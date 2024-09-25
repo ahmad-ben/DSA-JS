@@ -1,0 +1,367 @@
+V1 -PREREQUISITES-:
+  Mandatory section:
+    Section 1: BIG O NOTATION.
+    Section 18: DATA STRUCTURES INTRO.
+    Section 19: SINGLY LINKED LISTS.
+    Section 21: STACKS & QUEUES.
+  Highly recommended section:
+    Section 20: DOUBLY LINKED LISTS.
+V2 -Introduction to Trees-:
+  OBJECTIVES:
+    Define what a tree is.
+    Compare and contrast trees and lists.
+    Explain the differences between trees, binary trees, and binary search trees.
+    Focus on Binary Search Trees and Implement operations on it.
+  WHAT IS A TREE?
+    A data structure that consists of nodes in a parent / child relationship.
+    End up with branches since each node in the tree can connect to zero or more child nodes.
+    The tree can hold any type of data in its node and not only the numbers.
+    Examples of how tree can be represented:
+      ../Scripts/V2 -Introduction to Trees-/firs-tree-example.png
+        The tree can be complex like in this example.
+      ../Scripts/V2 -Introduction to Trees-/second-tree-example.png
+        The tree can be simple like in this example.
+      ../Scripts/V2 -Introduction to Trees-/third-tree-example.png
+  Lists VS Trees:
+    Lists are linear.
+      In SLL you have one pathway to go through.
+      In DLL you have two pathways to go through.
+    Trees are nonlinear.
+      You can have more than two pathways in a tree.
+      So we ca say a Singly Linked List is a very special case of a tree, see:
+        ../Scripts/V2 -Introduction to Trees-/sll-and-trees.png
+  Tree Rules:
+    A node can only point to a child, It's a parent child relationship.
+      We can't have a child pointing to a parent.
+      We can't have a node pointing to a sibling.
+      See:
+        ../Scripts/V2 -Introduction to Trees-/not-a-tree.png
+          This a graph, We'll talk about it later.
+    A node needs to have one entry point -one root-:
+      See:
+        ../Scripts/V2 -Introduction to Trees-/second-example-not-a-tree.png
+          We have two beginnings of this tree, so that's not a tree.
+  TREE TERMINOLOGY
+    Root: The top node in a tree.
+    Child: A node directly connected to another node when moving away from the Root.
+    Parent: The converse notion of a child.
+    Siblings: A group of nodes with the same parent.
+    Leaf: A node with no children.
+    Edge: The connection between one node and another -arrow in diagrams-.
+V3 -Uses For Trees-:
+  TREES have a Lots of different applications, like:
+    HTML DOM:
+      DOM is structured as a tree.
+      HTML DOM represents the structure of an HTML document as a tree of nodes.
+      Each element, attribute, and piece of text in the HTML is a node in this tree.
+      The topmost node is the root node, which corresponds to the <html> element.
+    Network Routing:
+    Abstract Syntax Tree:
+    Artificial Intelligence:
+    Folders in Operating Systems:
+    Computer File Systems:
+
+STOP HERE WITH AI 
+
+
+**Network Routing** is a process used in computer networks to determine the optimal path for data to travel from one device (source) to another (destination). It involves selecting paths within a network that data packets take to reach their target efficiently.
+
+### Network Routing Overview:
+- **Purpose**: To ensure data packets are delivered from one network node to another through the most efficient route.
+- **Components**: Routers, switches, and routing algorithms that guide data through the network.
+- **Routing Algorithms**: Algorithms like Dijkstra's, Bellman-Ford, and others are used to find the shortest or most efficient path.
+
+### Link Between Network Routing and Tree Data Structure:
+1. **Hierarchical Organization**:
+   - Many network routing protocols use **tree structures** to organize routes. For example, routing tables can represent hierarchical paths from the root (starting node) to leaves (destination nodes).
+   - **Spanning Trees** are used in network design to prevent loops and ensure all nodes are connected with the least number of edges, a crucial concept in routing protocols like Spanning Tree Protocol (STP).
+
+2. **Routing Trees**:
+   - Routing decisions often involve constructing a **routing tree** that represents all possible paths from a source node to other nodes. This tree helps identify the most efficient routes.
+   - **Shortest Path Trees (SPT)** are derived using algorithms like Dijkstra’s, where the tree represents the shortest paths from the root (source) to all other nodes.
+
+3. **Tree-Based Routing Algorithms**:
+   - Algorithms like **Dijkstra's** and **Breadth-First Search (BFS)** utilize tree-like structures to explore and find optimal paths.
+   - These algorithms often build or traverse a tree structure internally to determine the best routes.
+
+4. **Efficient Data Transmission**:
+   - Trees help break down complex network topologies into simpler, hierarchical forms, making routing decisions faster and more efficient.
+
+### Summary:
+- **Network Routing** relies on tree-like data structures to model paths and optimize routes within a network.
+- The tree structure helps organize and simplify the routing process, ensuring efficient data transmission across the network by minimizing unnecessary connections and loops.
+
+Understanding the tree data structure's principles is essential in designing, managing, and optimizing network routing protocols and algorithms.
+====================
+
+MIN 2:20 PHASE 2
+
+
+
+All right.
+
+Welcome back.
+
+Next, what I'd like to do is quickly run through some real world use cases for trees.
+
+These aren't just theoretical things.
+
+This isn't just about interview prep.
+
+Trees are used all the time, even if you're not fully conscious of it.
+
+You've interacted with trees both as a JavaScript developer, most likely, but then also just as a
+
+user of the Internet.
+
+So the most common example is HTML and the DOM, the document object model.
+
+So when we think about HTML, it lends itself to a tree like structure, right?
+
+We have elements.
+
+And inside of elements we can have nested elements that are child, that are child, that are children.
+
+And we can keep having children nested and nested and nested further down.
+
+And it's a parent child relationship between those HTML elements which are just text.
+
+But then once it gets to the browser after a request and get the response, the browser then reads through
+
+it all, parses it, and it creates the DOM, the document object model.
+
+And in Chrome we get this nice debugger.
+
+We can click through sort of an interactive way of viewing the different nodes, but behind the scenes
+
+there is a corresponding JavaScript object for each one of these nodes.
+
+So there's a body we can access it just by typing document dot body.
+
+And it prints text for us here, but it's actually an object.
+
+And if we do dot, we can see it has a bunch of properties, a bunch of methods we can call and we can
+
+do things like look at its children and it gives us a list of children.
+
+So let's take the first thing in there that gives us a node and we can do dot children on that.
+
+And there are so just one thing in there.
+
+It looks like there's just one child live inside of that first child.
+
+Anyway, if you're not familiar with the dome, I wouldn't worry about it.
+
+Just know that it's a tree structure.
+
+Very, very commonly used one.
+
+So another application has to do with network routing.
+
+Definitely not my expertise.
+
+I'm not even going to try and explain how it works.
+
+But if you go to the routing page in Wikipedia, we get all sorts of diagrams of trees over here.
+
+So these are different delivery schemes for how basically a message is transmitted to a node or to multiple
+
+nodes.
+
+And you can see that we've got some tree structures going on here and that's pretty much all I'll say
+
+about that because I know nothing about network routing, but behind the scenes there are some trees
+
+being used.
+
+There's a bunch of, you know, classic computer science logic that goes into finding the shortest path
+
+anyways.
+
+Next up, we'll talk about abstract syntax trees.
+
+So these are a way of describing the syntax of a programming language using a tree structure.
+
+So without going into too much detail really doesn't matter.
+
+Honestly, all that matters is that you see that this is a tree structure, whatever language this is
+
+for, it's from Wikipedia.
+
+If you do want to read more about it, we we have, let's say, a wild loop instead of a wild block.
+
+We have a condition as part of the the wild.
+
+And then we also have the body inside of that.
+
+While and in that condition, we can have a comparison between a variable and a constant.
+
+And this is a very succinct, shortened version.
+
+It's missing a lot of logic.
+
+But the point is to show you that this is a way of basically if you were writing code to take in other
+
+code and run that code or to parse that code or to make sure it's a valid syntax, you could use an
+
+abstract syntax tree to help you out.
+
+Next, trees are used in artificial intelligence all the time.
+
+There are tons of applications for trees in artificial intelligence and machine learning.
+
+Probably the simplest example is something called a minimax tree.
+
+So let's say we're building a tic tac toe game.
+
+We want to build an AI.
+
+That is very good.
+
+That isn't just picking random moves.
+
+We could basically break down the logic of the game into a tree and we basically would say, here's
+
+a given state of the board, and these are all the possible moves that the human player could make with.
+
+They are, oh, the computer is X and what we see here is och, you know, if, if the human player
+
+plays an oh here, the best possible mood move to make is to put an X right here.
+
+And in that way X would win.
+
+If an O goes here, the best possible move is to put an X in the middle and then it depends what O does
+
+next.
+
+You know, if there's multiple options, basically this tree structure just describes a bunch of different
+
+possible options for what could happen.
+
+And after a given move by the opponent, the best possible next move.
+
+So that's a really superficial we didn't even scratch the surface of how you actually implement this
+
+and what the minimax part is of the logic.
+
+But all that I want to show you is that this is basically called a decision tree.
+
+You have different decisions that you make branching points and you follow one, and then that splits
+
+and you follow the next decision and you keep going.
+
+And these have applications in very complicated classification algorithms, for example, not just Tic
+
+TAC tOe II.
+
+And then finally, probably the simplest example is the way that your folders are modeled in an operating
+
+system.
+
+You know, if you see something like this on a mac or PC, your computer is represented as a tree structure.
+
+There's all these directories, it's hierarchical, there's a root, there is a topmost folder on a
+
+mac.
+
+I actually don't know what it is anymore on your account.
+
+It's the root directory, but there's multiple accounts you can have on a computer anyways.
+
+It doesn't matter.
+
+But let's just say we're looking at a given folder.
+
+This folder inside.
+
+This is maybe our root.
+
+We have two other folders inside and then they have files.
+
+And yeah, technically this has like two types of nodes.
+
+You could say there's files and folders, but the structure itself is tree like we have all these branches
+
+and those children have children of their own and so on.
+
+So that's just a quick introduction to some of the real world use cases for trees.
+
+I assure you, though, this is not purely theoretical thing, it's not just an exercise.
+
+This is stuff that comes up all the time in programming.
+
+One example I totally forgot to mention is JSON.
+
+So if you've ever worked with JSON, JavaScript object notation, you're getting an AJAX call or you're
+
+sending a request and you're getting some data from an API when you parse that response from a string
+
+into JavaScript, or if you're using Python or whatever language you're using, there's code that is
+
+traversing a tree or creating a tree like structure.
+
+As we can see here, I'm using a chrome extension just to view some child nodes and they each have children.
+
+And this is a tree structure.
+
+You could represent this easily.
+
+Well, I shouldn't say easily.
+
+It suits itself to being represented by a tree.
+
+It's a lot of work, but it still is a tree structure where we have parents and child nodes, but there's
+
+at the end of the day, a single root.
+
+All right.
+
+I'll leave it off there.
+
+There's a lot of different uses for trees.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+V4 -Intro to Binary Trees-:
+V5 -POP QUIZ!-:
+V6 -Searching A Binary Search Tree-:
+V7 -Our Tree Classes-:
+V8 -BST: Insert-:
+V9 -BST: Insert Solution-:
+V10 -BST: Find-:
+V11 -BST: Find Solution-:
+V12 -Big O of Binary Search Trees-:
+===================================================================================================

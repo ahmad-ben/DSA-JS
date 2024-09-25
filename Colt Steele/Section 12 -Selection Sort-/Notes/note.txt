@@ -1,0 +1,32 @@
+V1 -PREREQUISITES-:
+  Mandatory section:
+    Section 1: BIG O NOTATION.
+  Highly recommended section:
+    Section 10: BUBBLE SORT.
+V2 -Selection Sort: Introduction-:
+  Selection Sort Behavior:
+    Loop over the whole array, search for the smaller value. put it in the start, do it again.
+    We can check the -VisuAlgo- website.
+  My implementation for selection sort:
+    ../Scripts/V2 -Selection Sort Introduction-/selection-sort.js
+  PseudoCode to apply the selection sort algorithm:
+    Store the first element as the smallest value you've seen so far.
+    Compare this item to the next item in the array until you find a smaller number.
+    If a smaller number is found. 
+      Designate that smaller number to be the new "minimum" and continue until the array end.
+    If the "minimum" is not the value -index- you initially began with, swap the two values.
+    Repeat this with the next element until the array is sorted.
+V3 -Selection Sort: Implementation-:  
+  Implementations:
+    Constructor Implementation:
+      ../Scripts/V3 -Selection Sort Implementation-/constructor-implementation.js
+    My Enhanced Implementation:
+      ../Scripts/V3 -Selection Sort Implementation-/my-enhanced-implementation.js
+        I did additional steps before. 
+          This version is better and inspired by constructor solution.
+V4 -Selection Sort: Big O Complexity-:
+  The Time Complexity of Selection Sort is O(n²).
+  When Selection Sort is better than Bubble Sort:
+    If we care about minimizing the number of swaps you're making.
+      If we are worried about writing to memory, which is not common though.
+===================================================================================================

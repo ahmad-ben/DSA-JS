@@ -1,0 +1,195 @@
+V1 -PREREQUISITES-:
+  Mandatory section:
+    Section 1: BIG O NOTATION.
+V2 -Introduction to Problem Solving-:
+  You're faced with a tough challenge, some code or a problem you have to solve. 
+    What are the steps you can take to make it solvable?
+  This section is more about the basic approach to solving a problem.
+    Steps you can take, things you can do to make it easier.
+  The second section, that comes after this is about: 
+    Specific blueprints or archetypes, little strategies. 
+      You can keep in your back pocket that help solve a lot of problems.
+      More code specific.
+  Section objectives:
+    Define what an algorithm is.
+    Devise a plan to solve algorithms.
+  Next section objectives:
+    Compare and contrast problem solving patterns including: 
+      frequency counters, two pointer problems and divide and conquer.
+  What is an algorithm?
+    Process or set of steps to accomplish a certain task. 
+      Set of mathematical steps that we need to do to solve a problem.
+      Facebook's algorithm that suggests certain ads to you.
+  Why i need algorithm:
+    Almost everything that you do in programming involves some sort of algorithm. 
+      Whether it's super basic things that you're doing or you're building a complex application.
+  We are focusing on things that come up in interviews.
+  How do you get better at problem solving:
+    Devise a plan for solving problems.
+      More about how do you approach a problem, strategies for breaking it down.
+      This is what we will be focusing in in this section.
+    Master common problem solving patterns.
+      So a lot of algorithms, especially in interviews can be broken into to different categories:
+        If you can identify some of those categories. 
+          there are some steps you can take in your code, that will help you solve the challenge.
+      This is what we will be focusing in in the next section.
+  Steps for solve a problem:
+    Understand the Problem
+    Explore Concrete Examples
+    Break It Down
+    Solve/Simplify
+    Look Back and Refactor
+      For each point we will have a video.
+        Each of these points: 
+          There's a lot more behind it.
+          Is part of this plan, this game plan, recipe for solving a challenge or a problem.
+V3 -Step 1: Understand The Problem-:
+  Important note:
+    Many of these strategies are adapted from a really good book on problem solving.
+    It's more about mathematics.
+    The book name is `How to Solve It` and the author name is `George Pólya`.
+  More about the first step:
+    There are some very deliberate questions that you can ask a thorough investigation: 
+      Can I restate the problem in my own words?
+      What are the inputs that go into the problem?
+      What are the outputs that should come from the solution to the problem?
+      Can the outputs be determined from the inputs? 
+        In other words, do I have enough information to solve the problem? 
+          You may not be able to answer this question until you set about solving the problem. 
+            That's okay; it's still worth considering the question at this early stage.
+      How should I label the important pieces of data that are a part of the problem?
+        How you should naming the things in your code?
+        What's the terminology that you should use?
+    Example to apply the previous questions:
+      Problem:
+        Write a function which takes two numbers and returns their sum.
+      Answers for previous questions:
+        Implement addition.
+        About inputs:
+          The type of the numbers is integer or float?
+          Should i check the type of the input, it's maybe a string or boolean...
+          Should i considered the limits of JS with big numbers.
+            How large these numbers will be?
+          How about passing 1 or 1000 inputs instead of one.
+        About output:
+          The type of the output will be integer or float?
+        If we have just one input we will not have the enough info to apply the sum operation.
+          will we add a 0, or return undefined or what??
+        For the naming we can for example do the following:
+          Name our function `add`.
+          Name the first input `numOne`.
+          Name the second input `numTwo`.
+          Name the output `sum`.
+V4 -Step 2: Concrete Examples-:
+    What we mean by concrete examples:
+      Give example on how the function should work with different inputs and conditions.
+        Additionally coming up with examples can help you understand the problem better.
+        Examples also provide sanity checks that your eventual solution works how it should.
+      User stories are considered a concrete example.
+      Unit tests are considered a concrete example.
+    How we can 
+    Steps for get better concrete examples:
+      Start with Simple Examples.
+        Write down two or three simple examples with an input and then the output.
+          The easiest use cases.
+      Progress to More Complex Examples.
+      Explore Examples with Empty Inputs.
+      Explore Examples with Invalid Inputs.
+    Example to apply the second step strategies:
+      Question:
+        Write a function that takes in a string and returns counts of each character in the string.
+      Steps:
+        I want to check that I understand it first.
+          So I try and restate the problem, do all the stuff from the last video.
+        Couple simple examples:
+          charCount("aaaa"); => {a: 4}
+          charCount("Hello"); => {h: 1, e: 1, l: 2, o:1}
+            I found two questions here:
+              Should i put all the english characters and then start increment the founding one.
+                This will be easier.
+              Should i separate between the upper and lower case characters.
+        Couple complex examples:
+          charCount("My phone number is 123-456-789");
+            Questions i found:
+              Should i calculate the space.
+              How about other characters like space, dollar sign, numbers, etc.
+        If the input is empty what we should do and return.
+        If the input is invalid what we should do and return.
+V5 -Step 3: Break It Down-:
+  What we mean by break it down:
+    Take the actual steps of the problem and write them down.
+      It doesn't have to be full pseudo-code.
+      It doesn't have to be valid syntax.
+      Just a little comment as a guide for the steps I need to take.
+      A lot of interviewers are looking for is you to communicate what you're doing.
+        They don't want to from you to start typing right silently.
+        It's much better to say, All right, here's the steps I'm going to try and take.
+    Explicitly writing out the steps that you need to take.
+  Some other benefits of why we should always break it down: 
+    Forces you to think about the code you'll write before you write it. 
+    Helps you catch any issues or misunderstandings.
+      before worry about details like the language syntax.
+    Even if you didn't complete the solution as a code, the steps can make you acceptable.
+  Real example of break it down:
+    Question:
+      Write a function which takes in a string and returns counts of each character in the string.
+    Break it down of the constructor: 
+      Create an object.
+      Loop over the string.
+        for each character, 
+          If the char is number/letter and is a key in object, Add 1 to count.
+          If the char is number/letter and is not a key in object, Add it and set its value to 1.
+          If the char is something else (space, period, etc.), don't do anything.
+      Return the object.
+    Break it down of mine: 
+      See: "../Scripts/V5 -Step 3 Break It Down-/script.js".
+V6 -Step 4: Solve Or Simplify-:
+  When solve and when simplify:
+    If you confidence with the previous steps, you can just solve it -write your code right away-.
+      This is not the last step.
+    If you are not ready to solve the entire problem at this point.
+      That's where Simplify comes in.
+      Solve a simpler problem.
+      Simply Steps:
+        Find the core difficulty in what you're trying to do.
+        Temporarily ignore that difficulty.
+        Write a simplified solution.
+          Often in this step you will discover how to finish the forth step successfully.
+        Then incorporate that difficulty back in.
+  The code of the constructor at this point:
+    See: "../Scripts/V6 -Step 4 Solve Or Simplify-/script.js".
+V7 -Step 5: Look Back and Refactor-:
+  Refactoring questions:
+    Can you check the result?
+      We need to make sure our code works.
+    Can you derive the result differently?
+      There's rarely only one solution to a problem.
+        Can you think about different approaches.
+        Is there another way that seems viable that you couldn't think of earlier?
+    Can you understand it at a glance?
+      Does it make sense when you look at it.
+    Can you use the result or the method for some other problem?
+      Ask if there's any similarities between the solution and others you faced in the past.
+    Can you improve the performance of your solution?
+      How can we make it perform better?
+        Mainly time complexity and space complexity.
+    Can you think of other ways to refactor?
+      Any other ways to refactor your code. 
+        If you're working for a company, does your code follow company guideline to style guide?
+        Does it follow conventions of the language?
+        Is the spacing consistent?
+    How have other people solved this problem?
+      At the end, ask about other approaches of other people.
+  Regular expressions and JS:
+    in JS, regular expressions performance can vary depending on: 
+      What you're doing.
+      The browser that you're in.
+        In particular, Chrome had some issues with regular expressions a while back.
+V8 -Recap and Interview Strategies-:
+  Recap of the main steps:
+    Understand the Problem
+    Explore Concrete Examples
+    Break It Down
+    Solve/Simplify
+    Look Back and Refactor
+===================================================================================================

@@ -1,0 +1,83 @@
+V1 -START HERE!-:
+  This is the first of two recursion problem sets.  
+  Both are completely optional.  
+  This problem set contains "easier" problems.
+    That doesn't mean they will be easy for everyone.  
+  The next section contains more challenging problems. 
+  Solutions are in the last lecture of this section!
+V2 -Coding Exercise 10: power-:
+  Challenge:
+    Write a function called power which accepts a base and an exponent. 
+    The function should return the power of the base to the exponent. 
+    This function should mimic the functionality of Math.pow(). 
+      Do not worry about negative bases and exponents.
+    Inputs & Outputs Examples:
+      power(2,0) => 1
+      power(2,2) => 4
+      power(2,4) => 16 
+    Solutions:
+      My Solution:
+        ../Scripts/V2 -Coding Exercise 10 power-/my-solution.js
+      Constructor Solution:
+        ../Scripts/V2 -Coding Exercise 10 power-/constructor-solution.js
+V3 -Coding Exercise 11: factorial-:
+  Challenge:
+    Write a function factorial which accepts a number and returns the factorial of that number.
+    A factorial is the product of an integer and all the integers below it; Example: 
+      Factorial four ( 4! ) is equal to 24, because 4 * 3 * 2 * 1 equals 24. 
+      Factorial zero (0!) is always 1.
+    Inputs & Outputs Examples:
+      factorial(1) => 1
+      factorial(2) => 2
+      factorial(4) => 24
+      factorial(7) => 5040
+    Solutions:
+      My Solution:
+        ../Scripts/V3 -Coding Exercise 11 factorial-/my-solution.js
+      Constructor Solution:
+        ../Scripts/V3 -Coding Exercise 11 factorial-/constructor-solution.js
+V4 -Coding Exercise 12: productOfArray-:
+  Challenge:
+    Write a function called productOfArray. 
+    Which takes in an array of numbers and returns the product of them all.
+    Inputs & Outputs Examples:
+      productOfArray([1,2,3]) => 6
+      productOfArray([1,2,3,10]) => 60
+    Solutions:
+      My Solution:
+        ../Scripts/V4 -Coding Exercise 12 productOfArray-/my-solution.js
+      Constructor Solution:
+        ../Scripts/V4 -Coding Exercise 12 productOfArray-/constructor-solution.js
+V5 -Coding Exercise 13: recursiveRange-:
+  Challenge:
+    Write a function called recursiveRange.
+    Which accepts a number and adds up all the numbers from 0 to the number passed to the function.
+    Inputs & Outputs Examples:
+      recursiveRange(6)  => 21
+      recursiveRange(10) => 55 
+    Solutions:
+      My Solution:
+        ../Scripts/V5 -Coding Exercise 13 recursiveRange-/my-solution.js
+      Constructor Solution:
+        ../Scripts/V5 -Coding Exercise 13 recursiveRange-/constructor-solution.js
+V6 -Coding Exercise 14: fib-:
+  Challenge:
+    Write a recursive function called fib. 
+    Which accepts a number and returns the nth number in the Fibonacci sequence. 
+      the Fibonacci sequence is: 
+        The sequence of whole numbers 1, 1, 2, 3, 5, 8, etc. 
+        Which starts with 1 and 1. 
+        Where every number thereafter is equal to the sum of the previous two numbers.
+    Inputs & Outputs Examples:
+      fib(4)  => 3
+      fib(10) => 55
+      fib(28) => 317811
+      fib(35) => 9227465
+    Solutions:
+      My Solution:
+        ../Scripts/V6 -Coding Exercise 14 fib-/my-solution.js
+      Constructor Solution:
+        ../Scripts/V6 -Coding Exercise 14 fib-/constructor-solution.js
+V7 -SOLUTIONS FOR THIS SECTION-:
+  Solutions already mentioned above.
+===================================================================================================

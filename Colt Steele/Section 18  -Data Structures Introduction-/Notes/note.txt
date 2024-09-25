@@ -1,0 +1,236 @@
+V1 -Which Data Structure Is The Best?-:
+  What is Data Structures:
+    Collections of values, along with:
+      The relationships among them. 
+      The functions or operations that can be applied to the data.
+    There's dozens of very well-known. 
+    There's hundreds or maybe thousands of very niche data structures.
+    For Example an array.
+      Array holds many values.
+      Array contains the relationships between those values -the order-.
+      Arrays come with all sorts of built in methods and functionality.
+        Ways of interacting with them: 
+          Add, remove, push, pop, also sort, reverse, etc.
+  What are Arrays and Objects:
+    Data Structure that came for free in JS, since they are beneficial in a lot of cases.
+  Future Implementation On Advanced Data Structure:
+    Create Theme from Scratch.
+    Define the relationship between the value of that data structure.
+    Create the functions those help us to interact with the data structure values easily, like:
+      Pop, Push, and so on... correspondent to the type of data structure we deal with.
+  Why we have so many data structure:
+    Different data structures excel at different things. 
+    Some are highly specialized, while others arrays for example are more generally used.
+  Visual Representations Of Various Data Structures:
+    Array:
+      ../Assets/array.png
+    Linked List -Singly linked list-:
+      ../Assets/singly-linked-list.png
+    Hash table:
+      ../Assets/hash-tables.png
+    Binary heap:
+      ../Assets/binary-heap.png
+        Type of tree, specifically a binary tree.
+    Binary search tree:
+      ../Assets/binary-search-tree.png
+    Graph -Unweighted, undirected graph-:
+      ../Assets/unweighted-undirected-graph.png
+    Graph -Unweighted, directed graph-:
+      ../Assets/unweighted-directed-graph.png
+      All of these do the same thing, they store data. but:
+        The behavior, the relationships between the data and their functionality are different. 
+          The methods we get to act upon them are very different.
+  Why we should care:
+    With time you'll need to use one of these data structures.
+    You've already worked with many of them unknowingly, like:
+      The DOM in JavaScript, is a tree.
+        If you know them, you will have the power to deal with them with more efficient way. 
+    They came in interviews.
+  The best Data Structure Ever:
+    There isn't.
+    All excel in different environments.
+  Situation And The Best Data Structure Of It:
+    Map Or Location: Graph.
+    Ordered List With Faster Insertion and Removing form both sided: Linked List.
+    Web Scraping Nested HTML: Tree.
+    Need to write a Scheduled: Binary Heap.
+V2 -ES2015 Class Syntax Overview-:
+  Data Structure Types:
+    Classic data structures:
+      Singly linked lists, doubly linked list, stacks, queues...
+    Complicated data structures:
+      Trees, binary search trees, graphs...
+  ES2015 And Data Structure Creation:
+    In order to create these data structures, we need to use of the ES2015 class syntax in JS.
+      It makes it really easy and simple for us to define our data structures.
+    JS doesn't really support OOP -object oriented programming-.
+      But with the year 2015, a new class keyword was introduced.
+  Section Objectives:
+    Explain what a class is.
+    Understand how JavaScript implements the idea of classes.
+    Define terms like abstraction, encapsulation and polymorphism.
+    Use ES2015 classes to implement data structures.
+  Class definition:
+    A blueprint for creating objects with pre-defined properties and methods.
+    In JS: 
+      Primarily syntactical sugar over JS existing prototype-based inheritance.
+      The class syntax does not introduce a new object oriented inheritance model to JS.
+      JS has never really been truly object oriented.
+        It takes advantage of prototype-based inheritance.
+V3 -Data Structures: The Class Keyword-:
+  How We Declare A Class And Additional Tries:
+    ../Scripts/V3 -Data Structures The Class Keyword-/play-around-with-js-class.js
+  More Info About Class:
+    Conventionally, classes should start with a capital letter.
+    The class keyword creates a constant, so you can not redefine it.
+  This keyword:
+    In JS its meaning changes depending on its context.
+    When we're inside of a constructor, it refers to the individual instance of the class.
+V4 -Data Structures: Adding Instance Methods-:
+  Instance Methods:
+    Function which is part of a class, and acts on an instance of that class.
+  Example Of Instance Methods And More:
+    ../Scripts/V4 -Data Structures Adding Instance Methods-/play-around-with-instance-method.js
+V5 -Data Structures: Adding Class Methods-:
+  Class Method:
+    They are called Static methods.
+    Methods within a class that have no access to anything else in the class, they don't need to.
+    Generally they are used for some purposes that not linked to only one instance. 
+    See:
+      ../Scripts/V5 -Data Structures Adding Class Methods-/static-methods.js
+  We learned about the JS classes to use in the future fir our data structure.
+    An example of how we will do this:
+      ../Scripts/V5 -Data Structures Adding Class Methods-/classes-and-data-structure-example.js
+        We will be using the constructor and instance methods quite a bit!
+        We will almost never be using static methods.
+  THIS Keyword:
+    Inside all of our instance methods and constructor. 
+      The keyword -this- refers to the object created from that class -the instance-.
+  Recap
+    Classes are blueprints that when created make objects known as instances.
+    Classes are created with the -new- keyword.
+    The constructor function is a special function that gets run when the class is instantiated.
+    Instance methods can be added to classes similar to methods in objects.
+    Class methods can be added using the static keyword.
+===================================================================================================
+Arrays and Object In JS and other Languages:
+  In JS arrays are: 
+    Teated as objects under the hood, object with integer keys. 
+    Specialized objects where the keys are integers.
+      This means you can access array elements using integer indices, but you can also: 
+        Attach non-numeric properties to arrays, just like objects, See:
+          ../Scripts/Additional Info/JS Arrays Vs Others/array-with-properties.js
+  This is a key distinction between JS arrays and arrays in languages like C++ or Java. 
+    Where arrays are typically more memory-efficient. 
+  Memory and Performance: 
+    Due to their dynamic nature. 
+      JS arrays might not be as memory-efficient as arrays in languages like C++ or Java.
+  In Other Languages Like C++
+    Arrays are much more rigid, we have:
+      Fixed Size: 
+        Arrays have a fixed size. 
+        You cannot dynamically add or remove elements without creating a new array.
+      Memory Efficiency: 
+        Arrays in C++ are more memory-efficient. 
+        They are contiguous blocks of memory. 
+          Each element is stored directly next to the previous one.
+            Allowing faster access and manipulation.
+      No Custom Properties: 
+        Unlike in JS, you cannot attach arbitrary properties to arrays. 
+        They are purely for storing a sequence of elements.
+    See:
+      ../Scripts/Additional Info/JS Arrays Vs Others/array-in-cpp.cpp
+  JS Array And Their Dynamic Nature:
+    Arrays do not guarantee that elements are stored in contiguous blocks of memory. 
+      Unlike in languages like C++.
+    Memory Layout in JavaScript Arrays:
+      Dynamic Nature: 
+        JavaScript arrays are dynamic and can change in size during runtime. 
+        Because of this flexibility, the underlying memory layout is more complex.
+      Sparse Arrays: 
+        JavaScript arrays can be sparse. 
+          Meaning that not all indices need to have a value. 
+          For example: 
+            You can create an array with a length of 100 but only assign a value to the index `50`. 
+            This would be inefficient to store in contiguous memory, and because of this: 
+              JS engine often optimize this by storing such arrays in a way that resembles objects. 
+                With only the occupied indices being stored.
+      Engine Optimization: 
+        Modern JavaScript engines like -V8 in Chrome- optimize the storage of arrays. 
+        When an array behaves in a predictable, dense, and contiguous manner. 
+          Like a typical array in other languages-. 
+        the engine might store it in a contiguous block of memory for performance reasons. 
+        If the array starts to behave more like an object 
+          Adding non-numeric properties, or making it sparse. 
+        the engine might switch to a different, less efficient storage strategy.
+      See: 
+        ../Scripts/Additional Info/JS Arrays And Memory/js-array-and-storage.js
+    Summary:
+      JS arrays are not guaranteed to be stored in contiguous memory blocks. 
+        Their storage can vary based on how they are used. 
+        If the array behaves in a predictable and dense manner.
+          The JS engine might optimize it to be more efficient in memory.
+            But this is not something you can directly control or rely on.
+      Languages like C++ always store arrays in contiguous memory. 
+        Which is why they are more memory-efficient for this specific use case.
+===================================================================================================
+JS and Class Keyword:
+  See:
+    ../Scripts/Additional Info/Js And The Keyword Class/js-class-keyword-behind-the-scenes.js
+===================================================================================================
+JS and OOP:
+  JS Classes are indeed built on top of functions, but: 
+    This does not mean that JavaScript doesn’t support Object-Oriented Programming -OOP-.
+    JS fully supports OOP principles such as encapsulation, inheritance, and polymorphism. 
+      Though it does so in a way that is distinct from class-based languages like Java or C++.
+  JavaScript Classes as Functions:
+    In earlier versions of JavaScript -before ES6-. 
+    Objects and inheritance were handled using constructor functions and prototypes. 
+    ES6 introduced the class syntax.
+      Syntactic sugar over the existing prototype-based inheritance.
+    See:
+      ../Scripts/Additional Info/JS OOP Versions Comparison/js-before-and-after-class-keyword.js
+  Understanding JavaScript’s OOP Support:
+    Encapsulation: 
+      JS supports encapsulation through closures and the use of classes -or constructor functions-. 
+      You can create private variables using closures or symbols to limit access.
+        They are powerful tools in JS for achieving: 
+          Encapsulation and controlling access to an object's internal state.
+        More about Closures and Symbols in the bottom.
+    Inheritance: 
+      JS implements inheritance via prototypes. 
+      The class syntax in ES6 makes it easier to work with inheritance.
+      You can extend classes using the extends keyword.
+    Polymorphism: 
+      JS supports polymorphism through method overriding.
+      See:
+        ../Scripts/Additional Info/JS And Polymorphism
+          The -speak- method in the Dog -class- overrides the -speak- method in the -Animal- class.
+  JS and prototype:
+    Even with the class syntax, JS is still fundamentally prototype-based. 
+    Every function in JavaScript has a prototype property.
+      Used to build up the inheritance chain.
+    When you create an instance of a class -or constructor function-. 
+      The instance inherits properties and methods from the constructor's prototype.
+    See:
+      ""../Scripts/Additional Info/JS And Prototype/js-prototype.js
+  Closures:
+    Function that remembers the environment in which it was created. 
+    Function can access variables from an outer fun even after that outer fun has returned. 
+    Closures are often used to create private variables and methods.
+    Allow you to create private variables and methods by enclosing them in a function's scope. 
+    This is particularly useful for encapsulation.
+    It ensures that certain data is not accessible outside the function.
+    See:
+      ""../Scripts/Additional Info/JS Closure
+  Symbols:
+    Unique and immutable primitive value introduced in ES6. 
+    They can be used to create private-like properties on objects. 
+      As each symbol is guaranteed to be unique, even if they have the same description.
+    Way to create unique, private-like properties on objects. 
+    They offer another method of encapsulation. 
+    Creating unique keys for object properties, which aren't easily accessible or enumerable.
+    See:
+      ../Scripts/Additional Info/Symbol/symbol-and-private-properties.js
+===================================================================================================
+-this- keyword and Arrow function

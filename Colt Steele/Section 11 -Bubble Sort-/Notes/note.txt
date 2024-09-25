@@ -1,0 +1,113 @@
+V1 -PREREQUISITES-:
+  Mandatory section:
+    Section 1: BIG O NOTATION.
+V2 -Introduction to Sorting Algorithms-:
+  What is sorting:
+    Referring to the process of rearranging items in any collection -Array, String...-
+      Usually now, we will work with arrays.
+        Later, we'll talk about sorting other data structures like linked lists or trees.
+    Examples of usage:
+      Sorting numbers from smallest to largest.
+      Sorting names alphabetically.
+      Sorting movies based on release year or revenue.
+  Sort problem:
+    We can sort a dataset with more than 15 ways, and that's can make the sort tricky.
+      Because in each case there is a better way to do it, we should discover it.
+  Sort Resources:
+    https://youtu.be/kPRA0W1kECg?si=TUNAP658Y3eK68JB
+      Youtube link for a video that visualizes the different approaches to sorting.
+        Shows the case of having some unsorted data representing, numbers for example.
+          The taller items, the taller columns.
+    https://www.toptal.com/developers/sorting-algorithms
+      How different sorting algorithms perform with different datasets.
+        The insertion algorithm is slow in random dataset, but quick when data is nearly sorted.
+  Why do we need to learn this?
+    Sorting is an incredibly common task, so it's good to know how it works.
+      Even with using the built-in methods, we should understand what's happening behind the scene.
+    There are many different ways to sort things each one has a different technique.
+      Each technique has its advantages and disadvantages correspondent to the data we have.
+      For example:
+        When the data is almost sorted, just a couple pieces that are out of place.
+          We can use some algorithms that are usually slow, and they will be really fast in this.
+          You might want to implement your own sort rather than having to rely on the built in one.
+    Sorting sometimes has quirks, so it's good to understand how to navigate them.
+  Objectives:
+    Implement bubble sort.
+    Implement selection sort.
+    Implement insertion sort.
+    Understand why it is important to learn these simpler sorting algorithms.
+  Selection sort: 
+    It builds up the array one item at a time.
+    It sorts it one thing at a time until we're done.
+  Quicksort: 
+    very different. Working from the start and the end at the same time.
+V3 -Built-In JavaScript Sorting-:
+  Sort Method weird behavior:
+    The sort() method of Array instances sorts the elements of an array in place.
+      In computer science, an in-place algorithm is an algorithm that: 
+        Operates directly on the input data structure. 
+          Without requiring extra space proportional to the input size.
+    Returns the reference to the same array, now sorted. 
+    The default sort order is ascending, built upon: 
+      Convert elements into strings, then comparing their sequences of UTF-16 code units values.
+    For Code Explanation See:
+      ../Scripts/V3 -Built-In JavaScript Sorting-/sort-function-default-behavior.js
+  Change Sort Method Behavior:
+    The built-in sort method accepts an optional comparator function
+    You can use this comparator function to tell JavaScript how you want it to sort
+    The comparator looks at pairs of elements -a and b-. 
+      Determines their sort order based on the return value.
+    If it returns a negative number, a should come before b.
+    If it returns a positive number, a should come after b.
+    If it returns 0, a and b are the same as far as the sort is concerned.
+    For Code Explanation See: 
+      ../Scripts/V3 -Built-In JavaScript Sorting-/sort-function-custom-behaviors.js
+    
+
+
+
+
+
+
+  charCodeAt function:
+    Method of String values. 
+    Returns an integer between 0 and 65535 representing the UTF-16 code unit at the given index.
+V4 -Bubble Sort: Overview-:
+  Definition:
+    A sorting algorithm where the largest values bubble up to the top.
+  Bubble Sort General Idea:
+    Start each time from the beginning of the array and comparing two values until the end. 
+      That will push the biggest number to the end of the array in each iteration.
+  PseudoCode to apply bubble sort algorithm:
+    Start looping from the end of the array towards the beginning with a variable called i. 
+    Start an inner loop with a variable called j from the beginning until i - 1.
+    If arr[j] is greater than arr[j+1], swap those two values.
+    Return the sorted array.
+  Website for algorithms visualization, its name VisuAlgo:
+    https://visualgo.net/en
+V5 -Bubble Sort: Implementation-:
+  Bubble Sort Code Implementation:
+    Constructor Implementation:
+      ../Scripts/V5 -Bubble Sort Implementation-/constructor-implementation.js
+        The constructor used the loop values to achieve what i did with additional variables.
+    My Implementations:
+      ../Scripts/V4 -Bubble Sort Overview-/my-implementation.js
+      ../Scripts/V5 -Bubble Sort Implementation-/my-enhanced-implementation.js
+        I made another solution, a shorter one inspired from the constructor solution.
+V6 -Bubble Sort: Optimization-:
+  If the array is almost sorted we can avoid unnecessary checks.
+    Constructor optimized version:
+      ../Scripts/V6 -Bubble Sort Optimization-/constructor-optimized-solution.js
+        The idea here is to check in each iteration of sorting.
+          If we didn't swap at all that means we already has the array sorted.
+    My optimized version:
+      ../Scripts/V6 -Bubble Sort Optimization-/my-optimization.js
+        I came up with better but more complex solution:
+          It's about calculate how much of continuos keeps we did until hit the end, and that's is:
+            How much of items we can ignore and remove because they are already ordered.
+      I believe my solution is better.
+V7 -Bubble Sort: BIG O Complexity-:
+  BIG O Of Bubble Sort:
+    On general is O(n²).
+    If we know that our dataset is almost sorted then it's a good candidate to use.
+===================================================================================================

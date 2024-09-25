@@ -1,0 +1,312 @@
+V1 -PREREQUISITES-:
+  Mandatory sections:
+    Section 1: BIG O NOTATION.
+    Section 18: Data Structures Introduction.
+V2 -Intro to Singly Linked Lists-:
+  Section Objectives:
+    Define what a Singly Linked List is.
+    Compare and contrast Linked Lists with Arrays.
+    Implement insertion, removal and traversal methods on Singly Linked Lists.
+      Defining our linked list class.
+      Adding a bunch of methods, with lot of functionality to: 
+        Push into it, or to pop things, or to search and traverse or to delete things, etc...
+  What is a linked list:
+    Data structure.
+    It stores whatever sort of data you want, strings, numbers, it doesn't matter.
+    It's ordered, list of data, just like an array, but there's a big distinction.
+    Terminology:
+      Name comes from the fact that each node is only connected one directionally to the next node.
+        Doubly linked list also has a connection pointing back to the previous node.
+    Visualization on visual algo:
+      https://visualgo.net/en/list
+  Linked list VS Array:
+    Array:
+      Indexed in order.
+      Insertion and deletion can be expensive.
+      Can quickly be accessed at a specific index.
+      Each item is mapped, it's indexed with a number.
+        We can get the fifth item, the sixth item.
+      Any time we add something in, it gets an index that is mapped to its position.
+    Linked List:
+      Do not have indexes.
+      Connected via nodes with a next pointer.
+      Random access is not allowed.
+      Consists of a bunch of elements with no indexes who are just pointing to the next element.
+      Each element is a node.
+        Node stores a piece of data, like a string or a number and also references the next node.
+          The last node references to null since there is not a next node in that point.
+      There is no zeroth, first...
+        You should start from the head and keep going until achieving the node you want if exists.
+      We have three properties we keep track of:
+        Head:
+          The beginning of the linked list.
+            From the head, we can figure out the next one, and so on until the end.
+        Tail:
+          The end. 
+            We don't keep track of every single item in the middle.
+        Length: 
+          Just to make things easier.
+      Diagram:
+        ../Assets/V2 -Intro to Singly Linked Lists-/linked-list-diagram.png
+  Linked List and Different processes:
+  Search:
+    We start checking from the beginning and so on until find our wanted value or achieve the tail.
+  Insert at the beginning:
+    Just make the value the new head and make it point to the old head.
+      Unlike in Array, every single item would have to be re indexed.
+  Insert in the middle:
+    Start from the beginning and move on until find the wanted position.
+    Insert the value.
+  Linked List Use Case:
+    If you: 
+      Care about insertion and deletion. 
+      Working with really long data set.
+      Don't need random access.
+V3 -Starter Code and Push Intro-:
+  Linked list: 
+    Just a collection of nodes.
+  PseudoCode To Implement Push Method:
+    This function should accept a value.
+    Create a new node using the value passed to the function.
+    If there is no head property on the list. 
+      Set the head and tail to be the newly created node.
+    Otherwise:
+      Set the next property on the tail to be the new node.
+      Set the tail property on the list to be the newly created node.
+    Increment the length by one.
+    Return the linked list.
+  My Early Try To Implement Singly Linked List Structure And Push Method:
+    ../Scripts/V3 -Starter Code and Push Intro-/Early Try Of Singly Linked List/script.js
+  Constructor Current Progress:
+    ../Scripts/V3 -...-/Constructor Current Progress/singly-linked-list-structure.js
+V4 -Singly Linked List: Push Solution-:
+  My Enhanced Implementation: 
+    ../Scripts/V4 -Singly Linked List Push Solution-/constructor-solution.js
+  Constructor Push Solution: 
+    ../Scripts/V4 -Singly Linked List Push Solution-/my-enhanced-solution.js
+V5 -Singly Linked List: Pop Intro-:
+  Early Implementations For Pop Method:
+    ../Scripts/V5 -Singly Linked List Pop Intro-/Early Try For Pop Method/first-implementation.js
+    ../Scripts/V5 -Singly Linked List Pop Intro-/Early Try For Pop Method/second-implementation.js
+  The pop method removes from the end of the linked list.
+    Takes the last item in the tail, and returns it to us.
+  Popping PseudoCode:
+    If there are no nodes in the list, return undefined.
+    Loop through the list until you reach the tail.
+    Set the next property of the 2nd to last node to be null.
+    Set the tail to be the 2nd to last node.
+    Decrement the length of the list by 1.
+    Return the value of the node removed.
+V6 -Singly Linked List: Pop Solution-:
+  Constructor Solution:
+    ../Scripts/V6 -Singly Linked List Pop Solution-/constructor-solution.js
+V7 -Singly Linked List: Shift Intro-:
+  My Early Implementation Of Shift Method:
+    ../Scripts/V7 -Singly Linked List Shift Intro-/my-early-implementation.js
+  Shift Method For Linked List:
+    Removes a node from the beginning of the linked List, whatever is at the start, we remove it.
+      Taking the head and deleting it and then move the head over to whatever the second item was.
+  Shift PseudoCode:
+    If there are no nodes, return undefined.
+    Store the current head property in a variable.
+    Set the head property to be the current head's next property.
+    Decrement the length by 1.
+    Return the value of the node removed.
+V8 -Singly Linked List: Shift Solution-:
+  Constructor Solution:
+    ../Scripts/V8 -Singly Linked List Shift Solution-/constructor-implementation.js
+      I can benefit form this solution two things:
+        If i will use a variable in onw place i can just put the value of that variable directly.
+          It may be less readable though, be careful.
+        To make the JS Engine delete an object, it's enough to not assign it. 
+V9 -Singly Linked List: UnShift Intro-:
+  My Early Implementation Of UnShift Method:
+    ../Scripts/V7 -Singly Linked List Shift Intro-/my-early-implementation.js
+  UnShift Method is to add a new node to the beginning of the Linked List!
+  UnShift PseudoCode:
+    This function should accept a value.
+    Create a new node using the value passed to the function.
+    If there is no head property on the list: 
+      set the head and tail to be the newly created node.
+      Else set the newly created node's next property to be the current head property on the list.
+    Set the head property on the list to be that newly created node.
+    Increment the length of the list by 1.
+    Return the linked list.
+V10 -Singly Linked List: UnShift Solution-:
+  Constructor Solution:
+    ../Scripts/V10 -Singly Linked List UnShift Solution-/constructor-solution.js
+V11 -Singly Linked List: Get Intro-:
+  My Early Try Of Get Method:
+    ../Scripts/V11 -Singly Linked List Get Intro-/my-early-implementation.js
+  Get Method:
+    Retrieving a node by it's position in the Linked List!
+  Get PseudoCode:
+    This function should accept an index.
+    If the index is less than zero or greater than or equal to the length of the list, return null.
+    Loop through the list until you reach the index and return the node at that specific index.
+V12 -Singly Linked List: Get Solution-:
+  Constructor Solution:
+    ../Scripts/V12 -Singly Linked List Get Solution-/constructor-solution.js
+V13 -Singly Linked List: Set Intro-:
+  My Early Try Of Set Method:
+    ../Scripts/V13 -Singly Linked List Set Intro-/my-early-try-of-set-method.js
+  Set Method Definition:
+    Changing the value of a node based on it's position in the Linked List.
+  Set PseudoCode:
+    This function should accept a value and an index.
+    Use your get function to find the specific node.
+    If the node is not found, return false.
+    Otherwise, set the value of that node to be the value passed to the function and return true.
+V14 -Singly Linked List: Set Solution-:
+  Constructor Solution:
+    ../Scripts/V14 -Singly Linked List Set Solution-/constructor-solution.js
+V15 -Singly Linked List: Insert Intro-:
+  My Early Try Of Insert Method:
+    ../Scripts/V15 -Singly Linked List Insert Intro-/my-early-try-of-insert-method.js
+  Insert Method:
+    Adding a node to the Linked List at a specific position.
+  Insert PseudoCode:
+    If the index is less than zero or greater than the length, return false.
+    If the index is the same as the length, push a new node to the end of the list.
+    If the index is 0, UnShift a new node to the start of the list.
+    Otherwise, using the get method, access the node at the index - 1.
+    Set the next property on that node to be the new node.
+    Set the next property on the new node to be the previous next.
+    Increment the length.
+    Return true.
+  Important Note About Linked List:
+    In each time i found an item, i basically have the access to two items:
+      The one i found.
+      The item after the one i found through the next property.
+V16 -Singly Linked List: Insert Solution-:
+  Constructor Solution:
+    ../Scripts/V16 -Singly Linked List Insert Solution-/constructor-solution-of-insert-method.js
+      I can benefit from the constructor solution the following note:
+        If i want to return the boolean value of a variable, instead of:
+          return VARIABLE_VALUE ? TRUE : FALSE.
+            I can simply do the following:
+              return !!VARIABLE_VALUE
+V17 -Singly Linked List: Remove Intro-:  
+  My Early Try Of Remove Method:
+    ../Scripts/V17 -Singly Linked List Remove Intro-/my-early-try-of-remove-method.js
+  Remove Method:
+    Removing a node from the Linked List at a specific position.  
+  Remove PseudoCode:
+    If the index is less than zero or greater than the length, return undefined.
+    If the index is the same as the length-1, pop.
+    If the index is 0, shift.
+    Otherwise, using the get method, access the node at the index - 1.
+    Set the next property on that node to be the next of the next node.
+    Decrement the length.
+    Return the value of the node removed.
+  Important Note Related To Singly Linked List:
+    If we want a node that close to the node we already have, we can use the -next- property.
+      Instead of looping again from the beginning of the list, it may be very expensive.
+V18 -Singly Linked List: Remove Solution-:
+  Constructor Solution:
+    ../Scripts/V18 -Singly Linked List Remove Solution-/constructor-solution-of-remove-method.js
+  Enhance the efficiency of you code:
+    If we want to get the value of a node and we already have the value of a node that close to it:
+      We can think about using the -next- property, it's better than loop over from the beginning.
+        Unless we aren't sure about the existing of the coming nodes -the next value-.
+V19 -Singly Linked List: Reverse Intro-:
+  My Early Try Of Reverse Method:
+    ../Scripts/V19 -Singly Linked List Reverse Intro-/My Early Try Of Reverse Method/script.js
+  Reverse Method:
+    Reversing the Linked List in place!
+  Reverse PseudoCode:
+    Swap the head and tail.
+    Create a variable called next.
+    Create a variable called prev.
+    Create a variable called node and initialize it to the head property.
+    Loop through the list.
+    Set next to be the next property on whatever node is.
+    Set the next property on the node to be whatever prev is.
+    Set prev to be the value of the node variable.
+    Set the node variable to be the value of the next variable.
+    Once you have finished looping, return the list.
+V20 -Singly Linked List: Reverse Solution-:
+  Constructor Solution:
+    ../Scripts/V20 -Singly Linked List Reverse Solution-/constructor-solution-of-reverse-method.js
+V21 -Singly Linked List: BIG O Complexity-:
+  Array Vs Singly linked List Time Complexity:
+    Insertion:
+      In the beginning:
+        Array: O(n).
+        Singly Linked List: O(1).
+      In the end:
+        Array: O(1).
+        Singly Linked List: O(1).
+      In the middle:
+        Array: O(n).
+        Singly Linked List: O(n).
+      Summary:
+        If we push it onto the the beginning:
+          Make a new node. 
+          Set its next to be the current head.
+          Move the head.
+          It takes constant time always O(1).
+        If we push it onto the very end:
+          we take the current end -the tail-. 
+          Make a new node.
+          Set the tail's next to be that new node.
+          Update the tail.
+          It takes constant time always O(1).
+        In arrays: 
+          If we want ot add an item to the: 
+            Beginning we should increment every single index over the array.
+            End it takes constant time.
+          On average, it's O(n) -where n is the length of the array-.
+        Singly Linked List win that battle as far as inserting data much faster.
+    Removal:
+      In the beginning:
+        Array: O(n).
+        Singly Linked List: O(1).
+      In the end:
+        Array: O(1).
+        Singly Linked List: O(n).
+      In the middle: 
+        Array: O(n).
+        Singly Linked List: O(n).
+      Summary:
+        For Singly Linked List: 
+          If we're removing from the very beginning, All we do is:
+            Take the current head and we just set its next to be the next head.
+            Take the old head and set its next to be null.
+          If we're removing from the very end, it becomes difficult:
+            We need to find the item right before the last item, right before the tail. 
+              That involves iterating the entire list.
+          In our best case for removing from the beginning, it's O(1). 
+          For the worst case of removing from the end, it's O(n).
+    Searching:
+      In the beginning:
+        Array: O(1).
+        Singly Linked List: O(1).
+      In the end:
+        Array: O(n).
+        Singly Linked List: O(n).
+      In the middle: 
+        Array: O(n).
+        Singly Linked List: O(n).
+    Index Accessing:
+      In the beginning:
+        Array: O(1).
+        Singly Linked List: O(1).
+      In the end:
+        Array: O(1).
+        Singly Linked List: O(n).
+      In the middle: 
+        Array: O(1).
+        Singly Linked List: O(n).
+  Summary:
+    Singly linked lists excel at insertion -in the start and end- and deletion compared to arrays.
+    So the Singly Linked List maybe right for you if you:
+      Don't need random access. 
+      Need some data represented in a list with an order.
+      Concerned about insertion and removal times and you don't care so much about random access.
+    Singly Linked Lists are an excellent alternative to arrays when: 
+      Insertion and deletion at the beginning are frequently required.
+    Arrays contain a built in index whereas Linked Lists do not.
+    A list data structure that consists of nodes is the foundation for other data structures like: 
+      Stacks and Queues...
+===================================================================================================

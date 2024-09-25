@@ -1,0 +1,156 @@
+V1 -PREREQUISITES-:
+  Mandatory section:
+    Section 1: BIG O NOTATION.
+V2 -Story Time: Martin & The Dragon-:
+  Recursion Definition:
+    Different way of thinking about writing solutions. 
+      We can write a solution with two ways:
+        Non recursive way, which is called iterative or iteratively.
+        The recursive way.    
+    The idea is basically taking one problem and doing it over and over on a: 
+      Smaller piece or on a changing piece until you hit an end point, which called the base case.
+    A process -a function in our case- that calls itself.
+  Section Objectives:
+    Define what recursion is and how it can be used.
+    Understand the two essential components of the recursive function.
+    Visualize the Call Stack to better debug and understand recursive functions.
+      how we can use the Chrome developer tools to: 
+        Debug the Call Stack and recursive function calls.
+    Use helper method recursion and pure recursion to solve more difficult problems.
+V3 -Why Use Recursion?-:    
+  Definition of recursion:
+    Process that calls itself. 
+      In our case and everything we do in JavaScript. 
+        When we say recursion, we're referring to a function that calls itself with an end point.
+  Why we should care:
+    We use the recursion in a lot of positions, like:
+      JSON.stringify, JSON.parse.
+        Up to the JavaScript engines to implement, but often they are recursively written.
+      document.getElementById and DOM traversal algorithms.
+        DOM is a tree structure where we have all these nested things like DIVs.
+          In the search process one popular approach is to write code that does it recursively. 
+      Object traversal.
+        Like traversing JSON.
+      Very common with more complex algorithms.
+      It's sometimes a cleaner alternative to iteration.
+    We will use it in our solutions in the future and that's because:
+      In writing our data structures, like trees or graphs and want to search in them.
+        Often our solutions will involve recursion.
+      You don't have to do anything recursively, but:
+        It's a nice cleaner and easier sometimes than the iteration approach.
+V4 -The Call Stack-:
+  What is the Call Stack:
+    Almost in all programming languages. 
+      There's a data structure behind the scenes that's managing function calls.
+      There's a special order that happens, Functions don't just happen randomly.
+        This data structure in JavaScript called the Call Stack.
+    A data structure called a stack.
+      When a function is invoked, it's placed on the top of the Call Stack.
+        The newest one that we put on goes on top.
+        When JavaScript sees the return keyword or when a function ends -no more code to run-.
+          The compiler will remove the top item from the stack.
+      You put and remove from the top.
+  Chrome DevTools and the Stack:
+    In the Chrome DevTools we have the ability to sees what's happening in the stack.
+    Code Example:
+      ../Scripts/V4 -The Call Stack-/call-stack-example.js
+  Call Stack and Recursive functions:
+    We keep pushing new functions over and over and over onto the Call Stack.
+      In fact, the same function over and over and over, and it's waiting to be called.
+V5 -Our First Recursive Function-:
+  Recursion Necessary parts:
+    Different Inputs In Each Call:
+      Often we want to change the inputs of the function call in order to have different outputs.
+    Base Case:
+      The condition when the recursion ends.
+  Simple recursive function with explanation:
+    ../Scripts/V5 -Our First Recursive Function-/recursive-and-Iteration-function.js
+V6 -Quiz 6: Recursion Quiz-:
+  ALHAMDOLILAH 😁 2 / 2.
+    QUESTIONS AND ANSWERS:
+      1- Q & A:
+        Q: What tool does JavaScript use to manage function invocations?
+        A: The Call Stack
+      2- Q & A:
+        Q: What is a base case?
+        A: A situation when the recursion ends
+V7 -Our Second Recursive Function-:
+  Second Recursion Example With Explanation:
+    ../Scripts/V7 -Our Second Recursive Function-/recursion-second-example.js
+V8 -Writing Factorial Iteratively-:
+  Challenge:
+    Write a function called factorial(num). 
+      That calculates the factorial of a given non-negative integer num with an iterative way.
+    Solutions:
+      My Solution:
+        ../Scripts/V8 -Writing Factorial Iteratively-/my-solution.js
+      Constructor Solution:
+        ../Scripts/V8 -Writing Factorial Iteratively-/constructor-solution.js
+          The constructor solution used the mathematical rules better. 
+V9 -Writing Factorial Recursively-:
+  Challenge:
+    Write a function called factorial(num). 
+      That calculates the factorial of a given non-negative integer num with a recursive way.
+    Solutions:
+      My Solution:
+        ../Scripts/V9 -Writing Factorial Recursively-/my-solution.js
+      Constructor Solution:
+        ../Scripts/V9 -Writing Factorial Recursively-/constructor-solution.js
+V10 -Common Recursion Pitfalls-:
+  Where things can go wrong:
+    No base case.
+      If we didn't add a base case the recursive function will continue call itself.
+        That will cause a Stack Overflow.
+    Forgetting to return or returning the wrong thing!
+      Adding the base case without return it will not stop the calling process. 
+        that mean Stack Overflow again.
+      If we return the wrong thing that also may leads to Stack Overflow by continuos calling.
+    Examples in:
+      ../Scripts/V10 -Common Recursion Pitfalls-/recursion-potential-errors.js
+  Stack overflow meaning: 
+    Type of buffer overflow error. 
+    Occurs when a computer program tries to: 
+      Use more memory space in the call stack than has been allocated to that stack.
+    The wrong implementation of the recursion can lead to this. 
+V11 -Helper Method Recursion-:
+  What is Helper Method Recursion:
+    A design pattern that's commonly used with recursion.
+    Defining a function around the recursion function.
+      To store data that for some reason we don't want to make it in the recursive function.
+    Where we have a non-recursive outer function that calls a recursive inner function.
+    Example of it as a code:
+      ../Scripts/V11 -Helper Method Recursion-/helper-method-recursion-example.js
+    It's used usually when we want to compile an array or a list of data, for example:
+      collecting all the odd values in an array, it's proper to do helper method recursion.
+        Solutions:
+          My Solution:
+          ../Scripts/V11 -Helper Method Recursion-/my-solution.js
+          Constructor Solution:
+          ../Scripts/V11 -Helper Method Recursion-/constructor-solution.js
+  Shift & Slice In JS:
+    Shift:
+      The shift cut the array from beginning, but its return is the truncated value itself.
+    Slice:
+      The shift cut but its return is the truncated array and not the truncated value.
+V12 -Pure Recursion-:
+  Challenge:
+    Collecting all the odd values in an array with pure recursive value:
+      Solution:
+        My Solution:
+          ../Scripts/V12 -Pure Recursion-/my-solution.js
+            I used the input value itself with the idea of waiting for the nested functions to end. 
+        Constructor Solution:
+          ../Scripts/V12 -Pure Recursion-/constructor-solution.js
+            Instead of put the data inside one variable of a function, the constructor idea is:
+              Put the necessary data in different functions calls.
+              Each function will wait until collect data from the nested functions of it.
+                And that's how we can collect pieces of data from each operation -function call-. 
+                And before ending the operation and lose the piece of data we should:
+                  Return it to the father function, and so on...
+  Pure Recursion Tips:
+    For arrays, use methods like `slice`, the `spread` operator, and `concat`. 
+      Make copies of arrays so you don't mutate them.
+    Remember that strings are immutable so you will need to use methods like: 
+      `slice`, `substr`, or `substring` to make copies of strings.
+    To make copies of objects use `Object.assign`, or the `spread` operator.   
+===================================================================================================

@@ -1,0 +1,116 @@
+V1 -Curriculum Walkthrough-:
+  Course sections explanation.
+  Course sections:
+    Big O Notation.
+      Important.
+      We will need it in all the sections f the course.
+      A way to valuate the efficiency and the performance of the code.
+    Analyzing Performance of Arrays and Objects.
+      Learn more and more about Big O notation.
+        Apply to some built-in data structure we work with all time.
+      Short.
+    Problem Solving Approach.
+      Talking about interviews, algorithms, challenges.
+        What we should do with a tough problem we don't know how to solve it?
+      Setting up a framework for you to think and approach a problem.
+    Problem Solving Patterns.
+      When we talk about patterns, we actually get into specific archetypes for your code.
+        They have different names, like: 
+          Divide and conquer, sliding window frequency, counter patterns.
+      Concrete patterns.
+        These patterns are well-defined, specific, and applicable to a wide range of problems. 
+          In a clear and practical manner.
+    100% OPTIONAL Challenges.
+    Recursion.
+      Important topic, should be skipped.
+      Comes up later on in many of algorithms.
+    Recursion Problem Set.
+    Bonus CHALLENGING Recursion Problems.
+    Searching Algorithms.
+      Like binary search here.
+    Bubble Sort.
+      Sorting algorithms.
+      Often considered the easiest or one of the easiest.
+      Intermediate or elementary sorting algorithms.
+    Selection Sort.
+      Sorting algorithms.
+      Intermediate or elementary sorting algorithms.
+    Insertion Sort.
+      Intermediate or elementary sorting algorithms.
+      Sorting algorithms.
+    Comparing Bubble, Selection, and Insertion Sort
+      Sorting algorithms.
+    Merge Sort.
+      Sorting algorithms.
+    Quick Sort.
+      Sorting algorithms.
+    Radix Sort.
+      Sorting algorithms.
+      Rare sort, very fast in a special situation.
+    Data Structures Introduction.
+      Overview on Data Structure on general.
+      Learn about ES2015 class syntax.
+        How you can approximate an object oriented class using JS.
+    Singly Linked Lists.
+    Doubly Linked Lists.
+    Stacks + Queues.
+      Very commonly used structures.
+    Binary Search Trees.
+      Trees in general.
+    Tree Traversal.
+      Breadth-First Search -BFS-.
+      Depth-first search -DFS-.
+      Post-order, Pre-order, In-order.
+    Binary Heaps.
+      Very related to trees but very special case.
+      Building priority queue.
+    Hash Tables.
+      Very particular data structure.
+      Understanding how JavaScript objects work, how they're implemented behind the scenes.
+      How would you implement a key value pair data structure?
+      Talk about hashing algorithms.
+    Graphs.
+      How you would model GPS global positioning.
+      GPS mapping.
+      How would you represent a map in traffic data and all these different variables.
+        So that you could create a GPS app or something similar?
+      Also we will talk about: 
+        Storing social network data, one way relationships and two way relationships.
+      Explore a lot of stuff around graphs, networks, routing.
+    Graph Traversal.
+      Breadth-First Search -BFS-.
+      Depth-first search -DFS-.
+    Dijkstra's Algorithm!.
+      Very famous mathematician and computer scientist called Dijkstra came up with it.
+      Finding the shortest path between two nodes on a graph -two vertices-.
+        For example:
+          If we go back to the idea of GPS. 
+          Say you want to get from point A to point B from New York to Los Angeles. 
+          What's the fastest way to do that on the roads?
+          If we have a complete map of all the roads with ignoring traffic data just distances. 
+          What's the best way to calculate that?
+          There's so many possibilities.
+            So we learn this algorithm to do that and we do an approximation of the same thing.
+      The pinnacle of the course because ot relies on: 
+        Big notation, Recursion, Heaps, Binary heaps, Priority queues, Stacks, Graphs.
+        A lot of things that we talk about earlier in the course come back in this last section.
+    Dynamic Programming.
+    The Wild West.
+V2 -Join The Community!-:
+  Join to the Discord community.
+V3 -What Order Should You Watch In?-:
+  Except the first two sections every section contains at the beginning, a lecture.
+    Its name is PREREQUISITES.
+    It contains as a maximum two sections:
+      Section 1:
+        Information about which other sections you need to complete before studying this section.
+        For example:
+          The way we implement the Merge sort is with a recursive implementation, so:
+            The Recursion is mandatory to understand the Merge sort section. 
+      Section 2:
+        Information about sections: 
+          Will be helpful to understand before jumping to the current section. 
+          They're not mandatory.
+V4 -How I'm Running My Code-:
+  Introduction to JS Snippets in Google chrome.
+===================================================================================================

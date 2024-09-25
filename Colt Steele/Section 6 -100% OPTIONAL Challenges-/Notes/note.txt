@@ -1,0 +1,171 @@
+V1 -IMPORTANT NOTE!-:
+  Constructor Note:
+    This section consists of a few practice problems. 
+      Makes you use of the code patterns from the previous section.  
+        These can get tricky, so I want to be clear that they are 100% optional. 
+      In my in-person bootCamps, I treat these questions as extra-credit/bonus challenges.  
+      DO NOT LET THESE CHALLENGES PREVENT YOU FROM MOVING ON!!!
+V2 -Coding Exercise 3: Frequency Counter - sameFrequency-:
+  Challenge:
+    Write a function called sameFrequency. 
+    Given two positive integers, find out if the two numbers have the same frequency of digits.
+    Your solution MUST have the following complexities:
+      Time: O(N)
+    Inputs & Outputs Examples:
+      sameFrequency(182,281)          // true
+      sameFrequency(34,14)            // false
+      sameFrequency(3589578, 5879385) // true
+      sameFrequency(22,222)           // false
+  Solution:
+    My Solution:
+      ../Scripts/V2 -Coding Exercise 3 Frequency Counter sameFrequency-/my-solution.js
+        Important AI syntax readable and shortness improvements:
+          If we will use to the for loop in an array, and we don't care about the index:
+            Is better to use `for ARRAY_VALUE of ARRAY`
+          If we need to loop over an array without changing any thing in it:
+            Is better to use `forEach`
+    AI Naive Solution:
+      ../Scripts/V2 -Coding Exercise 3 Frequency Counter sameFrequency-/ai-naive-solution.js
+    Constructor Solution:
+      ../Scripts/V2 -Coding Exercise 3 Frequency Counter sameFrequency-/constructor-solution.js
+V3 -Coding Exercise 4: Frequency Counter / Multiple Pointers - areThereDuplicates-:
+  Challenge:
+    Implement a function called, areThereDuplicates.
+      Accepts a variable number of arguments.
+      Checks whether there are any duplicates among the arguments passed in. 
+        You can solve this using the Frequency Counter Pattern OR the Multiple Pointers Pattern.
+    Inputs & Outputs Examples:
+      areThereDuplicates(1, 2, 3)             // false
+      areThereDuplicates(1, 2, 2)             // true 
+      areThereDuplicates('a', 'b', 'c', 'a')  // true 
+    Restrictions:
+      Time - O(n)
+      Space - O(n)
+    Bonus:
+      Time - O(n log n)
+      Space - O(1)
+  Solution:
+    My Solution:
+      Frequency Counter Pattern:
+        ../Scripts/V3 -...-/My Solutions/Frequency Counter Pattern.js
+      Multiple Pointers Pattern:
+        ../Scripts/V3 -...-/My Solutions/Multiple Pointers Pattern.js
+    Constructor Solution:
+      Frequency Counter Pattern:
+        ../Scripts/V3 -...-/Constructor Solutions/Frequency Counter Pattern.js
+      Multiple Pointers Pattern:
+        ../Scripts/V3 -...-/Constructor Solutions/Multiple Pointers Pattern.js
+      Set With Length Comparison, One Line Solution:
+        ../Scripts/V3 -...-/Constructor Solutions/One Line Set Solution.js
+V4 -SOLUTIONS PART 1-:
+  Solutions already mentioned above.
+V5 -Coding Exercise 5: Multiple Pointers - averagePair-:
+  Challenge:
+    Write a function called averagePair. 
+    Given a sorted array of integers and a target average. 
+      Determine if there is a pair of values in the array: 
+        Where the average of the pair equals the target average. 
+      There may be more than one pair that matches the average target.
+    Bonus Constraints:
+      Time: O(N)
+      Space: O(1)
+    Inputs & Outputs Examples:
+      averagePair([1, 2, 3], 2.5)                         // true
+      averagePair([1, 3, 3, 5, 6, 7, 10, 12, 19], 8)      // true
+      averagePair([-1, 0, 3, 4, 5, 6],  4.1)              // false
+      averagePair([], 4)                                  // false
+    Solutions:
+      My Solution:
+        ../Scripts/V5 -Coding Exercise 5 Multiple Pointers - averagePair--/solution.js
+      Constructor Solution:
+        ../Scripts/V5 -Coding Exercise 5 Multiple Pointers - averagePair--/constructor-solution.js
+V6 -Coding Exercise 6: Multiple Pointers - isSubsequence-:
+  Challenge:
+    Write a function called isSubsequence, which takes in two strings and checks: 
+      If the characters in the first string form a subsequence of the characters in the second one. 
+        In other words, The function should check: 
+          If the characters in the first string appear somewhere in the second string. 
+            Without their order changing.
+    Inputs & Outputs Examples:
+      isSubsequence('hello', 'hello world');  // true
+      isSubsequence('sing', 'sting');         // true
+      isSubsequence('abc', 'abracadabra');    // true
+      isSubsequence('abc', 'acb');            // false -order matters-
+    Your solution MUST have AT LEAST the following complexities:
+      Time Complexity  - O(N + M)
+      Space Complexity - O(1)
+    Solutions:
+      My Solution:
+        ../Scripts/V6 -...-/solution.js
+      Constructor Solutions:
+        With Multiple Pointer Pattern:
+          ../Scripts/V6 -...-/constructor-solution.js
+        With Recursive:
+          ../Scripts/V6 -...-/constructor-solution-recursive.js
+V7 -SOLUTIONS PART 2-:
+  Solutions already mentioned above.
+V8 -Coding Exercise 7: Sliding Window - maxSubArraySum-:
+  Challenge:
+    Given an array of integers and a number. 
+    Write a function called maxSubArraySum, which: 
+      Finds the maximum sum of a subArray with the length of the number passed to the function.
+        Note that a subArray must consist of consecutive elements from the original array. 
+    Inputs & Outputs Examples:
+      maxSubArraySum([100,200,300,400], 2)        // 700
+      maxSubArraySum([1,4,2,10,23,3,1,0,20], 4)   // 39 
+      maxSubArraySum([-3,4,0,-2,6,-1], 2)         // 5
+      maxSubArraySum([3,-2,7,-4,1,-1,4,-2,1],2)   // 5
+      maxSubArraySum([2,3], 3)                    // null
+    Constraints:
+      Time Complexity  - O(n)
+      Space Complexity - O(1)
+    Solutions:
+      My Solution:
+        ../Scripts/V8 -Coding Exercise 7 Sliding Window - maxSubArraySum--/my-solution.js
+      Constructor Solution:
+        ../Scripts/V8 -Coding Exercise 7 Sliding Window - maxSubArraySum--/constructor-solution.js
+V9 -Coding Exercise 8: Sliding Window - minSubArrayLen-:
+  Challenge
+    Write a function called minSubArrayLen, which accepts two parameters: 
+      Array of positive integers and a positive integer.
+    This function should return, the minimal length of a contiguous subArray of which: 
+      The sum is greater than or equal to the integer passed to the function. 
+      If there isn't one, return 0 instead.
+    Inputs & Outputs Examples:
+      minSubArrayLen([2,3,1,2,4,3], 7)                  // 2 -> [4,3] is the smallest subArray
+      minSubArrayLen([2,1,6,5,4], 9)                    // 2 -> [5,4] is the smallest subArray
+      minSubArrayLen([3,1,7,11,2,9,8,21,62,33,19], 52)  // 1 -> [62] is greater than 52
+      minSubArrayLen([1,4,16,22,5,7,8,9,10],39)         // 3
+      minSubArrayLen([1,4,16,22,5,7,8,9,10],55)         // 5
+      minSubArrayLen([4, 3, 3, 8, 1, 2, 3], 11)         // 2
+      minSubArrayLen([1,4,16,22,5,7,8,9,10],95)         // 0
+    Constraints:
+      Time Complexity  - O(n)
+      Space Complexity - O(1)
+    Solutions:
+      My Solution:
+        ../Scripts/V9 -Coding Exercise 8 Sliding Window - minSubArrayLen--/my-solution.js
+      Constructor Solution:
+        ../Scripts/V9 -Coding Exercise 8 Sliding Window - minSubArrayLen--/constructor-solution.js
+V10 -Coding Exercise 9: Sliding Window - findLongestSubstring-:
+  Challenge:
+    Write a function called findLongestSubstring, Which: 
+      Accepts a string.
+      Returns the length of the longest substring with all distinct characters.
+    Inputs & Outputs Examples:
+      findLongestSubstring('')                  // 0
+      findLongestSubstring('rithmschool')       // 7
+      findLongestSubstring('thisisawesome')     // 6
+      findLongestSubstring('thecatinthehat')    // 7
+      findLongestSubstring('bbbbbb')            // 1
+      findLongestSubstring('longestsubstring')  // 8
+      findLongestSubstring('thisishowwedoit')   // 6
+    Constraints:
+      Time Complexity - O(n)
+    Solutions:
+      My Solution:
+        ../Scripts/V10 -... -findLongestSubstring- -/my-solution.js
+      Constructor Solution:
+        ../Scripts/V10 -... -findLongestSubstring- -/constructor-solution.js
+V11 -SOLUTIONS PART 3-:
+  Solutions already mentioned above.

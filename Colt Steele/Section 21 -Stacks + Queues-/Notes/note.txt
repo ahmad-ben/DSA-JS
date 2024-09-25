@@ -1,0 +1,19 @@
+V1 -PREREQUISITES-:
+V2 -Intro to Stacks-:
+V3 -Creating a Stack with an Array-:
+V4 -Writing Our Own Stack From Scratch-:
+V5 -BIG O of Stacks-:
+V6 -Intro to Queues-:
+V7 -Creating Queues Using Arrays-:
+V8 -Writing Our Own Queue From Scratch-:
+V9 -BIG O of Queues-:
+===================================================================================================
+
+
+
+
+
+
+
+
+

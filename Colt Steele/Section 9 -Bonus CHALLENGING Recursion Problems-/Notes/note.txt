@@ -1,0 +1,200 @@
+V1 -NOTE ON THIS SECTION-:
+  Important note:
+    THESE PROBLEMS ARE SIGNIFICANTLY HARDER THAN THE EARLIER PROBLEMS.  
+    DO NOT FEEL BAD IF THEY GIVE YOU TROUBLE. 
+    THIS SECTION IS FOR PEOPLE WHO ENJOY PAIN AND MISERY.  
+    YOU DO NOT NEED TO ATTEMPT ANY OF THESE PROBLEMS IF YOU DO NOT WANT TO!
+  😁 Let's get started. 
+V2 -Coding Exercise 15: reverse-:
+  Challenge:
+    Write a recursive function called reverse. 
+    Which accepts a string and returns a new string in reverse.
+    Inputs & Outputs Examples:
+      reverse('awesome')     => 'emosewa'
+      reverse('rithmschool') => 'loohcsmhtir'
+    Solutions:
+      My Solution:
+        ../Scripts/V2 -Coding Exercise 15 reverse-/my-solution.js
+      Constructor Solution:
+        ../Scripts/V2 -Coding Exercise 15 reverse-/constructor-solution.js
+V3 -Coding Exercise 16: isPalindrome-:
+  Challenge:
+    Write a recursive function called isPalindrome. 
+    Which returns: 
+      True if the string passed to it is a palindrome, reads the same forward and backward. 
+      False otherwise.
+    Inputs & Outputs Examples:
+      isPalindrome('awesome')                    // false
+      isPalindrome('foobar')                     // false
+      isPalindrome('tacocat')                    // true
+      isPalindrome('amanaplanacanalpanama')      // true
+      isPalindrome('amanaplanacanalpandemonium') // false
+    Solutions:
+      My Solution:
+        ../Scripts/V3 -Coding Exercise 16 isPalindrome-/my-solution.js
+      Constructor Solution:
+        ../Scripts/V3 -Coding Exercise 16 isPalindrome-/constructor-solution.js
+V4 -Coding Exercise 17: someRecursive-:
+  Challenge:
+    Write a recursive function called someRecursive. 
+    Which accepts an array and a callback. 
+    The function returns: 
+      True if a single value in the array returns true when passed to the callback. 
+      False otherwise.
+    Inputs & Outputs Examples:
+      const isOdd = val => val % 2 !== 0;
+      someRecursive([1,2,3,4], isOdd)           => true
+      someRecursive([4,6,8,9], isOdd)           => true
+      someRecursive([4,6,8], isOdd)             => false
+      someRecursive([4,6,8], val => val > 10);  => false
+    Solutions:
+      My Solution:
+        ../Scripts/V4 -Coding Exercise 17 someRecursive-/my-solution.js
+      Constructor Solution:
+        ../Scripts/V4 -Coding Exercise 17 someRecursive-/constructor-solution.js
+V5 -Coding Exercise 18: flatten-:
+  Challenge:
+    Write a recursive function called flatten. 
+    Which accepts an array of arrays and returns a new array with all values flattened.
+    Inputs & Outputs Examples:
+      flatten([1, 2, 3, [4, 5] ])                   // [1, 2, 3, 4, 5]
+      flatten([1, [2, [3, 4], [[5]]]])              // [1, 2, 3, 4, 5]
+      flatten([[1],[2],[3]])                        // [1,2,3]
+      flatten([[[[1], [[[2]]], [[[[[[[3]]]]]]]]]])  // [1,2,3]
+    Solutions:
+      My Solution:
+        ../Scripts/V5 -Coding Exercise 18 flatten-/my-solution.js
+      Constructor Solution:
+        ../Scripts/V5 -Coding Exercise 18 flatten-/constructor-solution.js
+V6 -SOLUTIONS PART 1-:
+  Solutions already mentioned above.
+V7 -Coding Exercise 19: capitalizeFirst-:
+  Challenge:
+    Write a recursive function called capitalizeFirst. 
+    Given an array of strings, capitalize the first letter of each string in the array.
+    Inputs & Outputs Examples:
+      capitalizeFirst(['car','taco','banana']); => ['Car','Taco','Banana']
+    Solutions:
+      My Solution:
+        ../Scripts/V7 -Coding Exercise 19 capitalizeFirst-/my-solution.js
+      Constructor Solution:
+        ../Scripts/V7 -Coding Exercise 19 capitalizeFirst-/constructor-solution.js
+V8 -Coding Exercise 20: nestedEvenSum-:
+  Challenge:
+    Write a recursive function called nestedEvenSum. 
+    Return the sum of all even numbers in an object which may contain nested objects.
+    Inputs & Outputs Examples:
+      Example 1:
+        let obj1 = {
+          outer: 2,
+          obj: {
+            inner: 2,
+            otherObj: {
+              superInner: 2,
+              notANumber: true,
+              alsoNotANumber: "yup"
+            }
+          }
+        }
+        nestedEvenSum(obj1);  => 6
+      Example 2:
+        let obj2 = {
+          a: 2,
+          b: {b: 2, bb: {b: 3, bb: {b: 2}}},
+          c: {c: {c: 2}, cc: 'ball', ccc: 5},
+          d: 1,
+          e: {e: {e: 2}, ee: 'car'}
+        };
+        nestedEvenSum(obj2);  => 10
+    Solutions:
+      My Solution:
+        ../Scripts/V8 -Coding Exercise 20 nestedEvenSum-/my-solution.js
+      Constructor Solution:
+        ../Scripts/V8 -Coding Exercise 20 nestedEvenSum-/constructor-solution.js
+V9 -Coding Exercise 21: capitalizeWords-:
+  Challenge:
+    Write a recursive function called capitalizeWords. 
+    Given an array of words, return a new array containing each word capitalized.
+    Inputs & Outputs Examples:
+      Example 1:
+        let words = ['i', 'am', 'learning', 'recursion'];
+        capitalizeWords(words); => ['I', 'AM', 'LEARNING', 'RECURSION']
+      Example 2:
+        let words = ['here', 'we', 'go'];
+        capitalizeWords(words); => ['HERE', 'WE', 'GO']
+    Solutions:
+      My Solution:
+        ../Scripts/V9 -Coding Exercise 21 capitalizeWords-/my-solution.js
+      Constructor Solution:
+        ../Scripts/V9 -Coding Exercise 21 capitalizeWords-/constructor-solution.js
+V10 -Coding Exercise 22: stringifyNumbers-:
+  Challenge:
+    Write a function called stringifyNumbers.
+    It takes an object and finds all of the values which are numbers and converts them to strings. 
+    Recursion would be a great way to solve this!
+    The exercise intends for you to create a new object with the numbers converted to strings. 
+      Do not modify the original. Keep the original object unchanged.
+    Inputs & Outputs Examples:
+      Example 1:
+        let obj = {
+          num: 1,
+          test: [],
+          data: {
+            val: 4,
+            info: {
+              isRight: true,
+              random: 66
+            }
+          }
+        }
+        stringifyNumbers(obj)
+          {
+            num: "1",
+            test: [],
+            data: {
+              val: "4",
+              info: {
+                isRight: true,
+                random: "66"
+              }
+            }
+          }
+    Solutions:
+      My Solution:
+        ../Scripts/V10 -Coding Exercise 22 stringifyNumbers-/my-solution.js
+      Constructor Solution:
+        ../Scripts/V10 -Coding Exercise 22 stringifyNumbers-/constructor-solution.js
+V11 -Coding Exercise 23: collectStrings-:
+  Challenge:
+    Write a function called collectStrings. 
+    Accepts an object and returns an array of all object values that have a typeof string.
+    Inputs & Outputs Examples:
+      Example 1:
+        const obj = {
+          stuff: "foo",
+          data: {
+            val: {
+              thing: {
+                info: "bar",
+                moreInfo: {
+                  evenMoreInfo: {
+                    weMadeIt: "baz"
+                  }
+                }
+              }
+            }
+          }
+        }
+        collectStrings(obj) => ["foo", "bar", "baz"];
+      Example 2:
+        const obj = {one: "strOne", two: {twoOne: 1, twoTwo: "strTwo"}, three: 3, four: "strThree"}
+        collectStrings(obj) => ["strOne", "strTwo", "strThree"];
+    Solutions:
+      My Solution:
+        ../Scripts/V11 -Coding Exercise 23 collectStrings-/my-solution.js
+      Constructor Solution:
+        ../Scripts/V11 -...-/Constructor Solutions/helper-method-recursion-solution.js
+        ../Scripts/V11 -...-/Constructor Solutions/pure-recursion-solution.js
+V12 -SOLUTIONS PART 2-:
+  Solutions already mentioned above.
+===================================================================================================

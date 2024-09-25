@@ -1,0 +1,205 @@
+V1 -PREREQUISITES-:
+  Mandatory section:
+    Section 1: BIG O NOTATION
+    Section 18: DATA STRUCTURES INTRO
+    Section 19: SINGLY LINKED LISTS
+V2 -Doubly Linked Lists Introduction-:
+  DLL Node Properties:
+    Each node points in two directions.
+    It's tiny change in the actual structure, that causes changes in the methods code.
+  Section objectives:
+    Construct a Doubly Linked List.
+    Compare and contrast Doubly and Singly Linked Lists.
+    Implement basic operations on a Doubly Linked List.
+  DLL:
+    Almost identical to Singly Linked Lists, except: 
+      Every node has another pointer, to the previous node!
+    See:
+      ../Assets/V2 -Doubly Linked Lists Introduction-/DLL.png
+    The popping operation -remove from the end- in this situation its O(1), instead of O(n) in SLL.
+    Printing out a DLL in reverse, or you wanted to iterate it in reverse.
+      We can just go to the tail and use the previous property.
+    The real drawback is that it takes up more memory. 
+      It's almost always a trade off in programming:
+        More flexibility using a DLL also means more memory that's used up. 
+          Because of the additional property, previous.
+V3 -Setting Up Our Node Class-:
+  My Early Implementation Of Node And DoublyLinkedList Classes:
+    ../Scripts/V3 -Setting Up Our Node Class-/my-early-implementation.js
+  Constructor Implementation:
+    ../Scripts/V3 -Setting Up Our Node Class-/constructor-implementation.js
+V4 -Push-:
+  My Early Implementation Of Push Method:
+    ../Scripts/V4 -Push-/Push Method Early Try/script.js
+  Pushing PseudoCode:
+    Create a new node with the value passed to the function.
+    If the head property is null set the head and tail to be the newly created node.
+    If not, set the next property on the tail to be that node.
+    Set the previous property on the newly created node to be the tail.
+    Set the tail to be the newly created node.
+    Increment the length.
+    Return the Doubly Linked List.
+V5 -Push Solution-:
+  Constructor Solution:
+    ../Scripts/V5 -Push Solution-/constructor-solution.js
+V6 -Pop-:
+  Early Implementation Of Pop Method:
+    ../Scripts/V6 -Pop-/Pop Method Early Try/script.js
+  Pop is the remove the last item and return it.
+  Popping PseudoCode:
+    If there is no head, return undefined.
+    Store the current tail in a variable to return later.
+    If the length is 1, set the head and tail to be null.
+    Update the tail to be the previous Node.
+    Set the newTail's next to null.
+    Decrement the length.
+    Return the value removed.
+V7 -Pop Solution-:
+  Constructor Solution:
+    ../Scripts/V7 -Pop Solution-/constructor-solution.js
+V8 -Shift-:
+  SHIFTING is Removing a node from the beginning of the Doubly Linked List.
+  My Early Implementation Of Shift Method:
+    ../Scripts/V8 -Shift-/Shift Method Early Try/script.js
+  Shifting PseudoCode:
+    If length is 0, return undefined.
+    Store the current head property in a variable (we'll call it old head).
+    If the length is one.
+      set the head to be null.
+      set the tail to be null.
+    Update the head to be the next of the old head.
+    Set the head's prev property to null.
+    Set the old head's next to null.
+    Decrement the length.
+    Return old head.
+V9 -Shift Solution-:
+  Constructor Solution:
+    ../Scripts/V9 -Shift Solution-/constructor-solution.js
+V10 -UnShift-:
+  The UnShift is Adding a node to the beginning of a DLL.
+  My Early Implementation Of UnShift Method:
+    ../Scripts/V10 -UnShift-/UnShift Method Early Try/script.js
+  Unshifting PseudoCode:
+    Create a new node with the value passed to the function.
+    If the length is 0.
+      Set the head to be the new node.
+      Set the tail to be the new node.
+    Otherwise.
+      Set the prev property on the head of the list to be the new node.
+      Set the next property on the new node to be the head property .
+      Update the head to be the new node.
+    Increment the length.
+    Return the list.
+V11 -UnShift Solution-:
+  Constructor Solution:
+    ../Scripts/V11 -UnShift Solution-/constructor-solution.js
+V12 -Get-:
+  My Early Implementation Of Get Method:
+    ../Scripts/V12 -Get-/Get Method Early Try/script.js
+  Get is about Accessing a node in a Doubly Linked List by its position.
+  Since we have two directions in the DLL we can: 
+    Check the index and see what the closest point to it.
+      If it's the head or the tail.
+    Start accessing from the closest point.
+  Get PseudoCode:
+    If the index is less than 0 or greater or equal to the length, return null.
+    If the index is less than or equal to half the length of the list.
+    Loop through the list starting from the head and loop towards the middle.
+    Return the node once it is found.
+    If the index is greater than half the length of the list.
+    ​Loop through the list starting from the tail and loop towards the middle.
+    Return the node once it is found.
+V13 -Get Solution-:
+  Constructor Solution:
+    ../Scripts/V13 -Get Solution-/constructor-solution.js
+V14 -Set-:
+  My Early Implementation Of Set Method:
+    ../Scripts/V14 -Set-/Set Method Early Try/script.js
+  Set is Replacing the value of a node to the in a Doubly Linked List.
+    We can account on the get method.
+  Set PseudoCode:
+    Create a variable which is the result of the get method at the index passed to the function.
+    If the get method returns a valid node: 
+      set the value of that node to be the value passed to the function.
+      Return true.
+    Otherwise, return false.
+V15 -Set Solution-:
+  Constructor Solution:
+    ../Scripts/V15 -Set Solution-/constructor-solution.js
+V16 -Insert-:
+  My Early Implementation Of Insert Method:
+    ../Scripts/V16 -Insert-/Insert Method Early Try/script.js
+  The Insert is Adding a node in a Doubly Linked List by a certain position.
+  Insert PseudoCode:
+    If the index is less than zero or greater than or equal to the length return false.
+    If the index is 0, unshift.
+    If the index is the same as the length, push.
+    Use the get method to access the index -1.
+    Set the next and prev properties on the correct nodes to link everything together.
+    Increment the length.
+    Return true.
+V17 -Insert Solution-:
+  Constructor Solution:
+    ../Scripts/V17 -Insert Solution-/constructor-solution.js
+V18 -Remove-:
+  My Early Implementation Of Remove Method:
+    ../Scripts/V18 -Remove-/Remove Method Early Try/script.js
+  Remove is Removing a node in a Doubly Linked List by a certain position.
+  Remove PseudoCode:
+    If the index is less than zero or greater than or equal to the length return undefined.
+    If the index is 0, shift.
+    If the index is the same as the length-1, pop.
+    Use the get method to retrieve the item to be removed.
+    Update the next and prev properties to remove the found node from the list.
+    Set next and prev to null on the found node.
+    Decrement the length.
+    Return the removed node.
+V19 -Remove Solution-:
+  Constructor Solution:
+    ../Scripts/V19 -Remove Solution-/constructor-solution.js
+V20 -Comparing Singly and Doubly Linked Lists-:
+  Big O DLL and Big O:
+    Insertion: 
+      In the beginning is O(1).
+      At the end is O(1).
+    Remove:
+      From the beginning is O(1).
+      From the end is O(1).
+    Searching is O(N).
+    Access is O(N).
+      Technically accessing is O(N / 2), but that's still O(N).
+    RECAP!
+      Doubly Linked Lists are almost identical to Singly Linked Lists. 
+        Except there is an additional pointer to previous nodes.
+      DLL Better than Singly Linked Lists for finding nodes and can be done in half the time!
+      However, they do take up more memory considering the extra pointer.
+      DLL are used to implement other data structures and certain types of caches.
+    Representing your browser history often done with a DLL. 
+      Every page that you're on has a next and a previous.V21 -Coding Exercise 26: DLL push - Exercise-:
+V22 -Coding Exercise 27: DLL pop - Exercise-:
+  I already solved it in:
+    ../Scripts/V6 -Pop-/Pop Method Early Try/script.js
+V23 -Coding Exercise 28: DLL shift - Exercise-:
+  I already solved it in:
+    ../Scripts/V8 -Shift-/Shift Method Early Try/script.js
+V24 -Coding Exercise 29: DLL UnShift - Exercise-:
+  I already solved it in:
+    ../Scripts/V10 -UnShift-/UnShift Method Early Try/script.js
+V25 -Coding Exercise 30: DLL get - Exercise-:
+  I already solved it in:
+    ../Scripts/V12 -Get-/Get Method Early Try/script.js
+V26 -Coding Exercise 31: DLL set - Exercise-:
+  I already solved it in:
+    ../Scripts/V14 -Set-/Set Method Early Try/script.js
+V27 -Coding Exercise 32: DLL remove - Exercise-:
+  I already solved it in:
+    ../Scripts/V18 -Remove-/Remove Method Early Try/script.js
+V28 -Coding Exercise 33: DLL insert / remove - Exercise-:
+  I already solved the insert part in:
+    ../Scripts/V16 -Insert-/Insert Method Early Try/script.js
+  I already solved the delete part in:
+    ../Scripts/V18 -Remove-/Remove Method Early Try/script.js
+V29 -Coding Exercise 34: DLL reverse - Exercise-:
+  My Early Implementation Of Remove Method:
+    ../Scripts/V29 -Coding Exercise 34 DLL reverse - Exercise-/Reverse Method Early Try/script.js
+===================================================================================================

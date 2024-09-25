@@ -1,0 +1,195 @@
+V1 -PREREQUISITES-:
+  Mandatory section:
+    Section 1: BIG O NOTATION.
+V2 -Intro to Searching-:
+  Objectives:
+    Describe what a searching algorithm is.
+    Implement linear search on arrays.
+    Implement binary search on sorted arrays.
+    Implement a naive string searching algorithm.
+    Implement the KMP string searching algorithm.
+    We will focus on simple searching algorithms that are really commonly used, like:
+      Search for a string in an array.
+  indexOf Built-In function uses searching algorithm behind the scene.
+V3 -Intro to Linear Search-:
+  Linear Search Idea:
+    Given an array, the simplest way to search for an value is: 
+      Look at every element in the array and check if it's the value we want.
+    Is not a bad approach, but if we have sorted data like alphabetically sorted... 
+      There are better ways.
+    Visit one item at a time. 
+      Starting at the beginning, moving forward. 
+      or we could start at the end and move backward.
+      Moving at a set interval, one item at a time, checking every single thing.
+  JavaScript methods that use Linear Search:
+    indexOf
+    includes
+    find
+    findIndex
+V4 -Coding Exercise 24: Linear Search Exercise-:
+  Challenge:
+    Write a function called linearSearch. 
+    Which accepts an array and a value, and returns the index at which the value exists.
+    If the value does not exist in the array, return -1.
+    Don't use indexOf to implement this function!
+    Inputs & Outputs Examples:
+      linearSearch([10, 15, 20, 25, 30], 15)            // 1
+      linearSearch([9, 8, 7, 6, 5, 4, 3, 2, 1, 0], 4)   // 5
+      linearSearch([100], 100)                          // 0
+      linearSearch([1,2,3,4,5], 6)                      // -1
+      linearSearch([9, 8, 7, 6, 5, 4, 3, 2, 1, 0], 10)  // -1
+      linearSearch([100], 200)                          // -1
+    Solutions:
+      My Solution:
+        ../Scripts/V4 -Coding Exercise 24 Linear Search Exercise-/my-solution.js
+      Constructor Solution:
+        ../Scripts/V4 -Coding Exercise 24 Linear Search Exercise-/constructor-solution.js
+V5 -Linear Search Solution-:
+  Solution already mentioned above.
+  The time complexity of the Linear Search is O(n).
+    As our array gets longer, we have to do more searches, we have to do more operations.
+V6 -Linear Search BIG O-:
+  Different Cases:
+    Always find the item we search for in the beginning `O(1)`.
+    Always find the item we search for in the end `O(n)`.
+      So the average is `O(n)`, because we care about just the general trend. and it's:
+        As `n` grows -length of an array or a string- so does the average amount of time it takes.      
+          We throw away all constants, so two NW half NW 0.25 and those are constants.
+  The Linear Search is the best we can do with an unsorted piece of data.
+V7 -Intro to Binary Search-:
+  Binary Search:
+    Rather than eliminating one element at a time. 
+      We can eliminate half of the remaining elements.
+    It only works on sorted arrays, so the data has to be sorted.
+    The general idea is dividing and conquering.
+      So we split up the array into two pieces.
+      We pick a point in the middle usually.
+      We check based of what we're looking for, where it will be, in which half.
+    How the Binary Search works in code is in:
+      ../Scripts/V7 -Intro to Binary Search-/binary-search-behavior-explanation.js
+V8 -Binary Search PseudoCode-:
+  Binary Search PseudoCode for the next challenge:
+    This function accepts a sorted array and a value.
+    Create a left pointer at the start of the array, and a right pointer at the end of the array.
+    While the left pointer comes before the right pointer:
+    Create a pointer in the middle.
+    If you find the value you want, return the index.
+    If the value is too small, move the left pointer up.
+    If the value is too large, move the right pointer down.
+    If you never find the value, return -1.
+V9 -Coding Exercise 25: Binary Search Exercise-:
+  Challenge:
+    Write a function called binarySearch.
+    Which accepts a sorted array and a value.
+      If the value exists it returns the index at which of it, Otherwise return -1.
+    This algorithm should be more efficient than linearSearch. 
+      You can read how to implement it in these two place.
+        www.khanacademy.org/computing/computer-science/algorithms/binary-search/a/binary-search 
+        www.topcoder.com/community/data-science/data-science-tutorials/binary-search/
+    Inputs & Outputs Examples:
+      binarySearch([1,2,3,4,5],2) => 1
+      binarySearch([1,2,3,4,5],3) => 2
+      binarySearch([1,2,3,4,5],5) => 4
+      binarySearch([1,2,3,4,5],6) => -1
+      binarySearch([
+        5, 6, 10, 13, 14, 18, 30, 34, 35, 37, 
+        40, 44, 64, 79, 84, 86, 95, 96, 98, 99
+      ], 10) => 2
+      binarySearch([
+        5, 6, 10, 13, 14, 18, 30, 34, 35, 37, 
+        40, 44, 64, 79, 84, 86, 95, 96, 98, 99
+      ], 95) => 16
+      binarySearch([
+        5, 6, 10, 13, 14, 18, 30, 34, 35, 37, 
+        40, 44, 64, 79, 84, 86, 95, 96, 98, 99
+      ], 100) => -1      
+    Solutions:
+      My Solution:
+        ../Scripts/V9 -Coding Exercise 25 Binary Search Exercise-/my-solution.js
+      Constructor Solution:
+        ../Scripts/V9 -Coding Exercise 25 Binary Search Exercise-/constructor-solution.js
+V10 -Binary Search Solution-:
+  The solution for the previous exercise.
+    I already mentioned the solution above.
+V11 -Binary Search BIG O-:
+  Binary Search & BIG O:
+    The best scenario is O(1) assuming that the first picked element is what we search for.
+    The worst and the average is O(log n).
+  Log n:
+    In this case when we add one additional operation each time we double the array size, that's:
+      O(Log n)
+        It's really good and efficient.
+  Binary Search works only in sorted data.
+  Why Log₂(n) is the the proper time complexity for binary search:
+    The binary search cut the array length to the middle.
+    The Log₂ calculate the number of times we need to divide a number by 2 to get down to 1.
+      So basically how much of operation we will do with the binary search in the worst case.
+V12 -Naive String Search-:
+  We will talk about a different searching algorithm.
+    Which has to do with searching for some strings in a larger string.
+  Challenge:
+    Count the number of times a smaller string appears in a longer string.
+    Inputs & Outputs Examples:
+      findMatchNumber("omg this omg is omg hh.", "omg");        => 3 
+      findMatchNumber("ahmed is always ahmed.", "ahmed");       => 2
+      findMatchNumber("ahmed mohammad ahmed Abd ahmed", "a");   => 5
+    PseudoCode:
+      Loop over the longer string.
+      Loop over the shorter string.
+      If the characters don't match, break out of the inner loop.
+      If the characters do match, keep going.
+      If you complete the inner loop and find a match, increment the count of matches.
+      Return the count.
+    Solutions:
+      My Solution:
+        ../Scripts/V12 -Naive String Search-/my-solution.js
+      Constructor Solution:
+        ../Scripts/V12 -Naive String Search-/constructor-solution.js
+V13 -Naive String Search Implementation-:
+  Constructor Solution that already mentioned above.
+===================================================================================================
+KMP Algorithm -Knuth-Morris-Pratt-:
+  Popular string-searching -pattern-matching- algorithm. 
+  It efficiently finds the occurrences of a "pattern" string within a "text" string. 
+  The key advantage of the KMP algorithm over naive string-matching algorithms is: 
+    It avoids unnecessary comparisons by pre-processing the pattern string.
+  General Idea of the KMP Algorithm:
+    Pattern Preprocessing -Prefix Function-:   
+      The algorithm begins by pre-processing the pattern.
+        Create an array called the -Longest Prefix Suffix (LPS)- array.
+      The LPS array stores the lengths proper prefixes of the pattern that are also suffixes. 
+        This helps in determining how much the pattern can be shifted when a mismatch occurs.
+      For each position in the pattern.
+        The LPS array tells you the next position to compare if a mismatch occurs. 
+          Effectively skipping unnecessary comparisons.
+    Pattern Searching:
+      Once the LPS array is computed, the algorithm starts comparing the pattern with the text.
+      The pattern is aligned with the text, and characters are compared one by one.
+      If a mismatch occurs after some matching characters: 
+        Instead of shifting the pattern by one position to the right -as in naive methods-. 
+        The KMP algorithm uses the LPS array to determine the next position in the pattern. 
+          To continue the comparison.
+      If a match occurs, The algorithm will: 
+        Record the match's starting index and continues searching for other occurrences.
+  Steps in the KMP Algorithm
+    Compute the LPS array: 
+      For each position -i- in the pattern. 
+        Compute the length of the longest proper prefix which is also a suffix. 
+          Of the substring pattern[0...i].
+    This helps in determining how much the pattern can be shifted without missing a possible match.
+    Search the pattern in the text:
+      Start with the first character of the text and pattern.
+      Compare characters one by one.
+      If a mismatch occurs, use the LPS array to: 
+        Skip unnecessary comparisons and continue with the next potential match.
+  Complexity
+    Time Complexity: 
+      O(m + n), where -m- is the length of the text and -n- is the length of the pattern.
+    Preprocessing the pattern -computing the LPS array- takes -O(n)- time.
+    Searching through the text takes -O(m)- time.
+    Space Complexity: 
+      O(n) for the LPS array.
+  Summary:
+    The KMP algorithm is efficient and useful for scenarios where you need to: 
+      Find multiple occurrences of a pattern in a text.
+        Especially in long strings or large datasets.

@@ -1,0 +1,41 @@
+V1 -PREREQUISITES-:
+  Mandatory section:
+    Section 1: BIG O NOTATION.
+  Highly recommended section:
+    Section 10: BUBBLE SORT
+    Section 11: SELECTION SORT
+V2 -Insertion Sort: Introduction-:
+  My Early Implementation After knowing the general approach:
+    ../Scripts/V2 -Insertion Sort Introduction-/my-early-implementation.js
+    My Try Failure Reason:
+      I was thinking about finding the correct place and then start ordering.
+      But the algorithm start the possible ordering before even do the comparison.
+        Impressive!!.
+  Insertion Sort Advantages:
+    It's good in some situation we will see later on.
+  Insertion Sort General Idea:
+    Take the first element as a sorted portion, and grow that portion by iteration an comparison. 
+      Replace each element in the correct place in our sorted potion as we loop through.
+  Insertion Sort PseudoCode:
+    Start by picking the second element in the array.
+    Now compare the second element with the one before it and swap if necessary.
+    Continue to the next element and if it is in the incorrect order: 
+      Iterate through the sorted portion -the left side- to place the element in the correct place.
+    Repeat until the array is sorted.
+V3 -Insertion Sort: Implementation-:
+  Constructor Solution:
+    ../Scripts/V3 -Insertion Sort Implementation-/constructor-implementation.js
+      Its solution is much shorter, but harder to understand.
+      I used the break keyword, he achieve the same logic by the ForLoop Conditions Of Continuous.  
+V4 -Insertion Sort: BIG O Complexity-:
+  Insertion Sort And Big O Time Complexity:
+    In the worst case is: O(n²).
+  Good Situation For Insertion Sort: 
+    Nearly sorted data.
+    As an online algorithm.
+      Algorithm can work with no need for the whole data to come in.
+      Can process its input piece-by-piece in a serial fashion.
+        Without having the entire input available from the start.
+      Example: 
+        If data is coming in live or streaming and you need to insert it immediately.
+===================================================================================================

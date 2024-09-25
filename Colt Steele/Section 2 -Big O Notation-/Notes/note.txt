@@ -1,0 +1,391 @@
+V1 -Intro to Big O-:
+  Really important topic.
+  It's big in significance.
+  It's going to come up in a lot of the videos of this course.
+  We will establish a framework for talking about code in the rest of the course.
+  Involve some math up front.
+    Some parts of the course will be mathy, definitely.
+  Section objectives:
+    Talking about why we need Big O Notation.
+    Describe what the Big O Notation is.
+    Simplify Big O expressions.
+    Define time complexity and space complexity. 
+    Evaluate the time complexity and space complexity of different algorithms using Big O Notation.
+    Describe what a logarithm is.
+      Bit of math at the end there.
+  Why we need Big O Notation:
+    For every problem, there's different implementations or solutions that could work probably.
+      So to know what's the best to follow we need a way to evaluate the solutions.
+        One way in is using the Big O Notation.
+          That's really what Big O is about.
+          It's a system a way of: 
+            generalizing code.
+            Talking about it.
+            Comparing a code performance to other pieces of code.
+    Talk about how our code performs.
+    Discussing trade-offs between different approaches. 
+      Often it's not that one solution is always great and the other one is always terrible.
+    Debugging your code. 
+    Understand things that slow your code execution, For example:
+      If your code take too long, or the computer is lagging.
+      You can pinpoint where some problems might arise.
+        So it helps us identify inefficient points.
+  Why we should know the best solution anyway:
+    It's important for:
+      Large project and data set.
+        where one algorithm implementation can save an hour every time it runs compared to another.
+          Performance matters at that point. 
+          There is an actual best algorithm or best solution.
+      Pass technical interviews.
+V2 -Timing Our Code-:
+  What does better code mean:
+    The better can be:
+      The faster.
+      The less memory-intensive.
+      The more readable.
+    But in the majority of time it's about the first two:
+      The speed and the memory usage.
+  The challenge in general is to write: 
+    readable code, that execute fast with the minimal usage of the memory.
+  Test function speed:
+    First way:
+      Use the `performance.now()` before and after function execution. 
+      Calculate the difference between the two numbers of the beginning and the end.
+      Problems:
+        It requires a lot of code, specifically in case of having too much functions.
+        It varies from one laptop to another.
+        It varies even on the same laptop.
+        How would we give it a label of how efficient this one is compared to another.
+        For very fast algorithms, things are happening on a really, really fast scale. 
+          Speed measurements might not be precise enough.
+          There still one that is going to be fastest or most efficient. 
+            But if our timing functions can't figure it out, because: 
+              They're the smallest interval of time that can be measured isn't good enough.
+        What about if our code execution will take hours to execute??
+    Second way:
+      To use Big O Notation.
+V3 -Counting Operations-:
+  If we're not using time, what should we do:
+    So rather than counting the exact seconds that it takes for code to run.
+      Which can change so much.
+    We can count the number of simple operations that a computer has to perform.
+      That remains constant no matter what computer we're on.
+  Example Of Calculate Simple Operation:
+    See:
+      ../Scripts/V3 -Counting Operations-/fun1.js
+      ../Scripts/V3 -Counting Operations-/fun2.js
+  For the first fun:    
+    In this case we simply say: 
+      as n grows, the number of operations grow roughly in proportion with n.
+    And that's because:
+      Regardless of the exact number of operation, whether it's: 
+        5n + 2 or 2n or even 50n, 
+      It doesn't matter. 
+      We care about the general trend.
+      This is what we're going to see a lot with Big O, we're focused on the big picture, so:
+        It's not a static number.
+        It's not a constant number like three.
+  For the seconds fun:
+    We have three simple operations regardless of the size of N, whether it's small or massive.
+V4 -Visualizing Time Complexities-:
+  Use a tool from the constructor that:
+    Generate a graph.
+    Represent the relationship between the function time execution and the inserted input values.
+    It's URL:
+      https://rithmschool.github.io/function-timer-demo/
+V5 -Official Intro to Big O-:
+  big O is just a way of formalized counting.
+  Allows us to talk in a very formal way about: 
+    How the runtime of an algorithm grows as the inputs grow.
+  A way of describing the relationship between: 
+    The input of a function as it grows. 
+    How that changes the runtime of that function. 
+  The relationship between the input size and then the time relative to that input.
+  So we don't care about the other details, only the broad trends.
+  More about O(f(n)):
+  In the notation `O(f(n))`:
+    O: 
+      Stands for "Big O notation". which is used to:
+        Describe the upper bound of an algorithm's time or space complexity. 
+        It provides a way to express the worst-case scenario in terms of: 
+          How an algorithm's running time or space requirements grow as the input size increases.
+    f: 
+      Represents a function that describes the growth rate of the complexity. 
+      The function `f` typically involves the input size `n` and can take various forms, such as: 
+        `n`, `log n`, `n²`, etc. 
+      The choice of `f` depends on: 
+        The specific algorithm being analyzed.
+        How its performance scales with input size.
+    n: 
+      Represents the size of the input. 
+      It is a variable that denotes how large the input data set is. 
+      As `n` increases.
+        The function `f(n)` helps to describe how the algorithm's time or space complexity changes.
+    Putting it all together, `O(f(n))` provides a way to categorize algorithms based on their scalability and efficiency. For example:
+      `O(n)` indicates linear growth with input size.
+      `O(n²)` indicates quadratic growth.
+      `O(log n)` indicates logarithmic growth.
+  Some time complexities with their meanings:
+    `O(1)`: 
+      Means that `f(n) = 1`. 
+      The algorithm has constant time complexity. 
+      Meaning the runtime does not change regardless of the input size `n`.
+    `O(n)`: 
+      `f(n) = n`. The time complexity grows linearly with the input size.
+    `O(n²)`: 
+      `f(n) = n²`. The time complexity grows quadratically with the input size.
+    `O(log n)`: 
+      `f(n) = log n`. The time complexity grows logarithmically with the input size.
+  In calculate the Big O Notation we follow some rules, like:
+    We always think about the worst scenario. 
+    We simplify the expression by:
+      Focusing on the dominant term.
+      Remove constants and lower-order terms.
+        Capture the fundamental growth rate of the algorithm's time or space complexity. 
+      So:
+        3, 9, 100 => 1
+        2n + 50 => n 
+        5n² + n => n²
+  The loop en general is:
+    O(n).
+  If we have O(n) and inside it another O(n) that will give us O(n²).
+V6 -Simplifying Big O Expressions-:
+  The process of simplifying the Big O notation by: 
+    Focusing on the dominant term and dropping constants and lower-order terms. 
+    Generally referred to as `asymptotic analysis` or `asymptotic notation `, some of its rule:
+      Dominant Term: 
+        In Big O notation, we focus on the term with the highest growth rate as `n` becomes large. 
+        This dominant term most accurately represents: 
+          The scalability and efficiency of the algorithm or function.
+      Constants: 
+        Constant factors are disregarded.
+          They do not affect the asymptotic behavior of the function. 
+        For example: 
+          `O(2n)` is simplified to `O(n)`.
+      Lower-Order Terms: 
+        Lower-order terms, such as: 
+          Linear terms when compared to quadratic terms, become insignificant as `n` grows large. 
+          For example, `O(n² + n)` is simplified to `O(n²)`.
+    Purpose: 
+      The purpose of simplifying to Big O notation is to: 
+        Provide a concise and clear representation of: 
+          How the algorithm or function scales with input size. 
+      It allows for comparison and understanding of algorithmic efficiency. 
+        Without getting bogged down in specific implementation details or constant factors.
+      Removing constants and lower-order terms to: 
+        Capture the fundamental growth rate of the algorithm's time or space complexity.
+  Big O Shorthands
+    Arithmetic operations are constant.
+      2 + 2
+      12345 + 67890 
+    Variable assignment is constant.
+      let x = 10;
+      let y = 1234567890;
+    Accessing elements in an array -using index- or object -using key- is constant.
+    In a loop, the the complexity is: 
+      the length of the loop times the complexity of whatever happens inside of the loop.
+  If a function some how behavior with more than one BON correspondent to the input value.
+    We should considered the case of continuously increment the input value.
+V7 -Quiz 1: Big O Time Complexity Quiz-:
+  ALHAMDOLILAH   
+    QUESTIONS AND ANSWERS:
+      Simplify the big O expression as much as possible - O(n + 10) => O(n)
+      Simplify the big O expression as much as possible - O(100 * n) => O(n)
+      Simply the following big O expression as much as possible - O(25) => O(1)
+      Simply the following big O expression as much as possible -  O(n² + n³) => O(n³)
+      Simply the following big O expression as much as possible - O(n + n + n + n) => O(n)
+V8 -Quiz 2: Big O Time Complexity Quiz 2-:
+  ALHAMDOLILAH 😊 4 / 5.
+    QUESTIONS AND ANSWERS:
+      1- Q & A:
+        Q:
+          Determine the time complexity for the following function 
+          function logUpTo(n) {
+              for (var i = 1; i <= n; i++) {
+                  console.log(i);
+              }
+          }
+        A: O(n)
+      2- Q & A:
+        Q:
+          Determine the time complexity for the following function 
+          function logAtMost10(n) {
+              for (var i = 1; i <= Math.min(n, 10); i++) {
+                  console.log(i);
+              }
+          }
+        A: O(1)
+      3- Q & A:
+        Q:
+          Determine the time complexity for the following function
+          function logAtLeast10(n) {
+              for (var i = 1; i <= Math.max(n, 10); i++) {
+                  console.log(i);
+              }
+          }
+        A: O(n)
+      4- Q & A:
+        Q:
+          Determine the time complexity for the following function
+          function onlyElementsAtEvenIndex(array) {
+              var newArray = Array(Math.ceil(array.length / 2));
+              for (var i = 0; i < array.length; i++) {
+                  if (i % 2 === 0) {
+                      newArray[i / 2] = array[i];
+                  }
+              }
+              return newArray;
+          }
+        A: O(n)
+      5- Q & A:
+        Q:
+          Determine the time complexity for the following function
+          function subtotals(array) {
+              var subtotalArray = Array(array.length);
+              for (var i = 0; i < array.length; i++) {
+                  var subtotal = 0;
+                  for (var j = 0; j <= i; j++) {
+                      subtotal += array[j];
+                  }
+                  subtotalArray[i] = subtotal;
+              }
+              return subtotalArray;
+          }
+        A: O(n), the correct answer is: O(n²)
+V9 -Space Complexity-:
+  What is the Space Complexity:
+    What happens to the space that an algorithm takes up as the size of the input increases.
+    We can still use big notation for the same thing. 
+      Use the same formal syntax for describing what happens.
+    But now we're going to focus on space, the amount of memory that's taken up.
+  Some rules to follow:
+    As n `The input value` grows the space that it will take it grows also, but we ignore that:
+      We will focus on the space required by the algorithm only. 
+        Not including the space taken up by the inputs.
+      We refer to this space by the name:
+        Auxiliary space complexity.
+      So basically when we talk about space complexity, technically we're talking about:
+        Auxiliary space complexity.
+    The most primitives, things like Booleans Numbers, Undefined, null and JS are constant space.
+      It doesn't matter what the size of the input is. 
+        If the number is 1 or the number is 1000, we can consider it constant space.
+        It doesn't matter if a boolean is true or false takes up the same amount of space.
+    Strings are different because they require o(n) space.
+      If length of the string grows to 50 characters. 
+        The string takes up 50 times more space than a single character string.
+    Reference types, arrays and objects:
+      Generally we're talking about o(n) where n is:
+        The length of the array.
+          There's not really a length technically, but: 
+            If the length of an array is 4 compared to another that is 2. 
+              It takes up twice as much space as the shorter array.
+        The number of keys.
+  Example in the script file.
+V10 -Quiz 3: Big O Space Complexity Quiz-:
+  ALHAMDOLILAH 😊 4 / 5.
+    QUESTIONS AND ANSWERS:
+      1- Q & A:
+        Q:
+          Determine the space complexity for the following function  
+          function logUpTo(n) {
+              for (var i = 1; i <= n; i++) {
+                  console.log(i);
+              }
+          }
+        A: O(1)
+      2- Q & A:
+        Q:
+          Determine the space complexity for the following function  
+          function logAtMost10(n) {
+              for (var i = 1; i <= Math.min(n, 10); i++) {
+                  console.log(i);
+              }
+          }
+        A: O(1)
+      3- Q & A:
+        Q:
+          Determine the space complexity for the following function  
+          function logAtMost10(n) {
+              for (var i = 1; i <= Math.min(n, 10); i++) {
+                  console.log(i);
+              }
+          }
+        A: O(1)
+      4- Q & A:
+        Q:
+          Determine the  space complexity for the following function 
+          function onlyElementsAtEvenIndex(array) {
+              var newArray = Array(Math.ceil(array.length / 2));
+              for (var i = 0; i < array.length; i++) {
+                  if (i % 2 === 0) {
+                      newArray[i / 2] = array[i];
+                  }
+              }
+              return newArray;
+          }
+        A: O(n)
+      5- Q & A:
+        Q:
+          Determine the space complexity for the following function
+          function subtotals(array) {
+              var subtotalArray = Array(array.length);
+              for (var i = 0; i < array.length; i++) {
+                  var subtotal = 0;
+                  for (var j = 0; j <= i; j++) {
+                      subtotal += array[j];
+                  }
+                  subtotalArray[i] = subtotal;
+              }
+              return subtotalArray;
+          }
+        A: O(n)
+V11 -Logs and Section Recap-:
+  Why we should know about logarithm:
+    It comes with some of Big O Notation expression like:
+      O(log n) and O(n * log n)
+  What is Logarithm:
+    Logarithmic functions are the inverses of exponential functions.
+    Not always working with base two `log₂`, we can have the base 3...
+    Syntax:
+      log₂(Value) = exponent => 2ᵉˣᵖᵒⁿᵉⁿᵗ = value.
+    Example:
+      log₂(8) = 3. This means:
+        2³ = 8. `2 to what power equals 8`
+  Logarithm with Big O Notation:
+    log₂ === log
+      Just omitting the ₂, because as a big picture it doesn't matter.
+      In mathematic this isn't correct, we should always has a base.
+  General rule about logarithm with examples:
+    The logarithm of a number roughly: 
+      Measures the number of times you can divide that number by 2 before you get a value that's: 
+        Less than or equal to 1.
+    8 / 2 = 4 / 2 = 2 / 2 = 1
+      log(8) = 3;
+    25 / 2 = 12.5 / 2 = 6.25 / 2 = 3.125 / 2 = 1.5625 / 2 = 0.78125
+      log(25) ≈ 4.64;
+  The logarithmic complexity is great and we mean the O(log n) not the O(n.log n).
+  Where we can see the logarithmic complexity:
+    Certain searching algorithms do have logarithmic time complexity.
+    Efficient sorting algorithms involve logs.
+      Not all sorting algorithms, but some of the more efficient ones do.
+    Recursion, in space complexity, not time.
+  Recap:
+    To analyze the performance of an algorithm, we use Big O Notation.
+    Big O Notation: 
+      Can give us High level understanding of the time or space complexity of an algorithm.
+      Doesn't care about precision, only about general trends (linear? quadratic? constant?).
+      Is everywhere, so get lots of practice!
+    The time or space complexity -as measured by Big O-.
+      Depends only on the algorithm.
+      We don't care about the hardware used to run the algorithm.
+===================================================================================================
+More about logarithm:
+  log₂ 64 = 6.
+    2⁶ = 64.
+  The ₂ called the BASE.
+  The 6 called the POWER.
+  The 64 called the NUMBER.
+  So we always should remember this phrase:
+    The BASE raised to what POWER equals the NUMBER.
+  See the picture in the assets.
+    

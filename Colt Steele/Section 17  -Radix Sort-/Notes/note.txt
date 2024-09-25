@@ -1,0 +1,82 @@
+V1 -PREREQUISITES-:
+  Mandatory section:
+    Section 1: BIG O NOTATION.
+    Section 6: RECURSION
+  Highly recommended section:
+    Section 10: BUBBLE SORT
+    Section 11: SELECTION SORT
+    Section 12: INSERTION SORT
+    Section 14: MERGE SORT
+    Section 14: QUICK SORT
+V2 -Radix Sort: Introduction-:
+  The previous sorts we saw called:
+    Comparison Sorting Algorithms.
+      The base comparison that we're doing is between two items at any given point.
+      Mathematically these algorithms can't do better than O(n log n) time complexity.
+  How to sort in a better level than O(n log n):
+    Some algorithms take advantage of special properties of the data. like:
+      Group of sorts called integer sorting algorithms, and they only work with integers -numbers-.
+        We don't actually make direct comparisons, one of those is radix sort.
+          We never actually comparing is this number less than that number.
+  Radix Sort:
+    Special sorting algorithm that doesn't make comparisons and it works on numbers.
+    Used with binary numbers, any number can be expressed in binary.
+      You could take any strings or images if you want to and convert them to binary.
+      The actual data we work with at the time that we're sorting should be numbers.
+    Exploits the idea that the biggest numbers are the numbers with more digits, Impressive!!. 
+  Radix Sort Work Mechanism:
+    Since we are working with numbers of base ten:
+      We create ten different buckets.
+        These buckets represent all possible numbers one digit in base ten can ever have.
+V3 -Radix Sort: Helper Methods-:
+  My Early Implementation For Get Digit Function:
+    ../Scripts/V3 -Radix Sort Helper Methods-/early-implementation-for-get-digits-fun.js
+  My Early Implementation For Radix Sort Function:
+    ../Scripts/V3 -Radix Sort Helper Methods-/early-implementation-for-radix-sort.js
+  Fill Built-In Method And Its Weird Behavior:
+    ../Scripts/V3 -Radix Sort Helper Methods-/array-fill-built-in-fun-behavior.js
+  Constructor Helper Methods:
+    ../Scripts/V3 -Radix Sort Helper Methods-/Constructor Helper Methods/get-digit.js
+      returns the digit in num at the given place value.
+    ../Scripts/V3 -Radix Sort Helper Methods-/Constructor Helper Methods/digit-count.js
+      returns the number of digits in num.
+    ../Scripts/V3 -Radix Sort Helper Methods-/Constructor Helper Methods/most-digits.js
+      Given an array of numbers, returns the number of digits in the largest numbers in the list.
+V4 -Radix Sort: PseudoCode-:
+  RADIX SORT PseudoCode:
+    Define a function that accepts list of numbers.
+    Figure out how many digits the largest number has.
+    Loop from k = 0 up to this largest number of digits.
+    For each iteration of the loop:
+      Create buckets for each digit (0 to 9).
+      place each number in the corresponding bucket based on its kth digit.
+      Replace our existing array with values in our buckets, starting with 0 and going up to 9.
+    Return list at the end!
+V5 -Radix Sort: Implementation-:
+  Constructor Implementation:
+    ../Scripts/V5 -Radix Sort Implementation-/constructor-implementation.js
+      If we want to add array values to other array, we can either:
+        Loop on the second array and extract its values.
+        Use the Spread Operator with Contact built-in method if the situation allows.
+V6 -Radix Sort: BIG O Complexity-:  
+  Keyword We Use And Their Definition:
+    -n- is the number of the numbers in our arr.
+    -k- is the number of the digit in the biggest number we have.
+  Radix Sort And Time Complexity:
+    Best Case is O(nk).
+    Average Case is O(nk).
+    Worst Case is O(nk).
+  Radix Sort And Space Complexity:
+    Average Case is O(n + k).
+  Controversial Topic In Radix Sort:
+    Theoretically, radical sort can be faster than any of the comparison sorts. But: 
+      Apparently because of limitations on how computers actually store numbers in memory. 
+        That may not actually be the case.
+===================================================================================================
+
+
+
+
+
+
+

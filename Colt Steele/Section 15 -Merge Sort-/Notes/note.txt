@@ -1,0 +1,101 @@
+V1 -PREREQUISITES-:
+  Mandatory section:
+    Section 1: BIG O NOTATION.
+    Section 6: RECURSION.
+  Highly recommended section:
+    Section 10: BUBBLE SORT.
+    Section 11: SELECTION SORT.
+    Section 12: INSERTION SORT.
+V2 -Intro to the "Crazier" Sorts-:
+  Objectives of the coming three sections:
+    Understand the limitations of the sorting algorithms we've learned so far.
+    Implement merge sort.
+    Implement quick sort.
+    Implement radix sort.
+  Quadratic Sorting Algorithm Problem:
+    They don't scale well in larger datasets.
+  Next Sorting Algorithms: 
+    There is a family of sorting algorithms that can improve time complexity. 
+      From O(n²) to O(n log n).
+    There's a tradeoff between efficiency and simplicity.
+    The more efficient algorithms are much less simple, and generally take longer to understand.
+V3 -Merge Sort: Introduction-:
+  Merge Sort General Info:
+    Merge sort is a divide-and-conquer algorithm that was invented by John von Neumann in 1945.
+    A detailed description and analysis of bottom-up merge sort appeared in:
+      Report by Goldstine and von Neumann as early as 1948.
+  Merge Sort Definitions:
+    It's a combination of three things - splitting up, merging and sorting!
+    Exploits the fact that arrays of 0 or 1 element are always sorted.
+    Works by decomposing an array into smaller arrays of 0 or 1 elements.
+      Then building up a newly sorted array.
+  My Try To Apply Merge Sorted Arrays Function:
+    ../Scripts/V3 -Merge Sort Introduction-/merge-sorted-arrays-try.js
+V4 -Merging Arrays Intro-:
+  Merging sorted arrays functions:
+    Conditions to apply it:
+      You should have two arrays, sorted in the same order, ascending or descending.
+    In order to implement merge sort. 
+      It's useful to first implement a function responsible for merging two sorted arrays.
+        It should create a new array which:
+          Sorted, and consists of all of the elements in the two input arrays.
+    This function should: 
+      Run in O(n + m) time and O(n + m) space.
+      Do not modify the parameters passed to it.
+  Apply Merging of two sorted arrays PseudoCode:
+    Create an empty array, take a look at the smallest values in each input array.
+    While there are still values we haven't looked at...
+    If the value in the first array is smaller than the value in the second array.
+      Push the value in the first array into our results.
+      Move on to the next value in the first array.
+    If the value in the first array is larger than the value in the second array.
+      Push the value in the second array into our results.
+      Move on to the next value in the second array.
+    Once we exhaust one array, push in all remaining values from the other array.
+V5 -Merging Arrays: Implementation-:    
+  Constructor Implementation:
+    ../Scripts/V5 -Merging Arrays Implementation-
+  My Try To Implement Merge Sort Algorithm.
+    ../Scripts/V5 -Merging Arrays Implementation-/merge-sort-implementation-try.js
+      I think i did it 😁, ALHAMDOLILAH.
+V6 -Writing Merge Sort Part 1-:
+  Merge Sort PseudoCode:
+    Break up the array into halves until you have arrays that are empty or have one element.
+    Once you have smaller sorted arrays. 
+      Merge those arrays with other sorted arrays until you back at the full length of the array.
+    Once the array has been merged back together, return the merged -and the sorted- array.
+V7 -Writing Merge Sort Part 2-:
+  Constructor Implementation:
+    ../Scripts/V7 -Writing Merge Sort Part 2-/constructor-implementation.js
+V8 -Merge Sort BIG O Complexity-:
+  Merge Sort And Big O Complexity:
+    Time Complexity is O(n log n) in all the cases.
+    Space Complexity is O(n).
+  O(n log n) Time Complexity In Merge Sort, Where that come from:
+    n:
+      We basically iterate over each array item each time we do the comparison and create an array.
+    log n:
+      It comes from the splitting process, the idea of dividing the original array again and again.
+        For each array length, the number of the decomposition is the log base 2 of that length.
+    Why The Multiply Operation:
+      Because in each decomposition process we have a loop over the whole array.
+  O(n) Space Complexity In Merge Sort, Where that come from:
+    If we have a larger array we will need more space, and that's for:
+      Temporarily store the merged arrays during the sorting process.
+    If space is a consideration then: 
+      Merge sort takes a lot more space than bubble sort or any of the other earlier sorts.
+So you then.
+  O(n log n) And Sorting ALgorithm:
+    The best that we can get for sorting algorithm.
+      Unless the algorithm itself takes advantage of some weird quirk in the data, like:
+        Radix Sort that uses a particular quirk of numbers and it won't work to sort anything else.
+===================================================================================================
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,180 @@
+V1 -PREREQUISITES-:
+  Mandatory section:
+    Section 1: BIG O NOTATION.
+V2 -Section Introduction-:
+  Talk about the things we just learned:
+    Big O Notation, time and space complexity, and analyzing code performance.
+      Take that content and apply it to the stuff we already know, foe example:
+        Arrays and objects, built in methods, loops, how do they perform?
+        What are the easy things, the fast things we can do to an array?
+        What's a method that might be slower than you would expect?
+  Course objectives:
+    Understand how objects and arrays work, through the lens of Big O.
+      Various operations.
+      Is there a fast way to insert to an array.
+      Is there a slow way, to insert to an array. 
+    Explain why adding elements to the beginning of an array is costly.
+      We'll talk about why that is and how it works.
+      Are there alternatives.
+        If there's a better way of inserting.
+    Compare and contrast the runtime for arrays and objects, as well as built-in methods.
+      Like the built in JavaScript 
+        Sort for an array and foreach. 
+        object keys and object has own property function .
+V3 -The BIG O of Objects-:
+  What is objects:
+    Unordered data structures.
+    Everything is stored in key value pairs.
+  When we should use it:
+    When you don't need order.
+      There's no beginning of the object, there's no end.
+        But you can't insert at the beginning or in the middle or the end of the object.
+    When you need fast access/insertion and removal.
+  Big O Notation of objects:
+    Insertion: O(1).
+      Add something into an object.
+      Store, a new piece of information in constant time.
+    Removal: O(n).
+      The removal process is also happened in a constant time.
+    Searching: O(1).
+      Not the looking for a key, the accessing information with a key is constant time.
+        Here we talk about checking to see if a given piece of information is in a value somewhere.
+        We have no easy way of doing that.
+        We would potentially have to check every single item, every property.
+        As the number of properties `n` grows, so the amount of time it takes to do that.
+    Access: O(1).
+      Retrieve something in constant time. 
+      You could also update something in constant time. 
+        Which is really the same as retrieving it, you're just changing it.
+  Big O Notation of object methods:
+    Object.keys(): O(n).
+      As the number of items in the object grows. 
+        We're going to have to visit every single thing once and add it to this array.
+    Object.value(): O(n).
+      As the number of items in the object grows. 
+        We're going to have to visit every single thing once and add its value it to an array.
+    Object.entries(): O(n).
+      As the number of items in the object grows. 
+        We're going to visit each pair in the object and create a separate array for them.
+        Little more work since it is having to compile the key and the value.
+        But it all just simplifies to of end at the end of the day.
+    hasOwnProperty: O(1).
+      We pass in a property name and it just tells us if it exist or it isn't.
+        If we're able to access information in constant time.
+          We should also be able to check if a key exists in pretty much the exact same time.
+  Summation: 
+    Objects are really quick for pretty much everything.
+    There's no order.
+    Arrays can be pretty fast for a lot of things. 
+      But the order also can slow them down depending on what we're doing.
+  Objects in JS and HashMap/HashTable:
+    We later in the course have a section called hashMaps. 
+      Where we actually learn a data structure that explains how objects work behind the scenes. 
+      How things are actually stored.
+      What does JavaScript actually do?
+    There's something called hashing.
+V4 -Quiz 4: Object Operations Quiz-:
+  ALHAMDOLILAH 😁 3 / 3.
+    QUESTIONS AND ANSWERS:
+      1- Q & A:
+        Q: What is the big O for adding a key and value into an object?
+        A: O(1)
+      2- Q & A:
+        Q: What is the big O for accessing a key in an object?
+        A: O(1)
+      3- Q & A:
+        Q: What is the big O of removing a key in an object?
+        A: O(1)
+V5 -When are Arrays Slow?-:
+  Arrays:
+    They are ordered.
+      Data inside the array are ordered.
+    Very useful if we need order, but it can come at a cost for some of the operations.
+    Each element has an index, a numeric value that corresponds to it.
+    They are not the only ordered data structure on Earth. 
+      The only one that we get for free in JavaScript.
+  When we shouldn't use array:
+    If you don't need order.
+    If you're just trying to store random data together, with a good optimization for performance: 
+      there are other options.
+    Even if you do need order, we have other structures, like: 
+    Singly linked list and a doubly linked list.
+      List structure where each element is in a spot and they're all connected in an order.
+        Sometimes can perform better than arrays depending on what you need.
+  Arrays with some operation: 
+    Access: O(1).
+    Searching: O(n).
+    Insertion:
+      In the beginning: O(n)
+        So we have to re-index every single element in the array.
+      In the end: O(1)
+    Removal:
+      In the beginning: O(n)
+        So we have to re-index every single element in the array.
+      In the end: O(1)
+    So `push` and `pop` always faster than `shift` and `unshift`.
+V6 -Big O of Array Methods-:
+  Big O of Array Operations
+    push: O(1)
+      Constant time. 
+      Adding data to the end of any array. 
+        Whether it's one item or a million items.
+        No re-indexing involved.
+    pop: O(1)
+      Constant time. 
+      Removing data from the end of any array.
+        Whether it's one item or a million items.
+        No re-indexing involved.
+    shift: O(N)
+      We have to re-index every element in the array if you're adding to the beginning.
+      As the number of elements grows. 
+        The number of things we have to re-index grows in proportion with that.
+    unshift: O(N)
+      We have to re-index every element in the array if you're removing from the beginning.
+      As the number of elements grows. 
+        The number of things we have to re-index grows in proportion with that.
+    concat: O(N)
+      Takes multiple arrays and merges them together.
+      It's not O(n + m)
+        Since the m is for the second array, we don't care.
+        It's all about that: 
+          The time that it's going to take will grow corresponds to the size of the arrays.
+    slice: O(N)
+      Return a copy of part of an array or the entire array if you want it to.
+        If we're trying to copy 10 elements versus 1000 elements from an array. 
+          The amount of time it takes grows in proportion with that size.
+    splice: O(N)
+      Splice is going to remove and add new elements.
+      We can insert at the beginning of an array, we could also insert at the end of the array.
+      We can replace given elements.
+      If we're inserting in the middle of the array, we just simplify that to O(n).
+        This means shifting and re-indexing everything that comes after it.
+    sort: O(N * log N)
+      The time it takes to sort an array is larger than just O(n).
+        We have to make comparisons.
+        We have to move things around.
+        It's not enough just to look at every element once, and that's not enough to sort it.
+    forEach/map/filter/reduce/etc.: O(N)
+      Acting on each element or with each element.
+        As the size of the array grows, so does the amount of time it takes.
+  Summary:
+    Objects: 
+      Fast at pretty much everything, but there's no order to.
+    Arrays: 
+      Great when you need an order, but still be mindful that it's better if you can:
+        Add and remove from the end. 
+        Avoid adding and removing from the beginning.
+          The same goes to adding and removing from the middle.
+V7 -Quiz 5: Array Operations Quiz-:
+  ALHAMDOLILAH 😁 3 / 3.
+    QUESTIONS AND ANSWERS:
+      1- Q & A:
+        Q: What is the big O for pushing into an array?
+        A: O(1)
+      2- Q & A:
+        Q: What is the big O for shifting into an array?
+        A: O(n)
+      3- Q & A:
+        Q: What is the big O for the forEach function?
+        A: O(n)
+===================================================================================================

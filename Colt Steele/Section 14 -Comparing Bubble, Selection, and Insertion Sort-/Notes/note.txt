@@ -1,0 +1,25 @@
+V1 -Comparing Bubble, Selection, and Insertion Sort-:
+  The Three Sorting Algorithms Names:
+    Elementary Sorting Algorithm.
+    Quadratic Sorting Algorithm.
+      In the worst case the time complexity of all of them is O(n²).
+  Elementary Sorting Algorithm And Space Complexity:
+    All of them considered as O(1).
+      Some of other faster algorithms create a bunch of smaller arrays. for example: 
+        Merge sort.
+          Its space complexity is O(n) and not constant.
+  Elementary Sorting Algorithm With Nearly Sorted Data:
+    Bubble Sort & Insertion Sort:
+      We will need to fewer processes to produce the sorted array.
+      So we can say there are O(n) in this case.
+    Selection Sort:
+      It will do the same work always, it's always O(n²).
+  Insertion Sort Advantage:
+    Good as an online algorithm.
+    If you need your data to be continuously sorted, while adding new values with the time.
+      Because for each new value we will need to single iteration, no more. 
+  Elementary Sorting Algorithm Advantages:
+    Easy to understand.
+    Good start to understand the more complex algorithms more smoothly.
+    Can perform better on very small datasets.
+===================================================================================================

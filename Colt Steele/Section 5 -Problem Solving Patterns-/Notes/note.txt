@@ -1,0 +1,228 @@
+V1 -PREREQUISITES-:
+  Mandatory section:
+    Section 1: BIG O NOTATION.
+    Section 4: Problem Solving Approach.
+V2 -Intro to Problem Solving Patterns-:
+  This section is a continuation of the previous section, they're meant to go together.
+  Now we're going to talk about some common patterns that sometimes can come in handy.
+    There are some common patterns that we'll discuss that do apply to multiple problems.
+      Common approaches to writing code sort of archetypes.
+      That does not mean that you cover every possible scenario on earth.
+      It might help you in one out of five, one out of ten challenges you have to face.
+  List of different approaches -different patterns- to write code:
+    Frequency Counter
+    Multiple Pointers
+    Sliding Window
+    Divide and Conquer
+    Dynamic Programming
+    Greedy Algorithms
+    Backtracking
+    etc.
+V3 -Frequency Counter Pattern-:
+  More about frequency counter pattern:
+    Using an object usually in JS to collect a bunch of values and their frequencies.
+    Useful in algorithms when you: 
+      Have multiple pieces of data -multiple inputs-. 
+      You need to compare them to see: 
+        If the consist of similar values. 
+        If the are anagrams of one another. 
+        If a value is contained inside of another value. 
+      Any time you're comparing pieces of data -two inputs or more-.
+      Any time you want to check the frequencies of certain things occurring.
+    Use an object to construct a profile. 
+    Way of breaking down the contents of an array or a string. 
+      Usually some sort of linear structure like that.
+    Quickly compare the objects those were constructed from the data that we want to compare.
+  It's benefit:
+    Usually it's O(n) compared to the easier solution, which often involves nested loops.
+      So O(n²).
+  Example:
+    Write a function called same, which accepts to 2 arrays. 
+    The function should return true if: 
+      every value in the array has its corresponding values squared in the second array.
+    The order doesn't matter.
+    The frequency of values must be the same.
+    Inputs & Outputs Examples:
+      same([1,2,3], [4,1,9]) // true
+      same([1,2,3], [1,9])   // false
+      same([1,2,1], [4,4,1]) // false -must be same frequency-
+  Solution of this problem:
+    My Naive Solution:
+      ../Scripts/V3 -Frequency Counter Pattern-/My Solutions/my-solution 1.js
+    My Best Solution:
+      ../Scripts/V3 -Frequency Counter Pattern-/My Solutions/my-solution 2.js
+        My best solution was following the same pattern without my knowledge 😁.
+    The Constructor Naive Solution:
+      ../Scripts/V3 -Frequency Counter Pattern-/Constructor Solution/constructor-solution 1.js
+        The constructor here use indexOf and honestly is better than other loop in our case.
+          It's still does the loop process, but it's more shorter and readable also.
+        Also for apply the exponential operation on a variable we can write:
+          variableName ** 2.
+    The Constructor Frequency Counter Pattern Solution:
+      ../Scripts/V3 -Frequency Counter Pattern-/Constructor Solution/constructor-solution 2.js
+V4 -Frequency Counter: Anagram Challenge-:
+  The problem: 
+    Given two strings. 
+    Write a function to determine if the second string is an anagram of the first. 
+    An anagram is a word, phrase, or name formed by rearranging the letters of another. 
+      Such as cinema, formed from iceman.
+    Examples: 
+      validAnagram('', '') // true
+      validAnagram('aaz', 'zza') // false
+      validAnagram('anagram', 'nagaram') // true
+      validAnagram("rat","car") // false) // false
+      validAnagram('awesome', 'awesom') // false
+      validAnagram('qwerty', 'qeywrt') // true
+      validAnagram('texttwisttime', 'timetwisttext') // true
+    Target:
+      Use the frequency counter pattern.
+V5 -Coding Exercise 1: Frequency Counter - validAnagram-:
+  Finished successfully 😁, See:
+    ../Scripts/V4 -Frequency Counter Anagram Challenge-/my-solution.js
+V6 -Anagram Challenge Solution-:
+  Constructor solution in:
+    ../Scripts/V4 -Frequency Counter Anagram Challenge-/constructor-solution.js
+      The constructor follows new approach:
+        Store the date of the first string in the object. 
+        Use the date of the second object to decrease the numbers in the first one.
+  When we can use this pattern:
+    Any time you have multiple pieces of data and you need to compare them. 
+      You need to see if they consist of the same individual pieces.
+V7 -Multiple Pointers Pattern-:
+  Definition of the multiple pointers pattern:
+    Creating pointers or values that correspond to an index or position. 
+      Move the pointers towards the beginning, end or middle based on a certain condition.
+    Very efficient for solving problems with minimal space complexity as well.
+    We have some sort of structure, linear structure, like: 
+      Array, string or doubly linked list, or even a singly linked list.
+    and we are searching for a pair of values or searching for something that meets a condition.
+      Usually we're looking for a pair.
+    We use two references -pointers-, and we move them in a certain way. 
+      Vary from case to another.
+    The pointer which is just a variable.
+  Example for use the multiple pointers pattern:
+    Write a function called sumZero. 
+      Which accepts a sorted array of integers. 
+      It should find the first pair where the sum is 0. 
+        Return an array that includes both values that sum to zero. 
+        Return undefined if a pair does not exist.
+      It's important to note and remember that the array is sorted.
+    Inputs & Outputs Examples:
+      sumZero([-3,-2,-1,0,1,2,3])   // [-3,3] 
+      sumZero([-2,0,1,3])           // undefined
+      sumZero([1,2,3])              // undefined
+    Solution:
+      Constructor:
+        Naive Solution:
+          ..\Scripts\V7 -Multiple Pointers Pattern-\Constructor Solutions\constructor-solution 1.js
+        Multiple Pattern Solution:
+          ..\Scripts\V7 -Multiple Pointers Pattern-\Constructor Solutions\constructor-solution 2.js
+      Me:
+        Naive Solution:
+          ../Scripts/V7 -Multiple Pointers Pattern-/My Solutions/my-solution 1 .js
+        Multiple Pattern Solution:
+          ../Scripts/V7 -Multiple Pointers Pattern-/My Solutions/my-solution 2.js
+            I did it successfully 😁.
+V8 -Multiple Pointers: Count Unique Values Challenge-:
+  New Challenge:
+    Implement a function called countUniqueValues, which: 
+      Accepts a sorted array, and counts the unique values in the array. 
+      There can be negative numbers in the array, but it will always be always sorted.
+V9 -Coding Exercise 2: Multiple Pointers - countUniqueValues-:
+  Finished successfully 😁, See:
+    ../Scripts/V8 -Multiple Pointers Count Unique Values Challenge-/My Solutions/my-solution 2.js
+V10 -Count Unique Values Solution-:
+  Constructor Solution:
+    ../Scripts/V8 -...-/Constructor Solutions/constructor-solution.js
+      The solution of the constructor was better, in term of length.
+        He used for loop, while i used while and make a variable acts like the index in th loop.
+V11 -Sliding Window Pattern-:
+  Definition:
+    This pattern involves creating a window. 
+      That can be an array or number from one position to another Depending on certain conditions. 
+      The window either increases or closes (and a new window is created).
+  When we can use it:
+    Useful when we have a set of data like an array or a string again, and we're looking for: 
+      A subset of that data that is continuous in some way.
+    Where we're keeping track of a subset of data in a larger set of data.
+      Very useful for keeping track of a subset of data in an array/string etc.
+    In cases like:
+      Example 1:
+        Write a function to find the longest sequence of unique characters.
+        Inputs & Outputs Examples:
+          lengthOfLongestSubstring("Hello World");         // " World"
+          lengthOfLongestSubstring("IAmSadAndAfraid");     // "ndAfr" & "fraid"
+      Example 2:
+        Write a function called maxSubArraySum. 
+          Which accepts an array of integers and a number called n. 
+          The function should calculate the maximum sum of n consecutive elements in the array.
+        Inputs & Outputs Examples:
+          maxSubArraySum([1,2,5,2,8,1,5],2)   // 10
+          maxSubArraySum([1,2,5,2,8,1,5],4)   // 17
+          maxSubArraySum([4,2,1,6],1)         // 6
+          maxSubArraySum([4,2,1,6,2],4)       // 13
+          maxSubArraySum([],4)                // null
+        Solutions:
+          My Solutions:
+            Naive One:
+              ../Scripts/V9 -...-/My Solutions/my-solution 1 .js
+            With the Sliding Window Pattern:
+              ../Scripts/V9 -...-/My Solutions/my-solution 2.js
+                Although all what i did and doing, i did right, ALHAMDOLILAH.  
+          Constructor Solution:
+            Naive One:
+              ../Scripts/V9 -...-/Constructor Solutions/constructor-solution 1.js
+                I forget to consider the negative numbers. 
+                  I should always think about different possibilities.
+                Since i will take an array from another with a specific length.
+                  We will not need to make the index achieve the end of the array. 
+            With the Sliding Window Pattern:
+              ../Scripts/V9 -...-/Constructor Solutions/constructor-solution 2.js
+V12 -Divide And Conquer Pattern-:
+  Examples of using Divide And Conquer Algorithm:
+    Quick sort algorithm. 
+    Merge sort algorithm. 
+    Searching algorithms, specifically binary search.
+    Binary search trees.
+  Definition:
+    This pattern involves dividing a data set into smaller chunks. 
+      Then repeating a process with a subset of data.
+    This pattern can tremendously decrease time complexity
+    Take a larger set of data, usually an array, a string.
+      It could be a linked list or a tree, even when we talk about those.
+    Rather than starting from the left and moving to the right to achieve our purpose.
+      We start by dividing it into smaller pieces.
+        Then doing something to each smaller piece to determine where to go next.
+  Challenge:
+    Given a sorted array of integers. 
+    Write a function called search. 
+      Accepts a value and returns the index where the value passed to the function is located. 
+      If the value is not found, return -1
+    Inputs & Outputs Examples:
+      search([1, 2, 3, 4, 5, 6], 4)   // 3
+      search([1, 2, 3, 4, 5, 6], 6)   // 5
+      search([1, 2, 3, 4, 5, 6], 11)  // -1
+  Solutions:
+    Constructor Solution:
+      Naive:
+        ../Scripts/V12 -Divide And Conquer Pattern-/Constructor Solutions/constructor-solution 1.js
+      With the Divide And Conquer Pattern:
+        ../Scripts/V12 -Divide And Conquer Pattern-/Constructor Solutions/constructor-solution 2.js
+    My Solution:
+      With the Divide And Conquer Pattern:
+        ../Scripts/V12 -Divide And Conquer Pattern-/My Solutions/my-solution.js
+          Unfortunately, i didn't solve it by myself.
+            I got the general idea, but i was confuse about two things:
+              How to calculate the middle index in each time.
+                The constructor used two pointers. 
+                  One represents the first index in the array that we search in, not the original. 
+                  The second represents the last index in the same array.
+                    And by `first + last / 2` we can get the middle. 
+              How to know that we finished the search.
+                Since we use the two pointers for determine the new array that we are searching in.
+                  If the point of the beginning became bigger that the end pointer, we over. 
+===================================================================================================
+Solve it later on
+  We have a string, write a function to find the longest sequence of unique characters.
+    We did in:
+      ../../Section 6 -...-/Scripts/V10 -Coding Exercise 9 Sliding Window -findLongestSubstring- -

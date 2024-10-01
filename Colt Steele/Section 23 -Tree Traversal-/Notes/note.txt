@@ -1,0 +1,152 @@
+V1 -PREREQUISITES-:
+  Mandatory section:
+    Section 1: BIG O NOTATION
+    Section 6: RECURSION
+    Section 22: BINARY SEARCH TREES
+  Highly recommended section:
+    Section 18: DATA STRUCTURES INTRO
+    Section 19: SINGLY LINKED LISTS
+    Section 21: STACKS & QUEUES
+    Section 20: DOUBLY LINKED LISTS
+V2 -Intro To Tree Traversal-:
+  What is Tree Traversal:
+    Given any tree, How do we visit every node one time.
+    It's a classic computer science problem. and there are many, many ways of doing it.
+  Two primary types of tree traversal:
+    Breadth-First Search (BFS) / Level-Order Traversal:
+      Starting at the beginning and then basically working across the tree breadth.
+      See:
+        ../Assets/V2 -Intro To Tree Traversal-/breadth-first-search.png
+    Depth-First Search (DFS) Traversals:
+      Your primary direction is going vertically to the end of the tree and then coming back up.
+      There are three common types of DFS traversals:
+        DFS -InOrder-:
+          ../Assets/V2 -Intro To Tree Traversal-/depth-first-search-in-order.png
+        DFS -PreOrder-:
+          ../Assets/V2 -Intro To Tree Traversal-/depth-first-search-pre-order.png
+        DFS -PostOrder-:
+          ../Assets/V2 -Intro To Tree Traversal-/depth-first-search-post-order.png
+        There are certain situations where you might want to use one versus the other.
+V3 -Breadth First Search Intro-:
+  My Early Try To Implement BFS:
+    ../Scripts/V3 -Breadth First Search Intro-/my-early-try-to-implement-BFS.js
+  BFS PseudoCode:
+    Steps - Iteratively
+      Create a queue -this can be an array- and a variable to store the values of nodes visited.
+      Place the root node in the queue.
+      Loop as long as there is anything in the queue.
+      Dequeue a node from the queue and push its value into the variable that stores the nodes.
+      If there is a left property on the node dequeued - add it to the queue
+      If there is a right property on the node dequeued - add it to the queue
+      Return the variable that stores the values
+  My Implementation After Constructor PseudoCode:
+    My Implement Using Constructor Approach:
+      ../Scripts/V3 -Breadth First Search Intro-/my-implement-using-constructor-approach.js
+V4 -Breadth First Search Solution-:
+  Constructor Solution:
+    ../Scripts/V4 -Breadth First Search Solution-/constructor-solution.js
+V5 -Depth First PreOrder Intro-:
+  The PreOrder Means:
+    Visit the node first.
+    Then we look at the entire left side, we traverse the left, and then we traverse the right.
+  My Early Implementation Of DFS PreOrder Method:
+    ../Scripts/V5 -Depth First PreOrder Intro-/dfs-pre-order-early-implementation.js
+  DFS PreOrder PseudoCode:
+    Steps - Recursively.
+      Create a variable to store the values of nodes visited.
+      Store the root of the BST in a variable called current.
+      Write a helper function which accepts a node.
+      Push the value of the node to the variable that stores the values.
+      If the node has a left property:
+        Call the helper function with the left property on the node.
+      If the node has a right property: 
+        Call the helper function with the right property on the node.
+      Invoke the helper function with the current variable.
+      Return the array of values.
+V6 -Depth First PreOrder Solution-:
+  Constructor Solution:
+    ../Scripts/V6 -Depth First PreOrder Solution-/constructor-solution.js
+  Recursive Function Base Case:
+    It can be: 
+      A return in the function body to stop it.
+      A condition specific to determine if we will call the function again or not.
+V7 -Depth First PostOrder Intro-:   
+  The PostOrder Means:
+    We visit a node, after we have looked at the left and the right.
+    So we have two steps: 
+      We explore everything starting from a specific node. 
+        Traverse the entire tree if the starting node is the root.
+        Traverse the entire branch from a given node.
+      Then we visit the node that we start with.
+  My Early Implementation Of DFS PostOrder Method:
+    ../Scripts/V7 -Depth First PostOrder Intro-/dfs-post-order-early-implementation.js
+  DFS PostOrder PseudoCode:
+    Steps - Recursively
+      Create a variable to store the values of nodes visited
+      Store the root of the BST in a variable called current
+      Write a helper function which accepts a node
+      If the node has a left property: 
+        Call the helper function with the left property on the node
+      If the node has a right property: 
+        Call the helper function with the right property on the node
+      Push the value of the node to the variable that stores the values
+      Invoke the helper function with the current variable
+      Return the array of values
+V8 -Depth First PostOrder Solution-:
+  Constructor Solution:
+    ../Scripts/V8 -Depth First PostOrder Solution-/constructor-solution.js
+V9 -Depth First InOrder Intro-:
+  The InOrder Means:
+    Traverse the entire left side, then visit the node and then traverse the entire right side.
+  My Early Implementation Of DFS InOrder Method:
+    ../Scripts/V9 -Depth First InOrder Intro-/dfs-in-order-early-implementation.js
+  DFS InOrder PseudoCode:
+    Steps - Recursively
+      Create a variable to store the values of nodes visited
+      Store the root of the BST in a variable called current
+      Write a helper function which accepts a node
+      If the node has a left property: 
+        Call the helper function with the left property on the node
+      Push the value of the node to the variable that stores the values
+      If the node has a right property:
+        Call the helper function with the right property on the node
+      Invoke the helper function with the current variable
+      Return the array of values
+V10 -Depth First InOrder Solution-:
+  Constructor Solution:
+    ../Scripts/V10 -Depth First InOrder Solution-/constructor-solution.js
+V11 -When to Use BFS and DFS-:
+  BFS VS DFS:
+    When DFS is better:
+      If we have a big tree with normal structure, that automatically means:
+        A lot of nodes in deep level, which cause a lot of space complexity for BFS.
+          Since we will use the queue to store the nodes to treat them.
+      See:
+        ../Assets/V11 -When to Use BFS and DFS-/massive-normal-bst.jpg
+    When BFS is better:
+      If we have a big tree with a weird structure close to linked list, that automatically means:
+        A lot of nodes in the same vertical level, which cause a lot of space complexity for DFS.
+          Since we will have to call the  use the queue to store the nodes to treat them.
+      See:
+        ../Assets/V11 -When to Use BFS and DFS-/weird-bst.png
+    Always remember that the time complexity is the same since we want to visit each node once.
+  Benefit Of using:
+    DFS InOrder in a BST:
+      Get all the nodes in the tree in their underlying order, going from lowest to highest.
+    DFS PreOrder in a BST:
+      Useful if you're trying to clone or duplicate a tree. 
+      If you want to flatten it out so you can store it.
+        Then recreate it from that serialized structure.
+  The DFS types aren't a big deal though:
+    It's very easy to switch between them, just reorder the code lines and recall the function.  
+  RECAP:
+    Trees are non-linear data structures that contain a root and child nodes.
+    Binary Trees can have values of any type, but at most two children for each parent.
+    Binary Search Trees are a more specific version of binary trees where: 
+      Every node to the left of a parent is less than its value.
+      Every node to the right is greater.
+        You can only have a binary search tree with data that is comparable. 
+          Pieces of data where you can say this is definitely less than.
+    We can search through Trees using BFS and DFS.
+===================================================================================================
+??? Remove a node from a BST

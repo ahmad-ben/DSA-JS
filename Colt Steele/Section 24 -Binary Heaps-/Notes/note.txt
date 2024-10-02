@@ -1,0 +1,122 @@
+V1 -PREREQUISITES-:
+  Mandatory sections:
+    Section 1: BIG O NOTATION
+    Section 6: RECURSION
+    Section 22: BINARY SEARCH TREES
+    Section 23: TREE TRAVERSAL
+  Highly recommended sections:
+    Section 18: DATA STRUCTURES INTRO
+    Section 19: SINGLY LINKED LISTS
+    Section 21: STACKS & QUEUES
+    Section 20: DOUBLY LINKED LISTS
+V2 -Intro to Heaps-:
+  What are heaps:
+    Another category of trees.
+      Everything that applies to trees in general applies to heaps with additional special rules.
+  Some Heaps Types:
+    Binary Heap, Fibonacci heaps, Leonardo heaps, a soft heap, a leftist heap.
+      We will focus on binary heap.
+  Objectives:
+    Define what a binary heap is.
+    Compare and contrast min and max heaps, the two type of binary heaps.
+    Implement basic methods on heaps.
+      Focus on writing code for a max heap and add some basic methods.
+        min and max very similar and if you can implement one, you can implement the other.
+    Understand where heaps are used in the real world.
+    What other data structures can be constructed from heaps.
+  What is a Binary Heap:
+    Very similar to a binary search tree, but with some different rules!
+    We have two types:
+      A MaxBinaryHeap and a MinBinaryHeap. 
+    In a MaxBinaryHeap the parent nodes are always larger than child nodes. 
+    In a MinBinaryHeap the parent nodes are always smaller than child nodes.
+    Unlike a binary search tree, there is no order to the left versus the right.
+      See:
+        ../Assets/V2 -Intro to Heaps-/max-binary-heap.png
+      The exact same number in a binary search tree:
+        ../Assets/V2 -Intro to Heaps-/binary-search-tree.png
+  Max Binary Tree:
+    Each parent has at most two child nodes.
+    The value of each parent node is always greater than its child nodes.
+    In a max Binary Heap the parent is greater than the children.
+      But there are no guarantees between sibling nodes.
+    A binary heap is as compact as possible. 
+      All the children of each node are as full as they can be. 
+      Every left and right is filled before we move down.
+      Left children are filled out first.
+    See:
+      ../Assets/V2 -Intro to Heaps-/max-binary-heap-representation.png
+      ../Assets/V2 -Intro to Heaps-/max-binary-heap-siblings-relation.png
+  Min Binary Tree:
+    See:
+      ../Assets/V2 -Intro to Heaps-/min-binary-heap.png
+  Why do we need to know this?
+    Binary Heaps are used to implement Priority Queues, very commonly used data structures.
+    They are also used quite a bit, with graph traversal algorithms.
+V3 -Storing Heaps-:
+  How we can store Binary Heaps:
+    We can use arrays with a mathematical equation to store binary heaps.
+    See:
+      ../Assets/V3 -Storing Heaps-/representing-a-heap-in-array.png
+    To find the two children for a parent node in our array we apply this equation:
+      LEFT CHILD POSITION  = PARENT POSITION * 2 + 1
+      RIGHT CHILD POSITION = PARENT POSITION * 2 + 2
+        Explanation:
+          The index of the parent node in the number of the previous nodes.
+          Each node before the parent node will have two children already taken.
+            and that's where the -PARENT POSITION * 2- came from.
+          But why we add +1 to the left side.
+            It's because the root node will not be taken from any node, it's the first one.
+          And the +2 in the right is because we already take the left node so we should add 1.
+            1 + 1 = 2.
+          See:
+            ../Assets/V3 -Storing Heaps-/heap-in-array-parent-to-children-relation.png
+    To find the parent of a node we just have two flip the equation:
+      If the index is odd:
+        LEFT CHILD POSITION  = PARENT POSITION * 2 + 1
+        L_C_P - 1            = P_P * 2
+        (L_C_P - 1) / 2      = P_P
+      If the index is even:
+        RIGHT CHILD POSITION = PARENT POSITION * 2 + 2
+        R_C_P - 2            = P_P * 2
+        (R_C_P - 2) / 2      = P_P
+      See
+        ../Assets/V3 -Storing Heaps-/heap-in-array-child-to-parent-relation.png
+V4 -Heap: Insert Intro-:
+  My Early Try Of Insert Method:
+    ../Scripts/V4 -Heap Insert Intro-/my-early-try-of-insert-method.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+V5 -Heap: Insert Solution-:
+V6 -Heap: ExtractMax Intro-:
+V7 -Heap: ExtractMax Solution-:
+V8 -Priority Queue Intro-:
+V9 -Priority Queue PseudoCode-:
+V10 -Priority Queue Solution-:
+V11 -BIG O of Binary Heaps-:
+===================================================================================================

@@ -1,27 +1,25 @@
 class MaxBinaryHeap {
   constructor(){
-    this.value = [];
+    this.values = [];
   }
 
   insert(val){
-    if(this.value.length === 0) {this.value.push(val); return this.value;}
-    
-    this.value.push(val);
-    let childIdx = this.value.length - 1;
+    this.values.push(val);
+    let childIdx = this.values.length - 1;
     let parentIdx = Math.floor((childIdx - 1) / 2);
 
-    while(this.value[childIdx] > this.value[parentIdx] && childIdx !== 0){
-      const parentIdxValue = this.value[parentIdx];
-      this.value[parentIdx] = this.value[childIdx];
-      this.value[childIdx] = parentIdxValue;
+    while(this.values[childIdx] > this.values[parentIdx] && childIdx){
+      const parentPrevValue = this.values[parentIdx];
+      this.values[parentIdx] = this.values[childIdx];
+      this.values[childIdx] = parentPrevValue;
       
       childIdx = parentIdx;
       parentIdx = Math.floor((childIdx - 1) / 2);
     }
 
-    return this.value;
-
+    return this.values;
   }
+
 }
 
 const maxBinaryHeap = new MaxBinaryHeap();
@@ -35,6 +33,9 @@ console.log(maxBinaryHeap.insert(25));
 console.log(maxBinaryHeap.insert(75));
 console.log(maxBinaryHeap.insert(90));
 console.log(maxBinaryHeap.insert(45));
+console.log(maxBinaryHeap.insert(1000));
+console.log(maxBinaryHeap.insert(500));
+console.log(maxBinaryHeap.insert(600));
 
 
 

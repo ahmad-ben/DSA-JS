@@ -85,38 +85,107 @@ V3 -Storing Heaps-:
 V4 -Heap: Insert Intro-:
   My Early Try Of Insert Method:
     ../Scripts/V4 -Heap Insert Intro-/my-early-try-of-insert-method.js
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  INSERT PseudoCode
+    Push the value into the values property on the heap
+    Bubble Up:
+      Create a variable called index which is the length of the values property - 1.
+      Create a variable called parentIndex which is the floor of (index-1)/2.
+      Keep looping as long as: 
+        The values element at the parentIndex is less than the values element at the child index.
+      Swap the value in the parentIndex with the value of the element property at the child index.
+      Set the index to be the parentIndex, and start over!.
+    See the visual implementation of this process:
+      ../Assets/V4 -Heap Insert Intro-/heaps-insert-steps
 V5 -Heap: Insert Solution-:
+  Constructor Solution:
+    "../Scripts/V5 -Heap Insert Solution-/constructor-solution.js
 V6 -Heap: ExtractMax Intro-:
+  My Early Try Of ExtractMax Method:
+    Before knowing the general idea:
+      ../Scripts/V6 -Heap ExtractMax Intro-/my-first-early-try-of-extract-max-method.js
+    After knowing the general idea and see a visual representation of the process:
+      ../Scripts/V6 -Heap ExtractMax Intro-/my-second-early-try-of-extract-max-method.js
+  ExtractMax PseudoCode:
+    Swap the first value in the values property with the last one
+    Pop from the values property, so you can return the value at the end.
+    Have the new root "sink down" to the correct spot...​
+    Your parent index starts at 0 (the root)
+    Find the index of the left child: 2 * index + 1 (make sure its not out of bounds)
+    Find the index of the right child: 2*index + 2 (make sure its not out of bounds)
+    If the left or right child is greater than the element...swap. 
+    If both left and right children are larger, swap with the largest child.
+    The child index you swapped to now becomes the new parent index.  
+    Keep looping and swapping until neither child is larger than the element.
+    Return the old root!
 V7 -Heap: ExtractMax Solution-:
+  Constructor Solution:
+    ../Scripts/V7 -Heap ExtractMax Solution-/constructor-solution.js
 V8 -Priority Queue Intro-:
+  WHAT IS A PRIORITY QUEUE:
+    A data structure where each element has a priority. 
+    Elements with higher priorities are served before elements with lower priorities.
+    Collection of data where each node has a priority associated with it.
+      We want to take one element at a time out of this list or this structure.
+    Useful when you manage data of varying priority and you're not inserting things in order.
+    Separate from heaps, they are an abstract concept.
+      You could implement a priority queue with an array or a list, nut not the great version.
+        Slow, but it's possible.
+      Implement Priority Queue in a list:
+        ../Assets/V8 -Priority Queue Intro-/priority-queue-implemented-by-list.png
+          To find the next element to serve you should loop over the whole list to determine that.
+            It's basically O(n) time complexity.
+  Visual Example Of How We Can Implement A Priority Queue By A Heap In Real World:
+    Hospital Metaphor, Emergency room where people walk in and they have different injuries.
+      ../Assets/V8 -Priority Queue Intro-/example-pic-1.png
+      ../Assets/V8 -Priority Queue Intro-/example-pic-2.png
+      ../Assets/V8 -Priority Queue Intro-/example-pic-3.png
+      ../Assets/V8 -Priority Queue Intro-/example-pic-4.png
+      ../Assets/V8 -Priority Queue Intro-/example-pic-5.png
+      ../Assets/V8 -Priority Queue Intro-/example-pic-6.png
+      ../Assets/V8 -Priority Queue Intro-/example-pic-7.png
+      ../Assets/V8 -Priority Queue Intro-/example-pic-8.png
+        Heap works really well because insertion and removal time complexity is O(log n).
+  Priority Queue and Heap:
+    Priority queue is so commonly done with a heap, but again it is an abstract concept.
+      You can implement it in many ways.
 V9 -Priority Queue PseudoCode-:
+  My Early Implementation Of Priority Queue:
+    ../Scripts/V9 -Priority Queue PseudoCode-/my-early-implementation-of-priority-queue.js
+  OUR PRIORITY QUEUE
+    Write a Min Binary Heap - lower number means higher priority.
+    Each Node has a val and a priority.  Use the priority to build the heap.
+    Enqueue method accepts a value and priority: 
+      Makes a new node, and puts it in the right spot based off of its priority.
+    Dequeue method removes root element, returns it, and rearranges heap using priority.
 V10 -Priority Queue Solution-:
+  Constructor Solution:
+    ../Scripts/V10 -Priority Queue Solution-/constructor-solution.js
+  Note about current solutions:
+    They are not prepared to deal with two element with the same priority.
+      Our Heap doesn't handle this since there is no relation between siblings.
 V11 -BIG O of Binary Heaps-:
+  Binary Heap And Big O:
+    Insertion And Removal are O(log N).
+      That's because in the worst case for each level we only need to apply one process.
+      Every time we double the number of nodes, every new full complete layer. 
+        We are only increasing the time that it takes by one.
+      For worst case is the same since we don't have any weird depressing trees in heap:
+        ../Assets/V11 -BIG O of Binary Heaps-/impossible-heap-case.png
+          Heaps can never look like this, this is against the rules of a heap.
+            When we insert into a heap, we always fill out the left side first.
+    Search is O(N).
+      Are not really made to be searchable.
+      If you care about search, then you probably want to use a bst or something similar.
+      Some time we can eliminate some of the nodes, for example:
+        We are searching for node with value 80 in a MaxBinaryHeap.
+        One of the nodes is less than 80.
+          That's automatically means all its children ae also less than.
+        In this case we can say the search time complexity is O(n / 2)
+          Simply it's O(n).
+  RECAP:
+    Binary Heaps are very useful data structures for: 
+      Sorting, and implementing other data structures like priority queues.
+    Binary Heaps are either MaxBinaryHeaps or MinBinaryHeaps. 
+      With parents either being smaller or larger than their children.
+    With just a little bit of math, we can represent heaps using arrays!
 ===================================================================================================

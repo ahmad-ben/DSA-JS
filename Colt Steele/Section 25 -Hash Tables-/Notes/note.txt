@@ -1,0 +1,203 @@
+V1 -PREREQUISITES-:
+  Mandatory sections:
+    Section 1: BIG O NOTATION
+    Section 18: DATA STRUCTURES INTRO
+V2 -Intro to Hash Tables-:
+  OBJECTIVES:
+    Explain what a hash table is.
+    Define what a hashing algorithm.
+    Discuss what makes a good hashing algorithm.
+    Understand how collisions occur in a hash table.
+    Handle collisions using separate chaining or linear probing.
+  WHAT IS A HASH TABLE:
+    Also kno wn pretty commonly as a hash map.
+    Hash tables are used to store key-value pairs.
+    They are like arrays, but the keys are not ordered.
+      Arrays associate a key like zero or one... to a value, which could be anything else.
+        Those are strictly numeric, hash tables are not.
+      The keys in a hash table are not ordered.
+    Unlike arrays, hash tables are fast for all of the following operations: 
+      Finding values, Adding new values, and Removing values!
+  WHY SHOULD I CARE:
+    Nearly every programming language has some sort of hash table data structure.
+    Because of their speed, hash tables are very commonly used!
+  HASH TABLES IN THE WILD:
+    Python has Dictionaries or Dict.
+    JS has Objects and Maps.
+      Objects have some restrictions, but are basically hash tables.
+    Java, Go, & Scala have Maps.
+    Ruby has Hashes.
+  Introductory Example Of Using Hash Tables:
+    We want to store some hash colors.
+      To facilitate the process of retrieving we will link each color with its name.
+        Array in this case will not be suitable.
+V3 -More About Hash Tables-:
+  Hash Tables Key:
+    The key in the hash table is not necessarily a string, but we will focus only in strings.
+      Narrow down some of the complexity.
+  Implement A Hash Table Using An Array:
+    We will take the key and convert it to a number.
+      This number basically is the index of the value in our array.
+      We need to use hash function to convert the key to the index number.
+    The same key should always give us the same number.
+      Having the ability to retrieve the value after storing it in the array. 
+    See:
+      ../Assets/V3 -More About Hash Tables-/hash-table-in-array.png
+  Hash Functions:
+    Aso known as Hashing Functions.
+    It's very difficult to write a good hash function.
+    A lot of good has functions are used all over the place.
+    They have a lot of applications in security and cryptography.
+    We will talk about very simple hash function, limited to our scope.
+    But what we're talking about are going to be very simple, limited in scope, hash functions.
+    Writing one that takes a PDF, image, video or any piece of data and somehow spits out a number.
+      It's not easy.
+V4 -Intro to Hash Functions-:
+  WHAT MAKES A GOOD HASH -not a cryptographically secure one-:
+    Fast -constant time-, because we will also use it in access, update, generate, etc.
+      Not Like:
+        ../Scripts/V4 -...-/bad-example-of-hash-table-slow.js
+    Doesn't cluster outputs at specific indices, but distributes uniformly.
+      Not Like:
+        ../Scripts/V4 -...-/bad-example-of-hash-table-same-hash-value-different-key.js
+      We might have collisions and we'll talk about how to handle that.
+        If we have an 100 spots array and 500 things to store, we have to share some cubbyholes.
+          But we want it to be pretty evenly spread out.
+    Deterministic -same input yields same output-
+      Not Like:
+        ../Scripts/V4 -...-/bad-example-of-hash-table-same-key-different-hash-value.js
+      Very important, every time we pass the same input, we should always get the same output.
+  Hash Functions Use Cases:
+    Hash tables.
+    Protect data.
+    Store data.
+    Authenticate you when you log in on a website.
+    Cryptocurrencies and cryptography in general.
+      There's many types of hash functions, like a subgroup called cryptographic hash functions.
+  Basic hash function:
+    Takes data of arbitrary size and spit out data of a fixed size.
+      Simply map an input to an output of a fixed size.
+    Usually these function are one way, and that means:
+      From Key we can have the Hash Value, but from Hash value we can't have the Key.
+V5 -Writing Our First Hash Function-:
+  UTF 16 character codes:
+    To extract the UTF 16 character codes for each character we can use the charCodeAt function.
+      Every character has a numeric value associated with it.
+    If you subtract 96, this will give us the alphabetic ranking or position of the character.
+  If we want to make any number lower than a specific number it's enough to use the Modulo.
+    The modulo of the first number on the max number you don't want to exceed.
+  Simple Hash Example Works Only On Strings:
+    ../Scripts/V5 -Writing Our First Hash Function-/valid-simple-hash-function.js
+      Some problems in our function:
+        Only hashes strings -we won't worry about this-.
+        Not constant time -linear, mapping the whole string-.
+        Could be a little more random.
+V6 -Improving Our Hash Function-:
+  Improved Function:
+    ../Scripts/V6 -Improving Our Hash Function-/improved-function.js
+      Steps we did:
+        Stop the number of looping to be 100 as the maximum number of looping allowed.
+          That make the general trend of time complexity O(1).
+        Add a prime number to multiple it.
+          Specifically if your array length is also prime that will cause less collisions. 
+          Spreading data out as much as possible so that it's faster to retrieve.
+  Hash And Prime Numbers:
+    Hash functions almost always take advantage of prime numbers.
+V7 -Handling Collisions-:
+  Dealing with Collisions:
+    Even with a large array and a great hash function, collisions are inevitable. 
+    There are many strategies for dealing with collisions, but we'll focus on two:
+      Separate Chaining.
+      Linear Probing.
+  Separate Chaining:
+    At each index in our array we store values using a more sophisticated data structure, like: 
+      Array or a Linked list.
+    Allowing us to store multiple key-value pairs at the same index.
+    Allows us to have more data than the length of our table.
+    How we access the values:
+      First we use the key to know the index.
+      If we have more than one value there, we use the key as it is to search in that index keys.
+        Knowing we already store the key and the value in that index before.
+  Linear Probing:
+    Only store one piece of data at each position.
+    When we find a collision, we search through the array to find the next empty slot.
+      You could look backwards as well, but looking a head easier.
+    Unlike with separate chaining, this allows us to store a single key-value at each index.
+    Once we have more items than array limit we will need to another solution.
+    How we access the values:
+      First we use the key and find the corresponding index in the array. 
+        Where the value should be stored.
+      Check if the initial found position contain the wanted key.
+        If yes we find it, no need for additional steps.
+        If no you should simply loop forward from there in the array until you find it.
+    See:
+      ../Assets/V7 -Handling Collisions-/linear-probing.png
+V8 -Hash Table Set and Get-:
+  My Early Try Of Set And Get Of A Hash Table:
+    ../Scripts/V8 -Hash Table Set and Get-/early-try-set-get-methods-hash-table.js
+  Set PseudoCode:
+    Accepts a key and a value.
+    Hashes the key.
+    Stores the key-value pair in the hash table array via separate chaining.
+  Get PseudoCode:
+    Accepts a key.
+    Hashes the key.
+    Retrieves the key-value pair in the hash table.
+    If the key isn't found, returns undefined.
+V9 -Hash Table Set Solution-:
+  Constructor Solution:
+    ../Scripts/V9 -Hash Table Set Solution-/constructor-solution.js
+V10 -Hash Table Get Solution-:    
+  Constructor Solution:
+    ../Scripts/V10 -Hash Table Get Solution-/constructor-solution.js
+V11 -Hash Table Keys and Values-:
+  Keys PseudoCode: 
+    Loops through the hash table array and returns an array of keys in the table.
+  Values PseudoCode: 
+    Loops through the hash table array and returns an array of values in the table.
+  Handle duplicate data:
+    Keys are supposed to be unique anyway.
+    We may have more than one value that is the same.
+    We can:
+      Return both of them.
+      Return just one ignoring the duplicates.
+        Most of the time it's just the unique values that you return. 
+  My Early Try Of Keys And Value Methods:
+    ../Scripts/V11 -Hash Table Keys and Values-/early-try-keys-values-methods-hash-table.js
+V12 -Hash Table Keys and Values Solution-:
+  Constructor Solution:
+    ../Scripts/V12 -Hash Table Keys and Values Solution-/constructor-solution.js
+  Ways to enhance our implementation:
+    If the user try to add to the hash table a key is already exist:
+      Is better to inform him by warning message or something similar.
+    We can prevent duplicate keys by making the last value override the previous one:
+      This approach used in the most of the programming languages.
+  Array includes Function:
+    Method of Array instances. 
+    Determines whether an array includes a certain value among its entries. 
+      Returning true or false as appropriate.
+V13 -Hash Table Big O Complexity-:
+  BIG O of HASH TABLES -average case-:
+    Insert: O(1)
+    Deletion: O(1)
+    Access: O(1)
+      Using a given key, finding the corresponding value.
+    Search: O(n)
+      Searching for a value requires visiting every single item.
+    Measurements explanation:
+      These measurements depend and change corresponding to your hash function and how good it is.
+      See:
+        ../Assets/V13 -Hash Table Big O Complexity-/good-hash-function.png
+        ../Assets/V13 -Hash Table Big O Complexity-/bad-hash-function.png
+  Recap
+    Hash tables are collections of key-value pairs.
+    Hash tables can find values quickly given a key.
+    Hash tables can add new key-values quickly.
+    Hash tables store data in a large array, and work by hashing the keys.
+    A good hash should be fast, distribute keys uniformly, and be deterministic.
+    Separate chaining and linear probing are two strategies. 
+      Used to deal with two keys that hash to the same index.
+  Cryptographic hash functions exceptions:
+    They are generally O(1), and that's because:
+      Need to actually run for every single bit of data.
+===================================================================================================

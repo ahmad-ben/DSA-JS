@@ -1,0 +1,103 @@
+V1 -PREREQUISITES-:
+  Mandatory sections:
+    Section 1: BIG O NOTATION
+    Section 6: RECURSION
+    Section 22: BINARY SEARCH TREES
+  Highly recommended sections:
+    Section 18: DATA STRUCTURES INTRO
+    Section 19: SINGLY LINKED LISTS
+    Section 21: STACKS & QUEUES
+    Section 23: TREE TRAVERSAL
+V2 -Intro to Graphs-:
+  Graphs Use Cases: 
+    Any social network, like when modeling users.
+    Recommendation engines.
+      Like when Netflix recommends another movie.
+    When advertisers, target you based off of something.
+  OBJECTIVES:
+    Explain what a graph is.
+    Compare and contrast different types of graphs and their use cases in the real world.
+      Compare and contrast different types of graphs.
+      Compare and contrast graphs to other structures we've seen like trees.
+        Trees are special type of a graph.
+    Implement a graph using an adjacency list.
+      There are multiple ways to implement graphs.
+    Traverse through a graph using BFS and DFS.
+    Compare and contrast graph traversal algorithms.
+      Talk about big O along and some algorithms.
+  WHAT ARE GRAPHS:
+    A graph data structure consists of a finite -possibly mutable- of: 
+      Set of vertices or nodes or points.
+      With:
+        Set of unordered pairs of these vertices for an undirected graph.
+        Set of ordered pairs for a directed graph.
+          Pairs mean connections.
+    Simply is a collection of nodes and connections between those nodes.
+    See valid graphs:
+      ../Assets/V2 -Intro to Graphs-/valid-graph-1.png
+      ../Assets/V2 -Intro to Graphs-/valid-graph-2.png
+      ../Assets/V2 -Intro to Graphs-/valid-graph-3.png
+      ../Assets/V2 -Intro to Graphs-/valid-graph-4.png
+    In Graphs the place of the nodes isn't important, the important thing is the connection.
+V3 -Uses for Graphs-:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+V4 -Types of Graphs-:
+V5 -Storing Graphs: Adjacency Matrix-:
+V6 -Storing Graphs: Adjacency List-:
+V7 -Adjacency Matrix List BIG O-:
+V8 -Add Vertex Intro-:
+V9 -Add Vertex Solution-:
+V10 -Add Edge Intro-:
+V11 -Add Edge Solution-:
+V12 -Remove Edge Intro-:
+V13 -Remove Edge Solution-:
+V14 -Remove Vertex Intro-:
+V15 -Remove Vertex Solution-:
+===================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

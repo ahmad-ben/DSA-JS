@@ -40,39 +40,80 @@ V2 -Intro to Graphs-:
       ../Assets/V2 -Intro to Graphs-/valid-graph-4.png
     In Graphs the place of the nodes isn't important, the important thing is the connection.
 V3 -Uses for Graphs-:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  USES FOR GRAPHS:
+    Social Networks:
+      Representing connections between people or entities.
+      See:
+        ../Assets/V3 -Uses for Graphs-/people-connections-as-graph.png
+    Location / Mapping:
+      Representing locations as nodes and paths as edges exactly like Google Maps.
+      The places like cities, restaurants... are the nodes.
+      The roads are the connections.
+      See:
+        ../Assets/V3 -Uses for Graphs-/google-map.png
+    Routing Algorithms
+      When you request a Web page.
+        The response comes back in a bunch of different packets over the network.
+     Wikipedia pages:
+        Pages as Nodes, Each Wikipedia page can be a node in the graph.
+        Links as Edges, The hyperlinks between Wikipedia pages form the edges. 
+          Connecting one page -node- to another.
+        See:
+          ../Assets/V3 -Uses for Graphs-/wikipedia-pages-as-graph.png
+        This forms a directed graph. 
+          Where the direction represents which page links to which. 
+          Used to analyze relationships between topics and for search engine optimization -SEO-.
+    Visual Hierarchy
+    File System Optimizations
+  Recommendations:
+    Phases like:
+      "People also watched"
+      "You might also like..."
+      "People you might know"
+      "Frequently bought with"
+    Often the way that they're made -the way these all this data is stored- is: 
+      Some sort of graph relationship.
+    See:
+      ../Assets/V3 -Uses for Graphs-/two-games-as-graph.png
+        Things in green are common nodes between the two video games.
+  Graphs:
+    Bunch of nodes with connections between them.
+    There's not a pattern like there is for a tree or for a link to list.
+    Sort of free form, it's just nodes with connections.
 V4 -Types of Graphs-:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 V5 -Storing Graphs: Adjacency Matrix-:
 V6 -Storing Graphs: Adjacency List-:
 V7 -Adjacency Matrix List BIG O-:

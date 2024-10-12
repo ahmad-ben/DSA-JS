@@ -81,64 +81,213 @@ V3 -Uses for Graphs-:
     There's not a pattern like there is for a tree or for a link to list.
     Sort of free form, it's just nodes with connections.
 V4 -Types of Graphs-:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  ESSENTIAL GRAPH TERMS:
+    Vertex: A node.
+      Fancy technical term of a node.
+    Edge: Connection between nodes.
+      See:
+        ../Assets/V4 -Types of Graphs-/graph-vertex-and-edge.png
+    Weighted/Unweighted: Values assigned to distances between vertices.
+    Directed/Undirected: Directions assigned to distanced between vertices.
+  Tree and Graphs:
+    The tree is a graph in which any two vertices are connected by exactly one path. 
+    There's only one path from a given node to another.
+  Graph Types:
+    Directed VS Undirected:
+      Directed Graphs:
+        Often represented with arrows, which indicates the direction -the polarity- of that edge.
+        There is a direction assigned to the edge.
+        Edge could be bi directional, point both ways.
+        See:
+          ../Assets/V4 -Types of Graphs-/directed-graph.png
+        Real world example like Instagram follow system, it's directed relation -can be one way-:
+          ../Assets/V4 -Types of Graphs-/directed-graph-instagram-follow.png
+      Undirected Graphs:
+        There is no direction -polarity- to the edges.
+        They are two way connections.
+        See:
+          ../Assets/V4 -Types of Graphs-/undirected-graph.png
+        Real world example like Facebook friends, it's undirected relation -not a one way-:
+          ../Assets/V4 -Types of Graphs-/undirected-graph-facebook-friends.png
+    Weighted VS Unweighted:
+      Weighted:
+        When we assign a value to the edges, it becomes a weighted graph.
+        There is information about the connection itself.
+        See:
+          ../Assets/V4 -Types of Graphs-/weighted-graph.png
+        Real world example like Google maps, it's weighted graph:
+          ../Assets/V4 -Types of Graphs-/weighted-graph-google-maps.png
+          ../Assets/V4 -Types of Graphs-/weighted-graph-google-maps-clarify.png
+      Unweighted:
+        The edge has no value associated with it.
+        See:
+          ../Assets/V4 -Types of Graphs-/unweighted-graph.png
 V5 -Storing Graphs: Adjacency Matrix-:
+  There are two standard approaches to store graphs: 
+    Adjacency matrix:
+      Matrix:
+        Two dimensional structure, usually implemented with nested arrays, but not always.
+        Each cell in the table we created have a value. 
+          It represents the status of the relationship between the node column and the node row.
+      Basically we store information in rows and columns.
+      Every time we add a new node, we need to add an entire new row and column.
+      See:
+        ../Assets/V5 -Storing Graphs Adjacency Matrix-/adjacency-matrix-representation.png
+      More clarity examples:
+        ../Assets/V5 -Storing Graphs Adjacency Matrix-/directed-graph.png
+        ../Assets/V5 -Storing Graphs Adjacency Matrix-/directed-graph-adjacency-matrix.png
+        ../Assets/V5 -Storing Graphs Adjacency Matrix-/undirected-graph.png
+        ../Assets/V5 -Storing Graphs Adjacency Matrix-/undirected-graph-adjacency-matrix.png
+    Adjacency list.
 V6 -Storing Graphs: Adjacency List-:
-V7 -Adjacency Matrix List BIG O-:
+  Adjacency list.
+    We use an array or list to store the edges.
+    If the vertices are numeric and in order we can count on arrays:
+      Create a first array that its indexes values represent the numeric vertices:
+        The index zero represents the vertex zero and so one...
+      In each index we add an array contains the edges of the correspondent vertex.
+        In the index three of the first array: 
+          We create an array hold the vertices values those are linked to vertex three.
+      See:
+        ../Assets/V6 -Storing Graphs Adjacency List-/adjacency-list-numeric-vertices.png
+    In normal case when vertices hold string value, or any normal value in general:
+      We could use a hash table, use a key value pair of data structure.
+        Dictionary -python-, a JavaScript object, a map.
+      See:
+        ../Assets/V6 -Storing Graphs Adjacency List-/adjacency-list-normal-vertices.png
+V7 -Adjacency Matrix Vs. List BIG O-:
+  Adjacency Matrix And Adjacency List Big O:
+    VN is number of vertices.
+    EN is number of edges.
+    Add Vertex:
+      Matrix is O(VN²).
+        Expanding the matrix by adding a new row and column, hence the time complexity is O(VN²).
+      List is O(1).
+        Add a new property to our list -object-. 
+        add a new entry -key in the object or a list element-. 
+          No need to update existing structures.
+    Add Edge:
+      Matrix is O(1).
+        Directly setting the matrix cell at the row and column corresponding to the two vertices. 
+      List is O(1).
+        Add a new value to the proper list key.
+        Append the destination vertex to the source vertex's list.
+    Remove Vertex:
+      Matrix is O(VN²).
+        Deleting a row and a column and shifting the remaining elements. 
+        Since this affects the entire matrix, it takes O(V²) time.
+      List is O(VN + EN).
+        Remove the correspondent edge of the deleted vertex from other related vertices. 
+        Remove the property of the deleted vertex from our list. 
+        Two main tasks:
+          Remove the vertex itself. 
+            O(1) because it involves deleting a key -or an entry in the list-.
+          Remove edges pointing to the vertex: 
+            Checking every other vertex's list for any references to the vertex being deleted. 
+              In the worst case, you may need to 
+                Check every vertex’s adjacency list -O(VN)- and all of the edges -O(EN)-.
+    Remove Edge:
+      Matrix is O(1).
+        Setting the corresponding cell to 0 -or a default value-.
+      List is O(EN).
+        Iterate over the array until finding the edge and remove it.
+        Locating and removing the destination vertex from the source vertex's adjacency list. 
+          In the worst case, this may require iterating over the entire list of edges, hence O(EN).
+    Query:
+      Matrix is O(1).
+        To check if an edge exists between two vertices check the value in a specific matrix cell.
+      List is O(VN + EN).
+        specially if you use an undirected graph, you can't find the incoming edge simply.
+        Incoming Edges (To the Vertex Being Removed)
+          Incoming edges are edges from other vertices that point to the vertex you're removing.
+          To find these edges, you need to inspect the adjacency list of every other vertex in the graph.
+          In the worst case: 
+            Every other vertex might have an edge pointing to the vertex you're trying to delete.
+          To remove these incoming edges: 
+            You have to check the adjacency lists of all other vertices, which takes O(VN) time. 
+              Since you need to examine each vertex. 
+    Storage:
+      Matrix is O(VN²).
+        It's a two dimensional structure. 
+        If we add a new vertex that means not only just adding one slot in.
+          It means adding an entire row in an entire column to our matrix.
+        Doesn't matter how many connections there are, it matters how many vertices.
+        Adding one new vertex mean new column and row, even it has just one connection.
+        If your data is sparse -few connections- maybe don't use a matrix.
+      List is O(VN + EN).
+        The size of it -storage amount- is determined by how many edges we have.
+    See:
+      ../Assets/V7 -Adjacency Matrix Vs. List BIG O-/adjacency-matrix-vs-adjacency-list-big-o.png
+    Summary:
+      Adjacency List:
+        Can take up less space -in sparse graphs-.
+        Faster to iterate over all edges.
+        Can be slower to lookup specific edge.
+      Adjacency Matrix:
+        Takes up more space -in sparse graphs-.
+        Slower to iterate over all edges.
+        Faster to lookup specific edge.
+  Our choose is adjacency list, Why:
+    Most of the data in the real world tends to be sparse.
+      Ton of nodes -vertices- but usually they're not all connected. 
+        That lends itself more to adjacency lists.
+    The adjacency matrix nice if data could be almost full, then you might want to use a matrix.
 V8 -Add Vertex Intro-:
+  My Early Try Of addVertex Method:
+    ../Scripts/V8 -Add Vertex Intro-/my-early-try-of-add-vertex-method.js
+  addVertex PseudoCode:
+    Write a method called addVertex, which accepts a name of a vertex.
+    It should add a key to the adjacency list with the name of the vertex.
+    Set its value to be an empty array.
 V9 -Add Vertex Solution-:
+  Constructor Solution:
+    ../Scripts/V9 -Add Vertex Solution-/constructor-solution.js
 V10 -Add Edge Intro-:
-V11 -Add Edge Solution-:
+  My Early Try Of addEdge Method:
+    ../Scripts/V10 -Add Edge Intro-/my-early-try-of-add-edge-method.js
+  addEdge PseudoCode:
+    This function should accept two vertices, we can call them vertex1 and vertex2.
+    The function should find in the adjacency list the key of vertex1. 
+      Push vertex2 to the array.
+    The function should find in the adjacency list the key of vertex2.
+      Push vertex1 to the array.
+    Don't worry about handling errors/invalid vertices.
+V11 -Add Edge Solution-:  
+  Constructor Solution:
+    ../Scripts/V11 -Add Edge Solution-/constructor-solution.js
 V12 -Remove Edge Intro-:
+  My Early Try Of removeEdge Method:
+    ../Scripts/V12 -Remove Edge Intro-/my-early-try-of-remove-edge-method.js
+  removeEdge PseudoCode:
+    This function should accept two vertices, we'll call them vertex1 and vertex2.
+    The function should reassign the key of vertex1 to be an array that does not contain vertex2.
+    The function should reassign the key of vertex2 to be an array that does not contain vertex1.
+    Don't worry about handling errors/invalid vertices.
 V13 -Remove Edge Solution-:
+  Constructor Solution:
+    ../Scripts/V13 -Remove Edge Solution-/constructor-solution.js
 V14 -Remove Vertex Intro-:
-V15 -Remove Vertex Solution-:
+  My Early Try Of removeVertex Method:
+    ../Scripts/V14 -Remove Vertex Intro-/my-early-try-of-remove-vertex-method.js
+  removeVertex PseudoCode:
+    The function should accept a vertex to remove.
+    The function should loop as long as there are any other vertices in the list for that vertex.
+    Inside of the loop, call removeEdge function with: 
+      The vertex we are removing with the current vertex in pur loop.
+    delete the key in the adjacency list for that vertex
+V15 -Remove Vertex Solution-:  
+  Constructor Solution:
+    ../Scripts/V15 -Remove Vertex Solution-/constructor-solution.js
+      Constructor Solution Is Better, Why:
+        Instead of looping over all the object values, search if they contain the wanted vertex. 
+        We can go to the wanted vertex itself and know the other wanted vertices from it. 
+          This is valid in an undirected graph, but how about a directed graph?
+            We can't do this approach, there is two ways to do that in this case:
+              Go through the entire graph.
+              Maintain an additional structure like a reverse adjacency list.
+        Constructor Solution thing about that we will need to delete edges also. 
+          We already have a method to do this, so why Rebuild the wheel!! 
+            Remember DRY.
 ===================================================================================================
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  More About Matrix:
+    ../Scripts/More About Matrix/script.js

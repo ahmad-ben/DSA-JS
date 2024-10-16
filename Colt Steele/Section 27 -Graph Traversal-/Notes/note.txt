@@ -1,0 +1,120 @@
+V1 -PREREQUISITES-:
+  Mandatory sections:
+    Section 1: BIG O NOTATION
+    Section 6: RECURSION
+    Section 22: BINARY SEARCH TREES
+    Section 23: TREE TRAVERSAL
+    Section 26: GRAPHS
+  Highly recommended sections:
+    Section 18: DATA STRUCTURES INTRO
+    Section 19: SINGLY LINKED LISTS
+    Section 21: STACKS & QUEUES
+    Section 20: DOUBLY LINKED LISTS
+V2 -Intro to Graph Traversal-:
+  Traversal: 
+    Visiting every single node, every vertex in a graph.
+    In real world applications, you may not be visiting every single node, instead:
+      Finding nearest neighbors or most similar neighbors.
+      Finding the shortest path from one vertex to another.
+        In the case of GPS directions for example.
+    For any node in a graph, there's no guarantee there's one unique path to get there.
+      Sometimes, you may end up having to do some backtracking.
+      You may revisit a node you've already been to.
+  GRAPH TRAVERSAL USES:
+    Peer to peer networking.
+      Decentralized communication model. 
+      Each participant -peer- in the network can act both as a client and a server. 
+      Each peer can: 
+        Initiate requests for resources -like files, data, or services-.
+        Provide resources to other peers without needing a central server or authority.
+    Graph Representation:
+      In a P2P network, each peer can be represented as a node -vertex-.
+      The connections between peers can be represented as edges.
+        The ability to directly communicate or share resources.
+    Web crawlers.
+      Also known as web spiders or web robots. 
+      Automated programs that browse the internet systematically to index and retrieve web content.
+      They gather information from websites and store it for search engines or other applications.
+      Heavily rely on the principles of graph theory. 
+        To navigate the vast and complex structure of the internet. 
+      By viewing web pages as nodes and hyperlinks as edges, crawlers can systematically: 
+        explore, index, and analyze content efficiently.
+    Finding "closest" matches/recommendations.
+    Shortest path problems.
+      GPS Navigation.
+      Solving mazes.
+      AI -shortest path to win the game-.
+V3 -Depth First Graph Traversal-:
+  Depth First Traversal:
+    Prioritizing visiting children of a given node before we visit siblings.
+    Deepen the traversal before we widen it.
+    Visualization of DFT with the adjacency list:
+      ../Assets/V3 -Depth First Graph Traversal-/depth-first-traversal-graph-adjacency-list-1.png
+      ../Assets/V3 -Depth First Graph Traversal-/depth-first-traversal-graph-adjacency-list-2.png
+      ../Assets/V3 -Depth First Graph Traversal-/depth-first-traversal-graph-adjacency-list-3.png
+      ../Assets/V3 -Depth First Graph Traversal-/depth-first-traversal-graph-adjacency-list-4.png
+      ../Assets/V3 -Depth First Graph Traversal-/depth-first-traversal-graph-adjacency-list-5.png
+      ../Assets/V3 -Depth First Graph Traversal-/depth-first-traversal-graph-adjacency-list-6.png
+      ../Assets/V3 -Depth First Graph Traversal-/depth-first-traversal-graph-adjacency-list-7.png
+V4 -DFS Recursive Intro-:
+  My Early Try Of DFS Graph Recursively:
+    ../Scripts/V4 -...-/My Early Try Of DFS Graph Recursively/after-constructor-direction.js
+  My Early Try Of DFS Graph Recursively After Constructor Directions:
+    ../Scripts/V4 -...-/My Early Try Of DFS Graph Recursively/after-constructor-direction.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+V5 -DFS Recursive Solution-:
+V6 -DFS Iterative Intro-:
+V7 -DFS Iterative Solution-:
+V8 -Breadth First Graph Traversal-:
+V9 -BFS Intro-:
+V10 -BFS Solution-:
+===================================================================================================
+
+
+
+
+
+
+
+
+
+
+

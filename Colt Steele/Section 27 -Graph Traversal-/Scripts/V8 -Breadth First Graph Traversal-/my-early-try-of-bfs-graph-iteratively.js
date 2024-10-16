@@ -45,6 +45,49 @@ class Graph {
     return visitedVerticesArr;
   }
 
+  dftIteratively(startVertex){
+    let visitedVertices = {};
+    let visitedVerticesArr = [];
+    let nextVerticesStack = [startVertex];
+    visitedVertices[startVertex] = true;
+
+    while(nextVerticesStack.length !== 0){
+      const lastAddedVertex = nextVerticesStack.pop();
+
+      visitedVerticesArr.push(lastAddedVertex);        
+
+      this.adjacencyList[lastAddedVertex].forEach(edge => {
+        if(!visitedVertices[edge]){
+          visitedVertices[edge] = true;
+          nextVerticesStack.push(edge); 
+        }
+      });
+    }
+
+    return visitedVerticesArr;
+  }
+
+  bftIteratively(startVertex){
+    let visitedVertices = {};
+    let visitedVerticesArr = [];
+    visitedVertices[startVertex] = true;
+    let queueOfNextVertices = [startVertex];
+
+    while(queueOfNextVertices.length){
+      const firstVertex = queueOfNextVertices.shift();
+      visitedVerticesArr.push(firstVertex);
+
+      this.adjacencyList[firstVertex].forEach(edge => {
+        if(!visitedVertices[edge]){
+          visitedVertices[edge] = true;
+          queueOfNextVertices.push(edge);
+        }
+      })
+    }
+
+    return visitedVerticesArr;
+  }
+
 }
 
 
@@ -74,6 +117,25 @@ graph.addEdge("E","F");
     "E":["C", "D", "F"],
     "F":["D", "E"]
   }
+
+      A
+     / \
+    B   C 
+    |   |
+    D---E
+     \ /
+      F
+
+  A, B, D, E, F, C
+  A, B, D, E, C, F
+
+  A, B, D, F, E, C
+
+  A, C, E, D, B, F
+  A, C, E, D, F, B
+
+  A, C, E, F, D, B
 */
 
-console.log(graph.dftRecursively());
+console.log(graph.bftIteratively("A"));
+console.log(graph.bftRecursively("A"));

@@ -61,60 +61,89 @@ V4 -DFS Recursive Intro-:
     ../Scripts/V4 -...-/My Early Try Of DFS Graph Recursively/after-constructor-direction.js
   My Early Try Of DFS Graph Recursively After Constructor Directions:
     ../Scripts/V4 -...-/My Early Try Of DFS Graph Recursively/after-constructor-direction.js
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  DFT PseudoCode Recursively:
+    if vertex is empty
+        return (this is base case)
+    add vertex to results list
+    mark vertex as visited
+    for each neighbor in vertex's neighbors:
+       if neighbor is not visited:
+          recursively call DFS on neighbor
+  More Detailed DFT PseudoCode Recursively:
+    The function should accept a starting node.
+    Create a list to store the end result, to be returned at the very end.
+    Create an object to store visited vertices.
+    Create a helper function which accepts a vertex.
+    The helper function should return early if the vertex is empty.
+    The helper function should: 
+      Place the vertex it accepts into the visited object.
+      Push that vertex into the result array.
+    Loop over all of the values in the adjacencyList for that vertex.
+    If any of those values have not been visited: 
+      Recursively invoke the helper function with that vertex.
+    Invoke the helper function with the starting vertex.
+    Return the result array.
 V5 -DFS Recursive Solution-:
+  Constructor Solution:
+    ../Scripts/V5 -DFS Recursive Solution-/constructor-solution.js
 V6 -DFS Iterative Intro-:
+  My Early Try Of DFS Graph Iteratively:
+    ../Scripts/V6 -DFS Iterative Intro-/my-early-try-of-dfs-graph-iteratively.js
+  Performance node:
+    If we was using -unshift- and -shift- to make the operation act from the top always.
+      It's better to see if we can replace them with -Push- and -pop-.
+        To do the same purpose from the bottom with much better performance.
+  DFT PseudoCode Iteratively:
+  DFS-iterative(start):
+    let S be a stack
+    S.push(start)
+    while S is not empty
+      vertex = S.pop()
+      if vertex is not labeled as discovered:
+        visit vertex (add to result list)
+        label vertex as discovered
+        for each of vertex's neighbors, N do 
+          S.push(N)
+  More Detailed DFT PseudoCode Iteratively:
+    The function should accept a starting node
+    Create a stack to help use keep track of vertices (use a list/array)
+    Create a list to store the end result, to be returned at the very end
+    Create an object to store visited vertices
+    Add the starting vertex to the stack, and mark it visited
+    While the stack has something in it:
+      Pop the next vertex from the stack
+      If that vertex hasn't been visited yet:
+        ​Mark it as visited
+        Add it to the result list
+        Push all of its neighbors into the stack
+    Return the result array
 V7 -DFS Iterative Solution-:
+  Constructor Solution:
+    ../Scripts/V7 -DFS Iterative Solution-/constructor-solution.js
+      The first time you are in touch with the vertex, that is considered a visit.
 V8 -Breadth First Graph Traversal-:
+  My Early Try Of BFS Graph Iteratively:
+    ../Scripts/V8 -Breadth First Graph Traversal-/my-early-try-of-bfs-graph-iteratively.js
+  My Early Try Of BFS Graph Recursively:
+    ../Scripts/V8 -Breadth First Graph Traversal-/my-early-try-of-bfs-graph-recursively.js
+  Breadth first traversal: 
+    Prioritize visiting all of the neighbors at a given depth before moving downwards.
+      Visiting neighbors of neighbors basically.
+    Layers -levels- called height.
 V9 -BFS Intro-:
+  BREADTH FIRST ITERATIVELY:
+    This function should accept a starting vertex.
+    Create a queue -you can use an array- and place the starting vertex in it.
+    Create an array to store the nodes visited.
+    Create an object to store nodes visited.
+    Mark the starting vertex as visited.
+    Loop as long as there is anything in the queue.
+    Remove the first vertex from the queue and push it into the array that stores nodes visited.
+    Loop over each vertex in the adjacency list for the vertex you are visiting.
+    If it is not inside the object that stores nodes visited: 
+      Mark it as visited and enqueue that vertex.
+    Once you have finished looping, return the array of visited nodes.
 V10 -BFS Solution-:
+  Constructor Solution:
+    ../Scripts/V10 -BFS Solution-/constructor-solution.js
 ===================================================================================================
-
-
-
-
-
-
-
-
-
-
-

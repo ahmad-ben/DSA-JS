@@ -1,0 +1,88 @@
+V1 -PREREQUISITES-:
+  Mandatory sections:
+    Section 1: BIG O NOTATION
+    Section 6: RECURSION
+    Section 24: BINARY HEAPS -The Priority Queue Videos-
+    Section 26: GRAPHS
+    Section 27: GRAPH TRAVERSAL
+  Highly recommended sections:
+    Section 18: DATA STRUCTURES INTRO
+    Section 19: SINGLY LINKED LISTS
+    Section 21: STACKS & QUEUES
+    Section 20: DOUBLY LINKED LISTS
+V2 -Intro to Dijkstra's and Prerequisites-:
+  Dijkstra's algorithm:
+    Shortened from Dijkstra's shortest path algorithm.
+    It requires a graph and binary heap priority queue data structure.
+      It acts upon a graph, it searches across it.
+        Dijkstra's algorithm works on a weighted graph.
+      Uses a binary heap priority queue as part of its implementation.
+  OBJECTIVES:
+    Understand the importance of Dijkstra's.
+    Implement a Weighted Graph.
+    Walk through the steps of Dijkstra's.
+    Implement Dijkstra's using a naive priority queue.
+    Implement Dijkstra's using a binary heap priority queue.
+V3 -Who was Dijkstra and what is his Algorithm?-:
+  What is the Dijkstra's algorithm:
+    One of the most famous and widely used algorithms around!
+    It all about find the shortest path between two vertices on a graph.
+      What's the fastest way to get from point A to point B.
+  Who was Dijkstra:
+    Edsger W. Dijkstra.
+    Smart and influence polymath scientific, a lot of his discoveries still used until now.
+  Why is it useful:
+    GPS -finding fastest route-.
+      There's a lot of other complications in today's world, like:
+        Google Maps algorithm takes not only the distance but also:
+          Capacity of a road.
+          Number of lanes.
+          Accidents.
+      But it's still based on finding the shortest path -what make it shorter might be different-.
+    Network Routing -finds open shortest path for data-.
+      We have bunch of computers connected in a graph, we do the following:
+        Break up a large message into a bunch of little pieces. 
+        Send them across a bunch of computers and end up at the target computer.
+          In this process we need to know the fastest, shortest way to get there.
+    Biology -used to model the spread of viruses among humans-.
+    Airline tickets -finding cheapest route to your destination-.
+    Many other uses!
+V4 -Writing a Weighted Graph-:
+  My Early Try Of Writing A Weighted Graph
+    ../Scripts/V4 -Writing a Weighted Graph-/my-early-try-of-writing-weighted-graph.js
+  Constructor Solution:
+    ../Scripts/V4 -Writing a Weighted Graph-/constructor-solution.js
+  The change making to make an unweighted graph to a weighted one in terms of adding:
+    Just make the vertex as object, storing both the value -name- and the weight.
+
+PHASE 3.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+V5 -Walking through the Algorithm-:
+V6 -Introducing Our Simple Priority Queue-:
+V7 -Dijkstra's Pseudo-Code-:
+V8 -Implementing Dijkstra's Algorithm-:
+V9 -Upgrading the Priority Queue-:
+===================================================================================================

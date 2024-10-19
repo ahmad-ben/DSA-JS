@@ -54,33 +54,29 @@ V4 -Writing a Weighted Graph-:
     ../Scripts/V4 -Writing a Weighted Graph-/constructor-solution.js
   The change making to make an unweighted graph to a weighted one in terms of adding:
     Just make the vertex as object, storing both the value -name- and the weight.
-
-PHASE 3.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 V5 -Walking through the Algorithm-:
+  My Early Try To Implement Dijkstra Algorithm:
+    my-early-tyr-to-implement-dijkstra-algorithm.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 V6 -Introducing Our Simple Priority Queue-:
 V7 -Dijkstra's Pseudo-Code-:
 V8 -Implementing Dijkstra's Algorithm-:

@@ -33,8 +33,8 @@
 
 // ===== PRIORITY QUEUE =====
 class Node{
-  constructor(val, priority){
-    this.val = val;
+  constructor(name, priority){
+    this.name = name;
     this.priority = priority;
   }
 }
@@ -44,8 +44,8 @@ class MinBinaryHeap{
     this.values = [];
   }
 
-  Enqueue(val, priority){
-    let newNode = new Node(val, priority);
+  Enqueue(name, priority){
+    let newNode = new Node(name, priority);
     this.values.push(newNode);
 
     let childIdx = this.values.length - 1;
@@ -62,28 +62,6 @@ class MinBinaryHeap{
     this.sinkCurrent(parentPosition);
 
     return deletedNode;
-  }
-
-  removeFromIdx(currentIdx){
-    if(currentIdx < 0 && currentIdx >= this.values.length) return undefined;
-    if(currentIdx === 0) return this.Dequeue();
-    if(currentIdx === this.values.length - 1) return this.values.pop();
-
-    this.swap(currentIdx, this.values.length - 1);
-    const removedNode = this.values.pop();
-
-    let parentIdx = Math.floor((currentIdx - 1) / 2);
-    let leftEleIdx = (currentIdx * 2) + 1;
-    let rightEleIdx = (currentIdx * 2) + 2;
-
-    if(this.values[currentIdx].priority < this.values[parentIdx].priority) 
-      this.bubbleCurrent(currentIdx);
-    else if(
-      this.values[currentIdx].priority > this.values[leftEleIdx]?.priority ||
-      this.values[currentIdx].priority > this.values[rightEleIdx]?.priority
-    ) this.sinkCurrent(currentIdx);
-
-    return removedNode;
   }
 
   bubbleCurrent(childIdx){
@@ -121,10 +99,6 @@ class MinBinaryHeap{
     }
   }
 
-  showOnlyPrioritiesValues(){
-    return this.values.map(node => node.priority);
-  }
-
   swap(FI, SI){
     [this.values[FI], this.values[SI]] = [this.values[SI], this.values[FI]];
   }
@@ -144,15 +118,15 @@ class Graph {
   }
 
   addEdge(vertexOne, vertexTwo, weight){
-    this.adjacencyList[vertexOne].push({node: vertexTwo, weight});
-    this.adjacencyList[vertexTwo].push({node: vertexOne, weight});
+    this.adjacencyList[vertexOne].push({name: vertexTwo, weight});
+    this.adjacencyList[vertexTwo].push({name: vertexOne, weight});
   }
 
-  bftIteratively(startVertex){
+  bftIteratively(startNode){
     let visitedVertices = {};
     let visitedVerticesArr = [];
-    visitedVertices[startVertex] = true;
-    let queueOfNextVertices = [startVertex];
+    visitedVertices[startNode] = true;
+    let queueOfNextVertices = [startNode];
 
     while(queueOfNextVertices.length){
       const firstVertex = queueOfNextVertices.shift();
@@ -169,71 +143,55 @@ class Graph {
     return visitedVerticesArr;
   }
 
-  dijkstraAlgorithm(startVertex, endVertex){
-    // To save the next vertices that we need to visit them
-    let nextVerticesPriorityQueue = new MinBinaryHeap();
-    // To save the next vertices we already visited, so we don't do again.
-    let alreadyVisitedNodes = {};
-    // To save the value of the smallest distance for each vertex.
-    let nodesSmallestPathValue = {};
-    // To save the name of the previous node that lead us to this.
+  dijkstraAlgorithm(startNode, endNode){
+    // Next vertices that we need to visit them
+    let nextNodesPQ = new MinBinaryHeap();
+    // Next vertices we already visited, so we don't do again.
+    let visitedNodes = {};
+    // Value of the smallest distance for each node.
+    let nodesSmallestPathVal = {};
+    // Name of the previous node that lead us to this.
     let nodesPrevNode = {};
     
-    nextVerticesPriorityQueue.Enqueue(startVertex, 0);
-    nodesSmallestPathValue[startVertex] = 0;
-    nodesPrevNode[startVertex] = null;
-    alreadyVisitedNodes[startVertex] = true;
+    nextNodesPQ.Enqueue(startNode, 0);
+    nodesSmallestPathVal[startNode] = 0;
+    nodesPrevNode[startNode] = null;
+    visitedNodes[startNode] = true;
 
-    let queueArr = nextVerticesPriorityQueue.values;
+    let queueArr = nextNodesPQ.values;
 
     while(queueArr.length > 0){
-      const currentVertex = nextVerticesPriorityQueue.Dequeue();
-      /*
-        Instead removeFromIdx method, we can use alreadyVisitedNodes to prevent the duplicate.
-        Don't forgive to pop the duplicate vertex then, to avoid loop.
-      */ 
+      const currentNode = nextNodesPQ.Dequeue();  
 
-      const vertexEdges = this.adjacencyList[currentVertex.val];
+      if(currentNode.name === endNode) break;  
+       
+      if(
+        currentNode.name !== startNode && visitedNodes[currentNode.name]
+      ) continue;
 
-      if(currentVertex.val === endVertex) break;
-      console.log(currentVertex);
+      const currentNodeNeighbors = this.adjacencyList[currentNode.name];
 
-      for (const {node, weight} of vertexEdges) {
-        if(alreadyVisitedNodes[node]) continue;
-        const currentPathVal = nodesSmallestPathValue[currentVertex.val] + weight;
-        if(nodesSmallestPathValue[node]){
-          if(currentPathVal > nodesSmallestPathValue[node]) continue;
+      for (const {name, weight} of currentNodeNeighbors) {
+        const currentPathVal = nodesSmallestPathVal[currentNode.name] + weight;
+        if(
+          visitedNodes[name] ||currentPathVal > nodesSmallestPathVal[name] 
+        ) continue;
 
-          let currentNodeIdx;
-          queueArr.forEach((queueNode, queueNodeIdx) => {
-            if(queueNode.val === node) currentNodeIdx = queueNodeIdx;
-          });
-          
-          nextVerticesPriorityQueue.removeFromIdx(currentNodeIdx);
-        }
-
-        nodesSmallestPathValue[node] = currentPathVal;
-        nodesPrevNode[node] = currentVertex.val;
-        nextVerticesPriorityQueue.Enqueue(node, currentPathVal);
-        
+        nodesSmallestPathVal[name] = currentPathVal;
+        nodesPrevNode[name] = currentNode.name;
+        nextNodesPQ.Enqueue(name, currentPathVal);
       }
 
-      alreadyVisitedNodes[currentVertex.val] = true;
+      visitedNodes[currentNode.name] = true;
     }
 
-    let currentNode = endVertex; 
-    let completeRoute = endVertex; 
+    let currentNode = endNode, completeRoute = endNode; 
     while(nodesPrevNode[currentNode]){
       completeRoute = `${nodesPrevNode[currentNode]} -> ${completeRoute}`;
       currentNode = nodesPrevNode[currentNode];
     }
 
-    return {
-      alreadyVisitedNodes,
-      nodesSmallestPathValue, 
-      nodesPrevNode, 
-      completeRoute
-    };
+    return completeRoute;
   }
 }
 
@@ -271,8 +229,9 @@ graph.addEdge("E","F", 1);
 
 */
 
-console.log(graph.dijkstraAlgorithm("A", "E"));
+console.log(graph.dijkstraAlgorithm("A", "E")); // A -> C -> D -> F -> E
 console.log("==================================================");
-console.log(graph.dijkstraAlgorithm("A", "B"));
+// console.log(graph.dijkstraAlgorithm("A", "B"));
 console.log("==================================================");
-console.log(graph.dijkstraAlgorithm("A", "C"));
+// console.log(graph.dijkstraAlgorithm("A", "C"));
+

@@ -1,0 +1,170 @@
+V1 -Intro to Dynamic Programming-:
+  Objectives:
+    Define what dynamic programming is.
+    Explain what overlapping subProblems are.
+    Understand what optimal substructure is.
+    Solve more challenging problems using dynamic programming.
+  What is Dynamic Programming:
+    A method for solving a complex problem by: 
+      Breaking it down into a collection of simpler subProblems. 
+      Solving each of those subProblems just once, and storing their solutions.
+    Most problems cannot be solved with it.
+    If we can solve a problem by DP, it can make a huge difference in their performance.
+      Like divide and conquer.
+  Why it's called dynamic programming:
+    It used before to describe something that had nothing to do with computers.
+    Dynamic:
+      Capture the time-varying aspect of the problems, and because it sounded impressive.
+    Programming:
+      Referred to the use of the method to find an optimal program. 
+        In the sense of a military schedule for training or logistics.
+    Refers to is coming up with an optimal solution, both: 
+      Outside of the code world, in math in general, and planning or making decisions.
+      Into the world of code and programming as we know it.
+V2 -Overlapping Subproblems-:
+  When we can use DP:
+    If only we have Optimal SubStructure And Overlapping SubProblems.
+  What is Overlapping SubProblems:
+    A problem is said to have overlapping SubProblems if: 
+      The problem can be broken down into SubProblems which are reused several times.
+    We can break one problem down into smaller pieces, and some of those pieces are reused.
+      They are not unique.
+    Example Fibonacci sequence:
+      fibonacci-sequence:
+        ../Assets/V2 -Overlapping Subproblems-/fibonacci-sequence.png
+      If we're trying to find the fifth number and the Fibonacci sequence:
+        ../Assets/V2 -Overlapping Subproblems-/fibonacci-sequence-diagram.png
+  Example of problem include SubProblems that doesn't overlap:
+    Merge sort regular cases:
+      ../Assets/V2 -Overlapping Subproblems-/merge-sort-regular-cases.png
+        We're taking a bigger problem and breaking it into smaller pieces. SubProblems.
+          But there is no overlap, We're not repeating the same thing.
+          There's no way we can reduce our duplication.
+      This case often lends itself to the divide and conquer pattern.
+  Special Case -Overlapping SubProblems with merge sort-:
+    ../Assets/V2 -Overlapping Subproblems-/merge-sort-very-special-case.png
+V3 -Optimal Substructure-:
+  What is Optimal Substructure
+    A problem is said to have optimal substructure if: 
+      An optimal solution can be constructed from optimal solutions of its subproblems.
+    Property of a problem. 
+      Indicates a solution can be constructed optimally from optimal solutions of its subproblems.
+  Examples have the Optimal Substructure Property:
+    Fibonacci Sequence:
+      The optimal solution for Fibonacci of five depends on: 
+        The best solution for Fibonacci of four and three.
+          See:
+            ../Assets/V2 -Overlapping Subproblems-/fibonacci-sequence-diagram.png
+    Shortest path between vertices on a graph:
+      ../Assets/V3 -Optimal Substructure-/find-shortest-path.png
+        The shortest path from A to D, knowing that the complete route is A -> B -> C -> D, is:
+          the shortest paths from:
+            A to B With B to C With C to D, so now:
+              We have couple of subproblems.
+              The optimal solution is constructed from optimal solutions of these subproblems.
+  Examples do not have the Optimal Substructure Property:
+    Find the longest path:
+      ../Assets/V3 -Optimal Substructure-/find-longest-path-no-revisiting.png
+    Find the cheapest possible flights using some sort of web search -real word example-:
+      ../Assets/V3 -Optimal Substructure-/find-cheapest-path.png
+        Seems like logically that it should exhibit optimal substructure.
+          But because of the way that airlines sell their tickets, that was not the case.
+V4 -Writing A Recursive Solution-:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+V5 -Time Complexity of Our Solution-:
+V6 -The Problem With Our Solution-:
+V7 -Enter Memoization!-:
+V8 -Time Complexity of Memoized Solution-:
+V9 -Tabulation: A Bottom Up Approach-:
+===================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

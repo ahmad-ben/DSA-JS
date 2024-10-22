@@ -70,45 +70,170 @@ V3 -Optimal Substructure-:
         Seems like logically that it should exhibit optimal substructure.
           But because of the way that airlines sell their tickets, that was not the case.
 V4 -Writing A Recursive Solution-:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  My Try To Implement Fibonacci Sequence Recursively:
+    ../Scripts/V4 -Writing A Recursive Solution-/my-try-fibonacci-sequence-recursively.js
+  Video demonstrate how our recursive solution work: 
+    ../Assets/V4 -Writing A Recursive Solution-/fibonacci-sequence-recursively.mp4
 V5 -Time Complexity of Our Solution-:
+  Our current solution is very slow and that because:
+    fib(1) directly return 1.
+    fib(2) directly return 1.
+    fib(3) Requires fib(1) and fib(2) so it's two operations.
+    fib(4) Requires fib(2) and fib(3) so it's three operations.
+    fib(5) Requires fib(3) and fib(4) so it's five operations.
+    fib(6) Requires fib(4) and fib(5) so it's eight operations.
+    fib(7) Requires fib(5) and fib(6) so it's thirteen operations.
+      The number of the operation is almost being duplicated from a degree to the next degree.
+        That means the Big O of the current solution is O(2ⁿ).
+    See:
+      ../Assets/V5 -Time Complexity of Our Solution-/fibonacci-sequence-of-five.png
+      ../Assets/V5 -Time Complexity of Our Solution-/fibonacci-sequence-of-six.png
+      ../Assets/V5 -Time Complexity of Our Solution-/fibonacci-sequence-of-seven.png
+      ../Assets/V5 -Time Complexity of Our Solution-/fibonacci-sequence-from-two-to-seven.png
+  The Big O of our solution:
+    The approximation is O(2ⁿ), which is also called exponential.
+      Even worse than quadratic.
+    See:
+      ../Assets/V5 -Time Complexity of Our Solution-/fibonacci-sequence-big-o.png
+    The exact big O of the Fibonacci sequence, O(1.6ⁿ) 
+  How about memorize the result of the previous handled function with their degree, let's try:
+    ../Scripts/V5 -...-/my-try-fibonacci-sequence-recursively-with-memorizing.js
 V6 -The Problem With Our Solution-:
+  The problem:
+    Repeating the same operations over and over. 
+    For example in Fib(5):
+      We calculate the fib(3) twice.
+      Ignoring the duplicate also in fib(2) and fib(1) since they directly return 1.
+    The more input value increases the more repetitive operations increase.
+    See:
+      ../Assets/V6 -...-/fibonacci-sequence-of-five-repetition-problem.png
+      ../Assets/V6 -...-/fibonacci-sequence-of-six-repetition-problem.png
+      ../Assets/V6 -...-/fibonacci-sequence-of-seven-repetition-problem.png
+    Solution:
+      Just remember the result of the previous operations so we can avoid the repetition.
+        Return the already stored result directly.
+          And that's what dynamic programming about:
+            Using past knowledge to make solving a future problem easier.
+            Method for solving a complex problem, by: 
+              Breaking it down into a collection of simpler subproblems. 
+              Solving each of those subproblems just once, and storing their solutions.
 V7 -Enter Memoization!-:
+  My Solution:
+    It the same thing we thought about in:
+      ../Scripts/V5 -...-/my-try-fibonacci-sequence-recursively-with-memorizing.js
+  Construction Solution:
+    ../Scripts/V7 -Enter Memoization!-/constructor-solution.js
+  Memoization:
+    The idea of this strategy is having some structure to store data. 
+      In an array or an object usually.
+    So whenever do an expensive operation we store it result.
+      We never want that result we call it from our data structure. 
+        Avoiding executing the operation again.
+  Video demonstrate the usage of memorization technique with the Fibonacci Sequence:
+    ../Assets/V7 -Enter Memoization-/fibonacci-sequence-recursively-with-memoization.mp4
 V8 -Time Complexity of Memoized Solution-:
+  Big O of our memorized solution:
+    Roughly as -n- grows, the time that it takes for our algorithm grows in proportion.
+      So it's O(n) -just generalization-.
+
+Now, of course, remember, that's a generalization.
+
+It's not exactly.
+
+And we don't always do seven calculations or ten calculations.
+
+If N is ten, we're just saying it roughly grows linearly in line with N.
+
+And if we take a look at the graph that we were looking at earlier from the big old cheat sheet website,
+
+this is what we were working with here.
+
+Very bad, very steep.
+
+This is o of n a huge improvement.
+
+And as I showed you a couple of videos ago, if we try the non memo version, this is going to take
+
+forever.
+
+Let's see, let's do something slow.
+
+Like let's do fib of 35 maybe.
+
+Well, that wasn't too bad.
+
+Let's do fib of 40.
+
+It's going to take quite a while.
+
+All right, so that was a couple that was like a second or two.
+
+And we do fib of 45.
+
+And just that little difference of five digits or five numbers in the sequence really, really adds
+
+a lot of time because we're talking about this exponential chart.
+
+It's a lot more work.
+
+All right.
+
+There we go.
+
+And now if we compare it to the memo ized version, which I just executed, we don't need that console.log.
+
+I'm going to do fib of 45.
+
+There we go.
+
+We get it right away.
+
+It could do fib of 100, but then we run up against the issue of making numbers that are getting so
+
+large that eventually we're going to have some inaccuracies in JavaScript anyway.
+
+So it's a huge improvement, definitely worth it and it's not that much work, right, to remember what
+
+we've already calculated and just look it up.
+
+If it's already there, it's only a couple more lines compared to the original solution.
+
+But a huge, huge difference in complexity, time, complexity.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 V9 -Tabulation: A Bottom Up Approach-:
 ===================================================================================================
 

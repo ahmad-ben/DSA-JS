@@ -24,10 +24,6 @@ class SinglyLinkedList{
     return this;
   }
 
-
-
-
-
   pop(){
     if(!this.head) return undefined;
   

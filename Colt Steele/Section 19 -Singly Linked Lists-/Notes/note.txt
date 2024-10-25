@@ -180,7 +180,7 @@ V15 -Singly Linked List: Insert Intro-:
       The item after the one i found through the next property.
 V16 -Singly Linked List: Insert Solution-:
   Constructor Solution:
-    ../Scripts/V16 -Singly Linked List Insert Solution-/constructor-solution-of-insert-method.js
+    ../Scripts/V16 -Singly Linked List Insert Solution-/constructor-solution
       I can benefit from the constructor solution the following note:
         If i want to return the boolean value of a variable, instead of:
           return VARIABLE_VALUE ? TRUE : FALSE.

@@ -1,5 +1,5 @@
 const fib = (degree) => {
-  if(degree < 3) return degree;
+  if(degree < 3) return 1;
 
   let prePreviousValue = 1, previousValue = 1;
   let currentValue;

@@ -204,7 +204,7 @@ V17 -Singly Linked List: Remove Intro-:
       Instead of looping again from the beginning of the list, it may be very expensive.
 V18 -Singly Linked List: Remove Solution-:
   Constructor Solution:
-    ../Scripts/V18 -Singly Linked List Remove Solution-/constructor-solution-of-remove-method.js
+    ../Scripts/V18 -Singly Linked List Remove Solution-/constructor-solution.js
   Enhance the efficiency of you code:
     If we want to get the value of a node and we already have the value of a node that close to it:
       We can think about using the -next- property, it's better than loop over from the beginning.

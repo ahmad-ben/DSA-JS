@@ -111,6 +111,4 @@ console.log(singlyLinkedList.remove());                 // Undefined
 console.log(singlyLinkedList.remove(5), singlyLinkedList.length); // 60, 5
 console.log(singlyLinkedList.remove(0));                          // 10
 console.log(singlyLinkedList.remove(2));                          // 40 
-console.log(singlyLinkedList);                                    // 20 -> 30 -> 50    
-
-
+console.log(singlyLinkedList);                                    // 20 -> 30 -> 50 

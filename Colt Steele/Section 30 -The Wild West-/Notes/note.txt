@@ -48,369 +48,378 @@ V6 -Coding Exercise 39: SLL - insert Exercise-:
     ../Scripts/V6 -Coding Exercise 39 SLL insert Exercise-/my-solution.js
   Constructor Solution:
     ../../Section 19 -Singly Linked Lists-/Scripts/V16 -...-/constructor-solution.js
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 V7 -Coding Exercise 40: SLL - remove Exercise-:
   Exercise Description:
-    Input & Output Example:
+    See:
+      ../../Section 19 -Singly Linked Lists-/Notes/note.txt
+        Line 192.
   My Solution:
-    "../Scripts
+    ../Scripts/V7 -Coding Exercise 40 SLL - remove Exercise-/my-solution.js
   Constructor Solution:
-    "../Scripts
+    ../../Section 19 -Singly Linked Lists-/Scripts/V18 -...-/constructor-solution.js
 V8 -Coding Exercise 41: SLL - rotate Exercise-:
   Exercise Description:
-    Input & Output Example:
+    SLL - rotate Exercise
+    Implement the rotate function on the SinglyLinkedList class.
+    This function should rotate all the nodes in the list by some number passed in. For instance:
+      If your list looks like 1 -> 2 -> 3 -> 4 -> 5 and you rotate by 2. 
+      The list should be modified to 3 -> 4 -> 5 -> 1 -> 2. 
+      The number passed in to rotate can be any integer.
+        Time Complexity: O(N), where N is the length of the list.
+        Space Complexity: O(1)
   My Solution:
-    "../Scripts
-  Constructor Solution:
-    "../Scripts
+    ../Scripts/V8 -Coding Exercise 41 SLL - rotate Exercise-/my-solution.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 V9 -Coding Exercise 42: Divide and Conquer - countZeroes-:
   Exercise Description:
-    Input & Output Example:
+    See:
   My Solution:
     "../Scripts
   Constructor Solution:
     "../Scripts
 V10 -Coding Exercise 43: Divide and Conquer - sortedFrequency-:
   Exercise Description:
-    Input & Output Example:
+    See:
   My Solution:
     "../Scripts
   Constructor Solution:
     "../Scripts
 V11 -Coding Exercise 44: Divide and Conquer - findRotatedIndex-:
   Exercise Description:
-    Input & Output Example:
+    See:
   My Solution:
     "../Scripts
   Constructor Solution:
     "../Scripts
 V12 -Coding Exercise 45: Bubble Sort-:
   Exercise Description:
-    Input & Output Example:
+    See:
   My Solution:
     "../Scripts
   Constructor Solution:
     "../Scripts
 V13 -Coding Exercise 46: Selection Sort-:
   Exercise Description:
-    Input & Output Example:
+    See:
   My Solution:
     "../Scripts
   Constructor Solution:
     "../Scripts
 V14 -Coding Exercise 47: Insertion Sort-:
   Exercise Description:
-    Input & Output Example:
+    See:
   My Solution:
     "../Scripts
   Constructor Solution:
     "../Scripts
 V15 -Coding Exercise 48: Sorting Exercise - merge helper-:
   Exercise Description:
-    Input & Output Example:
+    See:
   My Solution:
     "../Scripts
   Constructor Solution:
     "../Scripts
 V16 -Coding Exercise 49: Merge Sort-:
   Exercise Description:
-    Input & Output Example:
+    See:
   My Solution:
     "../Scripts
   Constructor Solution:
     "../Scripts
 V17 -Coding Exercise 50: Sorting Exercise - pivot helper-:
   Exercise Description:
-    Input & Output Example:
+    See:
   My Solution:
     "../Scripts
   Constructor Solution:
     "../Scripts
 V18 -Coding Exercise 51: Quick Sort-:
   Exercise Description:
-    Input & Output Example:
+    See:
   My Solution:
     "../Scripts
   Constructor Solution:
     "../Scripts
 V19 -Coding Exercise 52: Radix Sort Helper - getDigit-:
   Exercise Description:
-    Input & Output Example:
+    See:
   My Solution:
     "../Scripts
   Constructor Solution:
     "../Scripts
 V20 -Coding Exercise 53: Radix Sort Helper - digitCount-:
   Exercise Description:
-    Input & Output Example:
+    See:
   My Solution:
     "../Scripts
   Constructor Solution:
     "../Scripts
 V21 -Coding Exercise 54: Radix Sort Helper - mostDigits-:
   Exercise Description:
-    Input & Output Example:
+    See:
   My Solution:
     "../Scripts
   Constructor Solution:
     "../Scripts
 V22 -Coding Exercise 55: Radix Sort-:
   Exercise Description:
-    Input & Output Example:
+    See:
   My Solution:
     "../Scripts
   Constructor Solution:
     "../Scripts
 V23 -Coding Exercise 56: Stacks - push Exercise-:
   Exercise Description:
-    Input & Output Example:
+    See:
   My Solution:
     "../Scripts
   Constructor Solution:
     "../Scripts
 V24 -Coding Exercise 57: Stacks - pop Exercise-:
   Exercise Description:
-    Input & Output Example:
+    See:
   My Solution:
     "../Scripts
   Constructor Solution:
     "../Scripts
 V25 -Coding Exercise 58: Stack with 2 Queues-:
   Exercise Description:
-    Input & Output Example:
+    See:
   My Solution:
     "../Scripts
   Constructor Solution:
     "../Scripts
 V26 -Coding Exercise 59: Queues - enqueue Exercise-:
   Exercise Description:
-    Input & Output Example:
+    See:
   My Solution:
     "../Scripts
   Constructor Solution:
     "../Scripts
 V27 -Coding Exercise 60: Binary Search Tree - insert Exercise-:
   Exercise Description:
-    Input & Output Example:
+    See:
   My Solution:
     "../Scripts
   Constructor Solution:
     "../Scripts
 V28 -Coding Exercise 61: Binary Search Tree - find-:
   Exercise Description:
-    Input & Output Example:
+    See:
   My Solution:
     "../Scripts
   Constructor Solution:
     "../Scripts
 V29 -Coding Exercise 62: Binary Search Tree - DFS Exercise-:
   Exercise Description:
-    Input & Output Example:
+    See:
   My Solution:
     "../Scripts
   Constructor Solution:
     "../Scripts
 V30 -Coding Exercise 63: Binary Search Tree - BFS Exercise-:
   Exercise Description:
-    Input & Output Example:
+    See:
   My Solution:
     "../Scripts
   Constructor Solution:
     "../Scripts
 V31 -Coding Exercise 64: Binary Search Tree - remove Exercise-:
   Exercise Description:
-    Input & Output Example:
+    See:
   My Solution:
     "../Scripts
   Constructor Solution:
     "../Scripts
 V32 -Coding Exercise 65: Binary Search Tree Exercise - Find 2nd largest node-:
   Exercise Description:
-    Input & Output Example:
+    See:
   My Solution:
     "../Scripts
   Constructor Solution:
     "../Scripts
 V33 -Coding Exercise 66: Binary Search Tree Exercise - Check if balanced-:
   Exercise Description:
-    Input & Output Example:
+    See:
   My Solution:
     "../Scripts
   Constructor Solution:
     "../Scripts
 V34 -Coding Exercise 67: BinaryHeap - insert Exercise-:
   Exercise Description:
-    Input & Output Example:
+    See:
   My Solution:
     "../Scripts
   Constructor Solution:
     "../Scripts
 V35 -Coding Exercise 68: BinaryHeap - extractMax Exercise-:
   Exercise Description:
-    Input & Output Example:
+    See:
   My Solution:
     "../Scripts
   Constructor Solution:
     "../Scripts
 V36 -Coding Exercise 69: Graphs Exercise - addVertex-:
   Exercise Description:
-    Input & Output Example:
+    See:
   My Solution:
     "../Scripts
   Constructor Solution:
     "../Scripts
 V37 -Coding Exercise 70: Graphs Exercise - removeEdge-:
   Exercise Description:
-    Input & Output Example:
+    See:
   My Solution:
     "../Scripts
   Constructor Solution:
     "../Scripts
 V38 -Coding Exercise 71: Graphs Exercise - removeVertex-:
   Exercise Description:
-    Input & Output Example:
+    See:
   My Solution:
     "../Scripts
   Constructor Solution:
     "../Scripts
 V39 -Coding Exercise 72: Graphs - DFS Exercise-:
   Exercise Description:
-    Input & Output Example:
+    See:
   My Solution:
     "../Scripts
   Constructor Solution:
     "../Scripts
 V40 -Coding Exercise 73: Graphs Exercise - addEdge-:
   Exercise Description:
-    Input & Output Example:
+    See:
   My Solution:
     "../Scripts
   Constructor Solution:
     "../Scripts
 V41 -Coding Exercise 74: Graphs - BFS Exercise-:
   Exercise Description:
-    Input & Output Example:
+    See:
   My Solution:
     "../Scripts
   Constructor Solution:
     "../Scripts
 V42 -Coding Exercise 75: Graphs - Dijkstra Exercise-:
   Exercise Description:
-    Input & Output Example:
+    See:
   My Solution:
     "../Scripts
   Constructor Solution:
     "../Scripts
 V43 -Coding Exercise 76: Dynamic Programming - Coin Change-:
   Exercise Description:
-    Input & Output Example:
+    See:
   My Solution:
     "../Scripts
   Constructor Solution:
     "../Scripts
 V44 -Coding Exercise 77: Coin Change - Greedy Algorithm-:
   Exercise Description:
-    Input & Output Example:
+    See:
   My Solution:
     "../Scripts
   Constructor Solution:
     "../Scripts
 V45 -Coding Exercise 78: Frequency Counter - constructNote-:
   Exercise Description:
-    Input & Output Example:
+    See:
   My Solution:
     "../Scripts
   Constructor Solution:
     "../Scripts
 V46 -Coding Exercise 79: Frequency Counter - findAllDuplicates-:
   Exercise Description:
-    Input & Output Example:
+    See:
   My Solution:
     "../Scripts
   Constructor Solution:
     "../Scripts
 V47 -Coding Exercise 80: Frequency Counter / Multiple Pointer - findPair-:
   Exercise Description:
-    Input & Output Example:
+    See:
   My Solution:
     "../Scripts
   Constructor Solution:
     "../Scripts
 V48 -Coding Exercise 81: Trie Exercise - addWord-:
   Exercise Description:
-    Input & Output Example:
+    See:
   My Solution:
     "../Scripts
   Constructor Solution:
     "../Scripts
 V49 -Coding Exercise 82: Trie Exercise - findWord-:
   Exercise Description:
-    Input & Output Example:
+    See:
   My Solution:
     "../Scripts
   Constructor Solution:
     "../Scripts
 V50 -Coding Exercise 83: Trie Exercise - getWords-:
   Exercise Description:
-    Input & Output Example:
+    See:
   My Solution:
     "../Scripts
   Constructor Solution:
     "../Scripts
 V51 -Coding Exercise 84: Trie Exercise - autoComplete-:
   Exercise Description:
-    Input & Output Example:
+    See:
   My Solution:
     "../Scripts
   Constructor Solution:
     "../Scripts
 V52 -Coding Exercise 85: Trie Exercise - removeWord-:
   Exercise Description:
-    Input & Output Example:
+    See:
   My Solution:
     "../Scripts
   Constructor Solution:

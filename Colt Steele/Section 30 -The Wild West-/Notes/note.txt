@@ -138,11 +138,10 @@ V12 -Coding Exercise 45: Bubble Sort-:
         Negative value if the first value is less than the second.
         Positive value if the first value is greater than the second. 
         0 if both values are equal.
-      The default comparator you provide should assume that the two parameters are numbers. 
-        That we are sorting the values from smallest to largest.
-      Bubble sort is an O(n^2) algorithm. 
-        You can read more about it here: 
-          rithmschool.com/courses/javascript-computer-science-fundamentals/basic-sorting-algorithms
+    The default comparator you provide should assume that the two parameters are numbers. 
+      That we are sorting the values from smallest to largest.
+    Bubble sort is an O(n^2) algorithm, You can read more about it here: 
+      www.rithmschool.com/courses/javascript-computer-science-fundamentals/basic-sorting-algorithms
     Inputs & Outputs Examples:
       bubbleSort([4, 20, 12, 10, 7, 9]);  => [4, 7, 9, 10, 12, 20]
       bubbleSort([0, -10, 7, 4]);         => [-10, 0, 4, 7]
@@ -155,11 +154,22 @@ V12 -Coding Exercise 45: Bubble Sort-:
     ../Scripts/V12 -Coding Exercise 45 Bubble Sort-/chatgpt-solution.js
 V13 -Coding Exercise 46: Selection Sort-:
   Exercise Description:
-    See:
+    Here's some guidance for how selection sort should work:
+      Assign the first element to be the smallest value -this is called the minimum-. 
+      It does not matter right now if this actually the smallest value in the array.
+      Compare this item to the next item in the array until you find a smaller number.
+      If a smaller number is found. 
+        Designate it to be the new "minimum" and continue until the end of the array.
+      If the "minimum" is not the value -index- you initially began with. 
+        Swap the two values. 
+          You will now see that the beginning of the array is in the correct order. 
+            Similar to how after the first iteration of bubble sort: 
+              We know the rightmost element is in its correct place.
+      Repeat this with the next element until the array is sorted.
+    This algorithm has a O(n^2) time complexity. You can read more about them here: 
+      www.rithmschool.com/courses/javascript-computer-science-fundamentals/basic-sorting-algorithms
   My Solution:
-    "../Scripts
-  Constructor Solution:
-    "../Scripts
+    ../Scripts/V13 -Coding Exercise 46 Selection Sort-/my-solution.js
 
 
 

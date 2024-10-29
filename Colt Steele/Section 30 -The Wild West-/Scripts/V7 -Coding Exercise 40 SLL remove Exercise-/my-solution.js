@@ -80,7 +80,7 @@ class SinglyLinkedList{
 
     if(idx === 0) this.head = this.head.next;
     else{
-      const preRemoveNode = this.get(idx);
+      const preRemoveNode = this.get(idx - 1);
       preRemoveNode.next = removedNode.next;
     }
 
@@ -91,7 +91,7 @@ class SinglyLinkedList{
 
 };
 
-
+/*
 const singlyLinkedList = new SinglyLinkedList();
 
 singlyLinkedList.push(10);
@@ -112,3 +112,13 @@ console.log(singlyLinkedList.remove(5), singlyLinkedList.length); // 60, 5
 console.log(singlyLinkedList.remove(0));                          // 10
 console.log(singlyLinkedList.remove(2));                          // 40 
 console.log(singlyLinkedList);                                    // 20 -> 30 -> 50 
+*/
+
+var singlyLinkedList = new SinglyLinkedList;
+singlyLinkedList.push(5).push(10).push(15).push(20); //5 -> 10 -> 15 -> 20
+console.log(singlyLinkedList.remove(2).val); // 15 "5 -> 10 -> 20"
+console.log(singlyLinkedList.remove(100)); // undefined
+console.log(singlyLinkedList.length) // 3
+console.log(singlyLinkedList.head.val) // 5
+console.log(singlyLinkedList.head.next.val) // 10
+console.log(singlyLinkedList.head.next.next.val) // 20

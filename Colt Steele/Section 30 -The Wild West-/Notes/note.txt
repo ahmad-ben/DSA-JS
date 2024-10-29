@@ -54,7 +54,7 @@ V7 -Coding Exercise 40: SLL - remove Exercise-:
       ../../Section 19 -Singly Linked Lists-/Notes/note.txt
         Line 192.
   My Solution:
-    ../Scripts/V7 -Coding Exercise 40 SLL - remove Exercise-/my-solution.js
+    ../Scripts/V7 -Coding Exercise 40 SLL remove Exercise-/my-solution.js
   Constructor Solution:
     ../../Section 19 -Singly Linked Lists-/Scripts/V18 -...-/constructor-solution.js
 V8 -Coding Exercise 41: SLL - rotate Exercise-:
@@ -66,77 +66,109 @@ V8 -Coding Exercise 41: SLL - rotate Exercise-:
       The list should be modified to 3 -> 4 -> 5 -> 1 -> 2. 
       The number passed in to rotate can be any integer.
         Time Complexity: O(N), where N is the length of the list.
-        Space Complexity: O(1)
+        Space Complexity: O(1).
   My Solution:
-    ../Scripts/V8 -Coding Exercise 41 SLL - rotate Exercise-/my-solution.js
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    ../Scripts/V8 -Coding Exercise 41 SLL rotate Exercise-/my-solution.js
 V9 -Coding Exercise 42: Divide and Conquer - countZeroes-:
   Exercise Description:
+    Given an array of 1s and 0s which has all 1s first followed by all 0s. 
+    Write a function called countZeroes, which returns the number of zeroes in the array.
+    Constraints
+      Time Complexity - O(log n)
+    Inputs & Outputs Examples:
+      countZeroes([1,1,1,1,0,0])  => 2
+      countZeroes([1,0,0,0,0])    => 4
+      countZeroes([0,0,0])        => 3
+      countZeroes([1,1,1,1])      => 0
     See:
   My Solution:
-    "../Scripts
-  Constructor Solution:
-    "../Scripts
+    ../Scripts/V9 -Coding Exercise 42 Divide and Conquer countZeroes-/my-solution.js
 V10 -Coding Exercise 43: Divide and Conquer - sortedFrequency-:
   Exercise Description:
+    Given a sorted array and a number. 
+    Write a function called sortedFrequency that counts the occurrences of the number in the array.
+    Constraints:
+      Time Complexity: O(log n)
+    Inputs & Outputs Examples:
+      sortedFrequency([1,1,2,2,2,2,3],2) // 4 
+      sortedFrequency([1,1,2,2,2,2,3],3) // 1 
+      sortedFrequency([1,1,2,2,2,2,3],1) // 2 
+      sortedFrequency([1,1,2,2,2,2,3],4) // -1
     See:
-  My Solution:
-    "../Scripts
-  Constructor Solution:
-    "../Scripts
+  My Solutions:
+    Initial solution:
+      ../Scripts/V10 -Coding Exercise 43 Divide and Conquer sortedFrequency-/my-solution.js
+        After asking CHATGPT i found that the first solution may not be always O(log n).
+    Enhanced Solution:
+      ../Scripts/V10 -...-/my-enhanced-solution.js
+        After getting the general idea of the optimal solution from CHATGPT.
+  CHATGPT solution:
+    ../Scripts/V10 -Coding Exercise 43 Divide and Conquer sortedFrequency-/chatgpt-solution.js
 V11 -Coding Exercise 44: Divide and Conquer - findRotatedIndex-:
   Exercise Description:
-    See:
+    Write a function called findRotatedIndex. 
+    It accepts a rotated array of sorted numbers and an integer. 
+    The function should return the index of the integer in the array. 
+    If the value is not found, return -1.
+    Constraints:
+      Time Complexity - O(log n)
+      Space Complexity - O(1)
+    Inputs & Outputs Examples:
+      findRotatedIndex([3,4,1,2],4)                     => 1
+      findRotatedIndex([6, 7, 8, 9, 1, 2, 3, 4], 8)     => 2
+      findRotatedIndex([6, 7, 8, 9, 1, 2, 3, 4], 3)     => 6
+      findRotatedIndex([37,44,66,102,10,22],14)         => -1
+      findRotatedIndex([6, 7, 8, 9, 1, 2, 3, 4], 12)    => -1
+      findRotatedIndex([11,12,13,14,15,16,3,5,7,9], 16) => 5
   My Solution:
-    "../Scripts
+    ../Scripts/V11 -Coding Exercise 44 Divide and Conquer findRotatedIndex-/my-solution.js
   Constructor Solution:
-    "../Scripts
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 V12 -Coding Exercise 45: Bubble Sort-:
   Exercise Description:
     See:

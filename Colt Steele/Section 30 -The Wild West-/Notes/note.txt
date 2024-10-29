@@ -122,60 +122,37 @@ V11 -Coding Exercise 44: Divide and Conquer - findRotatedIndex-:
       findRotatedIndex([11,12,13,14,15,16,3,5,7,9], 16) => 5
   My Solution:
     ../Scripts/V11 -Coding Exercise 44 Divide and Conquer findRotatedIndex-/my-solution.js
-  Constructor Solution:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 V12 -Coding Exercise 45: Bubble Sort-:
   Exercise Description:
-    See:
+    Implement a function called bubbleSort. 
+    Given an array, bubbleSort will sort the values in the array. 
+    The function takes 2 parameters: 
+      an array and an optional comparator function.
+        function bubbleSort(arr, comparator) {
+          if (typeof comparator !== 'function') {
+            // provide a default
+          }
+        }
+      Comparator function is a callback that will take two values from the array to be compared. 
+      The function returns:
+        Negative value if the first value is less than the second.
+        Positive value if the first value is greater than the second. 
+        0 if both values are equal.
+      The default comparator you provide should assume that the two parameters are numbers. 
+        That we are sorting the values from smallest to largest.
+      Bubble sort is an O(n^2) algorithm. 
+        You can read more about it here: 
+          rithmschool.com/courses/javascript-computer-science-fundamentals/basic-sorting-algorithms
+    Inputs & Outputs Examples:
+      bubbleSort([4, 20, 12, 10, 7, 9]);  => [4, 7, 9, 10, 12, 20]
+      bubbleSort([0, -10, 7, 4]);         => [-10, 0, 4, 7]
+      bubbleSort([1, 2, 3]);              => [1, 2, 3]
+      bubbleSort([]);
+      More Examples are in the solution file for test.
   My Solution:
-    "../Scripts
-  Constructor Solution:
-    "../Scripts
+    ../Scripts/V12 -Coding Exercise 45 Bubble Sort-/my-solution.js
+  CHATGPT Solution:
+    ../Scripts/V12 -Coding Exercise 45 Bubble Sort-/chatgpt-solution.js
 V13 -Coding Exercise 46: Selection Sort-:
   Exercise Description:
     See:
@@ -183,6 +160,52 @@ V13 -Coding Exercise 46: Selection Sort-:
     "../Scripts
   Constructor Solution:
     "../Scripts
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 V14 -Coding Exercise 47: Insertion Sort-:
   Exercise Description:
     See:

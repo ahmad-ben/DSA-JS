@@ -42,7 +42,7 @@ var names = ["Bob", "Ethel", "Christine"]
 var otherNames = ["M", "Colt", "Allison", "SuperLongNameOMG"]
 
 function stringLengthComparator(str1, str2) {
-return str1.length - str2.length;
+  return str1.length - str2.length;
 }
 
 console.log(merge(names, otherNames, stringLengthComparator)); // ["M", "Bob", "Colt", "Ethel", "Allison", "Christine", "SuperLongNameOMG"]

@@ -166,63 +166,42 @@ V13 -Coding Exercise 46: Selection Sort-:
             Similar to how after the first iteration of bubble sort: 
               We know the rightmost element is in its correct place.
       Repeat this with the next element until the array is sorted.
+    Inputs & Outputs Examples:
+      The same examples of bubble sort.
     This algorithm has a O(n^2) time complexity. You can read more about them here: 
       www.rithmschool.com/courses/javascript-computer-science-fundamentals/basic-sorting-algorithms
   My Solution:
     ../Scripts/V13 -Coding Exercise 46 Selection Sort-/my-solution.js
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 V14 -Coding Exercise 47: Insertion Sort-:
   Exercise Description:
-    See:
+    Implement insertionSort  
+      Given an array, both algorithms will sort the values in the array. 
+      The functions take 2 parameters:
+        an array and an optional comparator function. 
+      Comparator function is a callback that will take two values from the array to be compared. 
+      The function returns:
+        A negative value if the first value is less than the second.
+        A positive value if the first value is greater than the second.
+        0 if both values are equal. 
+      The default comparator you provide should assume that the two parameters are numbers. 
+        And we are sorting the values from smallest to largest.
+    Here's some guidance for how insertion sort should work:
+      Start by picking the second element in the array:
+        We will assume the first element is the start of the "sorted" portion.
+      Now compare the second element with the one before it and swap if necessary.
+      Continue to the next element:
+        If it is in the incorrect order: 
+          Iterate through the sorted portion to place the element in the correct place.
+      Repeat until the array is sorted.
+    Implement insertion sort:
+      Your function should accept an array and return an array of sorted values.
+    Inputs & Outputs Examples:
+      The same examples of bubble sort.
   My Solution:
-    "../Scripts
-  Constructor Solution:
-    "../Scripts
+    ../Scripts/V14 -Coding Exercise 47 Insertion Sort-/my-solution.js
+  Coursemate Solution:
+    ../Scripts/V14 -Coding Exercise 47 Insertion Sort-/coursemate-solution.js
+      Short and nice solution.
 V15 -Coding Exercise 48: Sorting Exercise - merge helper-:
   Exercise Description:
     See:
@@ -230,6 +209,52 @@ V15 -Coding Exercise 48: Sorting Exercise - merge helper-:
     "../Scripts
   Constructor Solution:
     "../Scripts
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 V16 -Coding Exercise 49: Merge Sort-:
   Exercise Description:
     See:

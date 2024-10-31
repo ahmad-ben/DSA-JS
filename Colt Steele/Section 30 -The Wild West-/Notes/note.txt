@@ -98,11 +98,11 @@ V10 -Coding Exercise 43: Divide and Conquer - sortedFrequency-:
   My Solutions:
     Initial solution:
       ../Scripts/V10 -Coding Exercise 43 Divide and Conquer sortedFrequency-/my-solution.js
-        After asking CHATGPT i found that the first solution may not be always O(log n).
+        After asking Chatgpt i found that the first solution may not be always O(log n).
     Enhanced Solution:
       ../Scripts/V10 -...-/my-enhanced-solution.js
-        After getting the general idea of the optimal solution from CHATGPT.
-  CHATGPT solution:
+        After getting the general idea of the optimal solution from Chatgpt.
+  Chatgpt solution:
     ../Scripts/V10 -Coding Exercise 43 Divide and Conquer sortedFrequency-/chatgpt-solution.js
 V11 -Coding Exercise 44: Divide and Conquer - findRotatedIndex-:
   Exercise Description:
@@ -150,7 +150,7 @@ V12 -Coding Exercise 45: Bubble Sort-:
       More Examples are in the solution file for test.
   My Solution:
     ../Scripts/V12 -Coding Exercise 45 Bubble Sort-/my-solution.js
-  CHATGPT Solution:
+  Chatgpt Solution:
     ../Scripts/V12 -Coding Exercise 45 Bubble Sort-/chatgpt-solution.js
 V13 -Coding Exercise 46: Selection Sort-:
   Exercise Description:
@@ -204,106 +204,216 @@ V14 -Coding Exercise 47: Insertion Sort-:
       Short and nice solution.
 V15 -Coding Exercise 48: Sorting Exercise - merge helper-:
   Exercise Description:
-    See:
+    Given two sorted arrays: 
+      Write a function called merge which: 
+        Accepts two SORTED arrays.
+        Returns a new array with both of the values from each array sorted.
+        Run in O(n + m) time and O(n + m) space.
+        It doesn't modify the parameters passed to it.
+        As before, the function should default to sorting numbers in ascending order. 
+        If you pass in a comparator function as a third argument: 
+          This comparator is what will be used. 
+            -Note that the input arrays will always be sorted according to the comparator!-
+    Do not use the built in sort method! 
+    We're going to use this helper to implement a sort.
+      The helper itself shouldn't depend on a sort.
+    Inputs & Outputs Examples:
+      Example 1:
+        var arr1 = [1,3,4,5];
+        var arr2 = [2,4,6,8];
+        merge(arr1,arr2) => [1,2,3,4,4,5,6,8]
+      Example 2:
+        var arr3 = [-2,-1,0,4,5,6];
+        var arr4 = [-3,-2,-1,2,3,5,7,8];
+        merge(arr3,arr4); => [-3,-2,-2,-1,-1,0,2,3,4,5,5,6,7,8]
+      Example 3:
+        var arr5 = [3,4,5]
+        var arr6 = [1,2]
+        merge(arr5,arr6) => [1,2,3,4,5]
+      More Examples are in the solution file for test.
   My Solution:
-    "../Scripts
-  Constructor Solution:
-    "../Scripts
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    ../Scripts/V15 -Coding Exercise 48 Sorting Exercise merge helper-/my-solution.js
 V16 -Coding Exercise 49: Merge Sort-:
   Exercise Description:
-    See:
+    Implement the merge sort algorithm. 
+    Given an array, this algorithm will sort the values in the array. 
+    The functions take 2 parameters: an array and an optional comparator function.
+    The comparator function is a callback that will take two values from the array to be compared.
+    The function returns:
+      A negative value if the first value is less than the second. 
+      A positive value if the first value is greater than the second.
+      0 if both values are equal.
+    The default comparator you provide: 
+      Should assume that the two parameters are numbers. 
+        We are sorting the values from smallest to largest.
+    Here's some guidance for how merge sort should work:
+      Break up the array into halves until you can compare one value with another.
+      Once you have smaller sorted arrays: 
+        Merge those arrays with other sorted pairs.
+          Until you are back at the full length of the array
+      Once the array has been merged back together. 
+        Return the merged -and sorted- array
+      In order to implement this function. 
+        You'll also need to implement a merge function. 
+          That takes in two sorted arrays and a comparator and returns a new sorted array. 
+          You implemented this function in the previous exercise, so copy and paste that code here.
+    You can read more merge sort here: 
+      "https://www.rithmschool.com/courses/
+        javascript-computer-science-fundamentals/intermediate-sorting-algorithms"
   My Solution:
-    "../Scripts
+    ../Scripts/V16 -Coding Exercise 49 Merge Sort-/my-solution.js
   Constructor Solution:
-    "../Scripts
+    ../Scripts/V16 -Coding Exercise 49 Merge Sort-/chatgpt-solution.js
 V17 -Coding Exercise 50: Sorting Exercise - pivot helper-:
   Exercise Description:
-    See:
+    In this exercise, your goal is to implement a function called pivot. 
+    This function contains nearly all of the logic you'll need in order to implement Quick Sort.
+    The pivot  function is responsible for: 
+      Taking an array.
+      Setting the pivot value.
+      Mutating the array so that: 
+        All values less than the pivot wind up to the left of it.
+        All values greater than the pivot wind up to the right of it. 
+        It's also helpful if this helper returns the index of where the pivot value winds up.
+    Inputs & Outputs Examples:
+      Example 1:
+        var arr = [4, 2, 5, 3, 6];
+        pivot(arr);  => 2
+        arr;         => [3, 2, 4, 5, 6];
+        More Examples are in the solution file for test.
   My Solution:
-    "../Scripts
-  Constructor Solution:
-    "../Scripts
+    ../Scripts/V17 -Coding Exercise 50 Sorting Exercise pivot helper-/my-solution.js
 V18 -Coding Exercise 51: Quick Sort-:
   Exercise Description:
-    See:
+    You can check out this video from Computerphile as a quick introduction to how quicksort works:
+      https://www.youtube.com/watch?v=XE4VP_8Y0BU
+    The algorithm is as follows:
+      Pick an element in the array and designate it as the "pivot". 
+        While there are quite a few options for choosing the pivot. 
+        We'll make things simple to start, and will choose the pivot as the first element. 
+        This is not an ideal choice, but it makes the algorithm easier to understand for now.
+    Next, compare every other element in the array to the pivot.
+      If it's less than the pivot value, move it to the left of the pivot.
+      If it's greater, move it to the right.
+    Once you have finished comparing, the pivot will be in the right place.
+    Next, recursively call quicksort again with the left and right halves from the pivot.
+      Until the array is sorted.
+    It's easiest to implement Quick Sort with the aid of your pivot helper.
+      From the earlier exercise. 
+    The default comparator you provide should assume that the two parameters are numbers. 
+      We are sorting the values from smallest to largest.
+    Inputs & Outputs Examples:
+      quickSort([4, 20, 12, 10, 7, 9]);    => [4, 7, 9, 10, 12, 20]
+      quickSort([0, -10, 7, 4]);           => [-10, 0, 4, 7]
+      quickSort([1, 2, 3]);                => [1, 2, 3]
+      More Examples are in the solution file for test.
   My Solution:
-    "../Scripts
-  Constructor Solution:
-    "../Scripts
+    ../Scripts/V18 -Coding Exercise 51 Quick Sort-/my-solution.js
+  Chatgpt Solution:
+    ../Scripts/V18 -Coding Exercise 51 Quick Sort-/chatgpt-solution.js
 V19 -Coding Exercise 52: Radix Sort Helper - getDigit-:
   Exercise Description:
-    See:
+    Implement a function called getDigit.
+    It accepts a positive integer and a position. 
+      Returns the digit in that number at the given position. 
+    The position reads from right to left, so the 0th position corresponds to the rightmost digit.
+    Inputs & Outputs Examples:
+      console.log(getDigit(12345, 0)); => 5
+      console.log(getDigit(12345, 1)); => 4
+      console.log(getDigit(12345, 2)); => 3
+      console.log(getDigit(12345, 3)); => 2
+      console.log(getDigit(12345, 4)); => 1
+      console.log(getDigit(12345, 5)); => 0
   My Solution:
-    "../Scripts
-  Constructor Solution:
-    "../Scripts
+    ../Scripts/V19 -Coding Exercise 52 Radix Sort Helper getDigit-/my-solution.js
 V20 -Coding Exercise 53: Radix Sort Helper - digitCount-:
   Exercise Description:
-    See:
+    Implement a function called digitCount.
+    It accepts a positive integer and returns the number of digits that the integer has.
+    Inputs & Outputs:
+      digitCount(1);      => 1
+      digitCount(9);      => 1
+      digitCount(25);     => 2
+      digitCount(314);    => 3
+      digitCount(1234);   => 4
+      digitCount(77777);  => 5
   My Solution:
-    "../Scripts
+    ../Scripts/V20 -Coding Exercise 53 Radix Sort Helper digitCount-/my-solution.js
   Constructor Solution:
-    "../Scripts
+    ../../Section 17 -...-/Scripts/V3 -...-/Constructor Helper Methods/digit-count.js
 V21 -Coding Exercise 54: Radix Sort Helper - mostDigits-:
   Exercise Description:
-    See:
+    Implement a function called mostDigits.
+    It accepts an array of integers.
+    Returns a count of the number of digits for the number in the array with the most digits.
+    It may help to use your digitCount code from the previous exercise in this function.
+    Inputs & Outputs Examples:
+      mostDigits([1, 9, 10, 100, 99]);      => 3
+      mostDigits([100, 1010, 1, 500]);      => 4
+      mostDigits([0, 100000, 400, 12, 8]);  => 6
+      mostDigits([]);                       => 0
   My Solution:
-    "../Scripts
-  Constructor Solution:
-    "../Scripts
+    ../Scripts/V21 -Coding Exercise 54 Radix Sort Helper mostDigits-/my-solution.js
 V22 -Coding Exercise 55: Radix Sort-:
   Exercise Description:
-    See:
-  My Solution:
-    "../Scripts
-  Constructor Solution:
-    "../Scripts
+    Write a function called radixSort.
+    It accepts an array of numbers and sorts them in ascending order.
+    You'll need to make use of the helper functions from the previous exercises.
+    Inputs & Outputs Examples:
+      radixSort([8, 6, 1, 12]);                 =>[1, 6, 8, 12]
+      radixSort([10, 100, 1, 1000, 10000000]);  =>[1, 10, 100, 1000, 10000000]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 V23 -Coding Exercise 56: Stacks - push Exercise-:
   Exercise Description:
     See:

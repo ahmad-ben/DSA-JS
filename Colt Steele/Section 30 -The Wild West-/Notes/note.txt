@@ -362,65 +362,66 @@ V22 -Coding Exercise 55: Radix Sort-:
     Inputs & Outputs Examples:
       radixSort([8, 6, 1, 12]);                 =>[1, 6, 8, 12]
       radixSort([10, 100, 1, 1000, 10000000]);  =>[1, 10, 100, 1000, 10000000]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 V23 -Coding Exercise 56: Stacks - push Exercise-:
   Exercise Description:
-    See:
+    Implement the push method on the Stack class:
+      Takes in a node and puts it at the top of the stack. 
+      Should return the new size of the stack.
   My Solution:
-    "../Scripts
-  Constructor Solution:
-    "../Scripts
+    ../Scripts/V23 -Coding Exercise 56 Stacks push Exercise-/my-solution.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 V24 -Coding Exercise 57: Stacks - pop Exercise-:
   Exercise Description:
     See:

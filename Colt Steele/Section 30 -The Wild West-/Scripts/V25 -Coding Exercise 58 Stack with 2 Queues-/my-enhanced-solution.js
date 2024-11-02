@@ -46,51 +46,18 @@ class Stack {
     this.secondQueue = new Queue(); 
   };
 
-  push(val) {
-    if(this.firstQueue.size === 0){
-      this.firstQueue.enqueue(val);
-      this.secondQueue.enqueue(val);
-      return this;
-    }
-    this.firstQueue.enqueue(val);
+  push(value) {
+    this.secondQueue.enqueue(value);
 
-    let currentNode = this.firstQueue.first;
-    let arrOfNodes = [];
-    while(currentNode){
-      arrOfNodes.push(currentNode.value);
-      currentNode = currentNode.next;
-    };
+    while(this.firstQueue.size) 
+      this.secondQueue.enqueue(this.firstQueue.dequeue());
 
-    this.secondQueue = new Queue;
-    for (let i = arrOfNodes.length - 1; i >= 0 ; i--) 
-      this.secondQueue.enqueue(arrOfNodes[i])
-
-   return this;
+    this.firstQueue = this.secondQueue;
+    this.secondQueue = new Queue();
+    return this;
   };
 
-  pop() {
-    if(this.firstQueue.size === 0) return null;
-    const removedNode = this.secondQueue.first;
-
-    if(this.firstQueue.size === 1) 
-      this.firstQueue = this.secondQueue = new Queue();
-    else{
-      this.secondQueue.dequeue();
-
-      let currentNode = this.secondQueue.first;
-      let arrOfNodes = [];
-      while(currentNode){
-        arrOfNodes.push(currentNode.value);
-        currentNode = currentNode.next;
-      };
-
-      this.firstQueue = new Queue;
-      for (let i = arrOfNodes.length - 1; i >= 0 ; i--) 
-        this.firstQueue.enqueue(arrOfNodes[i]);
-    };
-
-    return removedNode.value;
-  }
+  pop() { return this.firstQueue.dequeue(); }
 }
 
 const stack = new Stack();

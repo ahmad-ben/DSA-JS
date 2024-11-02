@@ -374,71 +374,90 @@ V23 -Coding Exercise 56: Stacks - push Exercise-:
     ../Scripts/V23 -Coding Exercise 56 Stacks push Exercise-/my-solution.js
 V24 -Coding Exercise 57: Stacks - pop Exercise-:
   Exercise Description:
-    See:
+    Implement the pop method on the Stack class
+      Removes the node at the top of the stack and returns the value of that node.
+      Note: The tests for pop rely on push working.
   My Solution:
-    "../Scripts
-  Constructor Solution:
-    "../Scripts
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    "../Scripts/V24 -Coding Exercise 57 Stacks pop Exercise-/my-solution.js
 V25 -Coding Exercise 58: Stack with 2 Queues-:
   Exercise Description:
-    See:
+    Implement a stack using two queues:
+      You should implement the following functions:
+        Push -returns the stack-.
+        Pop -returns the value popped-.
   My Solution:
-    "../Scripts
-  Constructor Solution:
-    "../Scripts
+    ../Scripts/V25 -Coding Exercise 58 Stack with 2 Queues-/my-solution.js
+      My first solution try.
+    ../Scripts/V25 -Coding Exercise 58 Stack with 2 Queues-/my-enhanced-solution.js
+      After asking CHATGPT if the first solution is correct and understand the idea more and more.
+  Stack VS Queue:
+    Stack:
+      Elements are added and removed from the top -Last In, First Out, or LIFO-.
+      Top always refers to the most recently added element.
+      When a new node is pushed, it becomes the new top and points to the previous top.
+      Only the top can be removed -popped- at any time. 
+      Elements below the top are inaccessible until the elements above them are removed.
+      Only the top is accessed, and elements are removed in the reverse order of addition.
+    Queue:
+      Elements are added at the end -tail- and removed from the front -head-. 
+        First In, First Out, or FIFO.
+      The head stays the same until we dequeue. 
+        It always refers to the oldest element in the queue.
+      New nodes are added at the tail, while the head is the one dequeued first.
+      The head node is always removed first, and the next node becomes the new head.
+      The head remains at the front until dequeued. 
+      Elements are removed in the order of addition.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 V26 -Coding Exercise 59: Queues - enqueue Exercise-:
   Exercise Description:
     See:

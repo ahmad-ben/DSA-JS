@@ -367,61 +367,11 @@ V23 -Coding Exercise 56: Stacks - push Exercise-:
     Implement the push method on the Stack class:
       Takes in a node and puts it at the top of the stack. 
       Should return the new size of the stack.
+  Important note:
+    In the stack each node should have a refer to the previous node before it.
+      that makes the process of knowing the new top item after a pop easier. 
   My Solution:
     ../Scripts/V23 -Coding Exercise 56 Stacks push Exercise-/my-solution.js
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 V24 -Coding Exercise 57: Stacks - pop Exercise-:
   Exercise Description:
     See:
@@ -429,6 +379,59 @@ V24 -Coding Exercise 57: Stacks - pop Exercise-:
     "../Scripts
   Constructor Solution:
     "../Scripts
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 V25 -Coding Exercise 58: Stack with 2 Queues-:
   Exercise Description:
     See:

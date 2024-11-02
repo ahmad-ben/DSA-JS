@@ -378,7 +378,7 @@ V24 -Coding Exercise 57: Stacks - pop Exercise-:
       Removes the node at the top of the stack and returns the value of that node.
       Note: The tests for pop rely on push working.
   My Solution:
-    "../Scripts/V24 -Coding Exercise 57 Stacks pop Exercise-/my-solution.js
+    ../Scripts/V24 -Coding Exercise 57 Stacks pop Exercise-/my-solution.js
 V25 -Coding Exercise 58: Stack with 2 Queues-:
   Exercise Description:
     Implement a stack using two queues:
@@ -407,64 +407,64 @@ V25 -Coding Exercise 58: Stack with 2 Queues-:
       The head node is always removed first, and the next node becomes the new head.
       The head remains at the front until dequeued. 
       Elements are removed in the order of addition.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 V26 -Coding Exercise 59: Queues - enqueue Exercise-:
   Exercise Description:
-    See:
+    Implement the enqueue method on the Queue class.
+    This function adds the value to the end of the queue. 
+    This should be an O(1) operation and return the new size of the queue.
   My Solution:
-    "../Scripts
-  Constructor Solution:
-    "../Scripts
+    ../Scripts/V26 -Coding Exercise 59 Queues enqueue Exercise-/my-solution.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 V27 -Coding Exercise 60: Binary Search Tree - insert Exercise-:
   Exercise Description:
     See:

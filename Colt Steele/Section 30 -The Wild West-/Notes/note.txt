@@ -414,71 +414,54 @@ V26 -Coding Exercise 59: Queues - enqueue Exercise-:
     This should be an O(1) operation and return the new size of the queue.
   My Solution:
     ../Scripts/V26 -Coding Exercise 59 Queues enqueue Exercise-/my-solution.js
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 V27 -Coding Exercise 60: Binary Search Tree - insert Exercise-:
   Exercise Description:
-    See:
+    Write a the insert function on the BinarySearchTree class:
+      Accepts a value and inserts it into the BST in the correct position. 
+      The function should return the binary search tree. 
   My Solution:
-    "../Scripts
-  Constructor Solution:
-    "../Scripts
+    "../Scripts/V27 -Coding Exercise 60 Binary Search Tree insert Exercise-/my-solution.js
 V28 -Coding Exercise 61: Binary Search Tree - find-:
   Exercise Description:
-    See:
+    Implement the findIteratively functions on the -BinarySearchTree.prototype-. 
+    This function should find a node in a binary tree. 
+    It should return the node if found, otherwise return -undefined-. 
+    This should be solved using iteration or recursion. 
+    The tests for this method assume that insertIteratively has been implemented correctly.
   My Solution:
-    "../Scripts
-  Constructor Solution:
-    "../Scripts
+    ../Scripts/V28 -Coding Exercise 61 Binary Search Tree find-/my-solution.js 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 V29 -Coding Exercise 62: Binary Search Tree - DFS Exercise-:
   Exercise Description:
     See:

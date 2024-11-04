@@ -430,45 +430,85 @@ V28 -Coding Exercise 61: Binary Search Tree - find-:
     The tests for this method assume that insertIteratively has been implemented correctly.
   My Solution:
     ../Scripts/V28 -Coding Exercise 61 Binary Search Tree find-/my-solution.js 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 V29 -Coding Exercise 62: Binary Search Tree - DFS Exercise-:
   Exercise Description:
-    See:
+    Implement the following functions on the BinarySearchTree.prototype.
+      DFSPreOrder
+        Search through each node in the binary search tree using pre-order depth first search.
+        Return an array containing each node's value.
+        Inputs & Outputs Examples: 
+          const binarySearchTree = new BinarySearchTree();
+          binarySearchTree
+              .insert(15)
+              .insert(20)
+              .insert(10)
+              .insert(12)
+              .insert(1)
+              .insert(5)
+              .insert(50);
+          binarySearchTree.DFSPreOrder() // [15, 10, 1, 5, 12, 20, 50]
+      DFSInOrder
+        Search through each node in the binary search tree using in-order depth first search.
+        Return an array containing each node's value.
+        Inputs & Outputs Examples:
+          const binarySearchTree = new BinarySearchTree();
+          binarySearchTree
+            .insert(15)
+            .insert(20)
+            .insert(10)
+            .insert(12)
+            .insert(1)
+            .insert(5)
+            .insert(50);
+          binarySearchTree.DFSInOrder() // [1, 5, 10, 12, 15, 20, 50]
+      DFSPostOrder
+        Search through each node in the binary search tree using post-order depth first search.
+        Return an array containing each node's value.
+        Inputs & Outputs Examples:
+          const binarySearchTree = new BinarySearchTree();
+          binarySearchTree
+            .insert(15)
+            .insert(20)
+            .insert(10)
+            .insert(12)
+            .insert(1)
+            .insert(5)
+            .insert(50);
+          binarySearchTree.DFSPostOrder() // [5, 1, 12, 10, 50, 20, 15]
   My Solution:
-    "../Scripts
-  Constructor Solution:
-    "../Scripts
+    ../Scripts/V29 -Coding Exercise 62 Binary Search Tree DFS Exercise-/my-solution.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 V30 -Coding Exercise 63: Binary Search Tree - BFS Exercise-:
   Exercise Description:
     See:

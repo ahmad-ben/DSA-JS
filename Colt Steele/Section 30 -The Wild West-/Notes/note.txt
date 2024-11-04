@@ -439,13 +439,13 @@ V29 -Coding Exercise 62: Binary Search Tree - DFS Exercise-:
         Inputs & Outputs Examples: 
           const binarySearchTree = new BinarySearchTree();
           binarySearchTree
-              .insert(15)
-              .insert(20)
-              .insert(10)
-              .insert(12)
-              .insert(1)
-              .insert(5)
-              .insert(50);
+            .insert(15)
+            .insert(20)
+            .insert(10)
+            .insert(12)
+            .insert(1)
+            .insert(5)
+            .insert(50);
           binarySearchTree.DFSPreOrder() // [15, 10, 1, 5, 12, 20, 50]
       DFSInOrder
         Search through each node in the binary search tree using in-order depth first search.
@@ -477,45 +477,57 @@ V29 -Coding Exercise 62: Binary Search Tree - DFS Exercise-:
           binarySearchTree.DFSPostOrder() // [5, 1, 12, 10, 50, 20, 15]
   My Solution:
     ../Scripts/V29 -Coding Exercise 62 Binary Search Tree DFS Exercise-/my-solution.js
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 V30 -Coding Exercise 63: Binary Search Tree - BFS Exercise-:
   Exercise Description:
-    See:
+    Implement the breadthFirstSearch function on the BinarySearchTree.prototype.
+    It should search through each node in the binary search tree using breadth first search.
+    Return an array containing each node's value.
+    Inputs & Outputs Examples:
+      const binarySearchTree = new BinarySearchTree();
+      binarySearchTree
+        .insert(15)
+        .insert(20)
+        .insert(10)
+        .insert(12)
+        .insert(1)
+        .insert(5)
+        .insert(50);
+      binarySearchTree.breadthFirstSearch() // [(15, 10, 20, 1, 12, 50, 5)];
   My Solution:
-    "../Scripts
-  Constructor Solution:
-    "../Scripts
+    ../Scripts/V30 -Coding Exercise 63 Binary Search Tree BFS Exercise-/my-solution.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 V31 -Coding Exercise 64: Binary Search Tree - remove Exercise-:
   Exercise Description:
     See:

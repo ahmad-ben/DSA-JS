@@ -85,6 +85,7 @@ binarySearchTree
   .insert(1)
   .insert(5)
   .insert(50);
+
 console.log(binarySearchTree.DFSPreOrder());     // [15, 10, 1, 5, 12, 20, 50]
 console.log(binarySearchTree.DFSInOrder());      // [1, 5, 10, 12, 15, 20, 50]
 console.log(binarySearchTree.DFSPostOrder());    // [5, 1, 12, 10, 50, 20, 15]

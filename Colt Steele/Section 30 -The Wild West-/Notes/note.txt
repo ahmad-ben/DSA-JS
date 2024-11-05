@@ -523,72 +523,86 @@ V31 -Coding Exercise 64: Binary Search Tree - remove Exercise-:
     ../Scripts/V31 -Coding Exercise 64 Binary Search Tree remove Exercise-/my-solution.js
   ChatGPT Shorter Solution:
     ../Scripts/V31 -Coding Exercise 64 Binary Search Tree remove Exercise-/chatgpt-solution.js
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 V32 -Coding Exercise 65: Binary Search Tree Exercise - Find 2nd largest node-:
   Exercise Description:
-    See:
+    Write the findSecondLargest function on the BinarySearchTree class:
+    Finds and returns the second largest value in the BST. 
+    If the tree has fewer than two nodes, return undefined.
+    Inputs & Outputs Example:
+      Example 1:
+        const binarySearchTree = new BinarySearchTree();
+        binarySearchTree.insert(15);
+        binarySearchTree.insert(20);
+        binarySearchTree.insert(10);
+        binarySearchTree.insert(12);
+        binarySearchTree.findSecondLargest(); // returns 15
+      Example 2:
+        const binarySearchTree2 = new BinarySearchTree();
+        binarySearchTree2.insert(10);
+        binarySearchTree2.findSecondLargest(); // returns undefined    
   My Solution:
     "../Scripts
   Constructor Solution:
     "../Scripts
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 V33 -Coding Exercise 66: Binary Search Tree Exercise - Check if balanced-:
   Exercise Description:
     See:

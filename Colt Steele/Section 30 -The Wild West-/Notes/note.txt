@@ -552,73 +552,73 @@ V33 -Coding Exercise 66: Binary Search Tree Exercise - Check if balanced-:
     ../Scripts/V33 -...-/my-solution.js
   Chatgpt Solution:
     ../Scripts/V33 -...-/chatgpt-solution.js
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 V34 -Coding Exercise 67: BinaryHeap - insert Exercise-:
   Exercise Description:
-    See:
+    Implement the insert functions on the maxBinaryHeap class.
+    This function should insert a node in a binary heap. 
+    Make sure to re-order the heap after insertion if necessary.
   My Solution:
-    "../Scripts
-  Constructor Solution:
-    "../Scripts
+    ../Scripts/V34 -Coding Exercise 67 BinaryHeap insert Exercise-/my-solution.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 V35 -Coding Exercise 68: BinaryHeap - extractMax Exercise-:
   Exercise Description:
     See:

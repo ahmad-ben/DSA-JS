@@ -559,73 +559,81 @@ V34 -Coding Exercise 67: BinaryHeap - insert Exercise-:
     Make sure to re-order the heap after insertion if necessary.
   My Solution:
     ../Scripts/V34 -Coding Exercise 67 BinaryHeap insert Exercise-/my-solution.js
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 V35 -Coding Exercise 68: BinaryHeap - extractMax Exercise-:
   Exercise Description:
-    See:
+    Implement the extractMax functions on the maxBinaryHeap class.
+    It should remove the root node in a binary heap. 
+    Make sure to re-order the heap after removal if necessary.
   My Solution:
-    "../Scripts
-  Constructor Solution:
-    "../Scripts
+    ../Scripts/V35 -Coding Exercise 68 BinaryHeap extractMax Exercise-/my-solution.js
+  Chatgpt Solution:
+    ../Scripts/V35 -Coding Exercise 68 BinaryHeap extractMax Exercise-/chatgpt-solution.js
+      Since we always care about the biggest child we can: 
+        Extract first and then do the comparison just with it.
+  Avoid Shift:
+    Instead of shifting in array it's better to: 
+      Swap the first and the last item and then apply the pop method.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 V36 -Coding Exercise 69: Graphs Exercise - addVertex-:
   Exercise Description:
     See:

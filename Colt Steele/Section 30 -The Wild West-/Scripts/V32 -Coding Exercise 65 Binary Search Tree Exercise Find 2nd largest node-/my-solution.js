@@ -130,7 +130,7 @@ thirdBinarySearchTree
        \
        85
        /  \ 
-     66   95
+     66    95
          /    \
         90    100 
        /  \   / 

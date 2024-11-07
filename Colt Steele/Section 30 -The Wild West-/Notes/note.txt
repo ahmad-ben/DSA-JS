@@ -541,75 +541,77 @@ V32 -Coding Exercise 65: Binary Search Tree Exercise - Find 2nd largest node-:
         binarySearchTree2.insert(10);
         binarySearchTree2.findSecondLargest(); // returns undefined    
   My Solution:
-    "../Scripts
-  Constructor Solution:
-    "../Scripts
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    ../Scripts/V32 -...-/my-solution.js
 V33 -Coding Exercise 66: Binary Search Tree Exercise - Check if balanced-:
   Exercise Description:
-    See:
+    Write the isBalanced function on the BinarySearchTree class:
+      It returns true if the BST is balanced, otherwise returns false.
+    A balanced tree is defined as a tree where: 
+      The depth of all leaf nodes or nodes with single children differ by no more than one.
   My Solution:
-    "../Scripts
-  Constructor Solution:
-    "../Scripts
+    ../Scripts/V33 -...-/my-solution.js
+  Chatgpt Solution:
+    ../Scripts/V33 -...-/chatgpt-solution.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 V34 -Coding Exercise 67: BinaryHeap - insert Exercise-:
   Exercise Description:
     See:
@@ -744,13 +746,3 @@ V52 -Coding Exercise 85: Trie Exercise - removeWord-:
   Constructor Solution:
     "../Scripts
 ===================================================================================================
-
-
-
-/*
-
-Add the exercices here
-See my previous solutions and construtor prev POP?
-see the current construtor solution
-
-*/

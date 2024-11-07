@@ -573,74 +573,74 @@ V35 -Coding Exercise 68: BinaryHeap - extractMax Exercise-:
   Avoid Shift:
     Instead of shifting in array it's better to: 
       Swap the first and the last item and then apply the pop method.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 V36 -Coding Exercise 69: Graphs Exercise - addVertex-:
   Exercise Description:
-    See:
+    Implement the addVertex method on the Graph class.
+    It should: 
+      Add a node to the graph.
+      Place a new key in the adjacency list with the value of an empty array.
   My Solution:
-    "../Scripts
-  Constructor Solution:
-    "../Scripts
+    ../Scripts/V36 -Coding Exercise 69 Graphs Exercise addVertex-/my-solution.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 V37 -Coding Exercise 70: Graphs Exercise - removeEdge-:
   Exercise Description:
     See:

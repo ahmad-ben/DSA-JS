@@ -24,7 +24,7 @@ class MaxBinaryHeap{
     let unstableVal, rightChildIdx, rightChildVal, leftChildIdx, leftChildVal;
 
     this.swap(0, this.values.length - 1);
-    this.values.pop(); //No need for delete from the beginning just switch to end and pop it.
+    this.values.pop();
 
     while(true){
       leftChildIdx = (unstableValIdx * 2) + 1;

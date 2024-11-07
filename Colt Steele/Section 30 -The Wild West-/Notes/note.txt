@@ -581,73 +581,75 @@ V36 -Coding Exercise 69: Graphs Exercise - addVertex-:
       Place a new key in the adjacency list with the value of an empty array.
   My Solution:
     ../Scripts/V36 -Coding Exercise 69 Graphs Exercise addVertex-/my-solution.js
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 V37 -Coding Exercise 70: Graphs Exercise - removeEdge-:
   Exercise Description:
-    See:
+    Implement the removeEdge methods on the Graph class. 
+    addEdge and addVertex have been implemented for you.
+    This function should accept two nodes and remove the edge between them. 
+    It should modify the adjacency list ensuring that: 
+      Both values are not in each array for the two nodes which no longer contain the edge.
   My Solution:
-    "../Scripts
-  Constructor Solution:
-    "../Scripts
+    ../Scripts/V37 -Coding Exercise 70 Graphs Exercise removeEdge-/my-solution.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 V38 -Coding Exercise 71: Graphs Exercise - removeVertex-:
   Exercise Description:
     See:

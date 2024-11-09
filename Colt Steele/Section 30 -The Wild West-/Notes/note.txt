@@ -590,73 +590,77 @@ V37 -Coding Exercise 70: Graphs Exercise - removeEdge-:
       Both values are not in each array for the two nodes which no longer contain the edge.
   My Solution:
     ../Scripts/V37 -Coding Exercise 70 Graphs Exercise removeEdge-/my-solution.js
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 V38 -Coding Exercise 71: Graphs Exercise - removeVertex-:
   Exercise Description:
-    See:
+    Implement the removeVertex methods on the Graph class, removeEdge has been implemented for you.
+    This function should: 
+      Remove the node in the array of nodes.
+      Remove all edges that the removed node previously contained.
   My Solution:
-    "../Scripts
-  Constructor Solution:
-    "../Scripts
+    ../Scripts/V38 -Coding Exercise 71 Graphs Exercise removeVertex-/my-solution.js
+  Chatgpt Solution -Using Set-:
+    ../Scripts/V38 -Coding Exercise 71 Graphs Exercise removeVertex-/chatgpt-solution.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 V39 -Coding Exercise 72: Graphs - DFS Exercise-:
   Exercise Description:
     See:

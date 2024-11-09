@@ -600,74 +600,77 @@ V38 -Coding Exercise 71: Graphs Exercise - removeVertex-:
     ../Scripts/V38 -Coding Exercise 71 Graphs Exercise removeVertex-/my-solution.js
   Chatgpt Solution -Using Set-:
     ../Scripts/V38 -Coding Exercise 71 Graphs Exercise removeVertex-/chatgpt-solution.js
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 V39 -Coding Exercise 72: Graphs - DFS Exercise-:
   Exercise Description:
-    See:
+    Implement the depthFirstSearch method on the Graph class:
+      It should return an array of nodes visited using DFS. 
+      You can do this iteratively -using a stack- or recursively. 
+        Note the order of the results will be different.
   My Solution:
-    "../Scripts
-  Constructor Solution:
-    "../Scripts
+    ../Scripts/V39 -Coding Exercise 72 Graphs DFS Exercise-/my-solution.js
+  Chatgpt Solution:
+    ../Scripts/V39 -Coding Exercise 72 Graphs DFS Exercise-/chatgpt-solution.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 V40 -Coding Exercise 73: Graphs Exercise - addEdge-:
   Exercise Description:
     See:

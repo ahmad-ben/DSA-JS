@@ -583,7 +583,7 @@ V36 -Coding Exercise 69: Graphs Exercise - addVertex-:
     ../Scripts/V36 -Coding Exercise 69 Graphs Exercise addVertex-/my-solution.js
 V37 -Coding Exercise 70: Graphs Exercise - removeEdge-:
   Exercise Description:
-    Implement the removeEdge methods on the Graph class. 
+    Implement the removeEdge method on the Graph class. 
     addEdge and addVertex have been implemented for you.
     This function should accept two nodes and remove the edge between them. 
     It should modify the adjacency list ensuring that: 
@@ -592,7 +592,7 @@ V37 -Coding Exercise 70: Graphs Exercise - removeEdge-:
     ../Scripts/V37 -Coding Exercise 70 Graphs Exercise removeEdge-/my-solution.js
 V38 -Coding Exercise 71: Graphs Exercise - removeVertex-:
   Exercise Description:
-    Implement the removeVertex methods on the Graph class, removeEdge has been implemented for you.
+    Implement the removeVertex method on the Graph class, removeEdge has been implemented for you.
     This function should: 
       Remove the node in the array of nodes.
       Remove all edges that the removed node previously contained.
@@ -612,79 +612,82 @@ V39 -Coding Exercise 72: Graphs - DFS Exercise-:
     ../Scripts/V39 -Coding Exercise 72 Graphs DFS Exercise-/chatgpt-solution.js
 V40 -Coding Exercise 73: Graphs Exercise - addEdge-:
   Exercise Description:
-    See:
+    Implement the addEdge method on the Graph class.
+      addVertex has been implemented for you
+    This function should: 
+      Add an edge between two nodes in the graph.
+      Place each value of the nodes in each array for the value of the node in the adjacency list.
   My Solution:
-    "../Scripts
-  Constructor Solution:
-    "../Scripts
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    ../Scripts/V40 -Coding Exercise 73 Graphs Exercise addEdge-/my-solution.js
 V41 -Coding Exercise 74: Graphs - BFS Exercise-:
   Exercise Description:
-    See:
+    Implement the breadthFirstSearch method on the Graph class:
+    This function should return an array of vertices visited using BFS.
   My Solution:
-    "../Scripts
-  Constructor Solution:
-    "../Scripts
+    ../Scripts/V41 -Coding Exercise 74 Graphs BFS Exercise-/my-solution.js
+      I used the -unshift- and the -pop- methods.
+        But is generally more standard to use -push- and -shift- methods.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 V42 -Coding Exercise 75: Graphs - Dijkstra Exercise-:
   Exercise Description:
     See:

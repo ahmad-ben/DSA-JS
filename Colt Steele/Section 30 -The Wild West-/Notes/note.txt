@@ -627,74 +627,86 @@ V41 -Coding Exercise 74: Graphs - BFS Exercise-:
     ../Scripts/V41 -Coding Exercise 74 Graphs BFS Exercise-/my-solution.js
       I used the -unshift- and the -pop- methods.
         But is generally more standard to use -push- and -shift- methods.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 V42 -Coding Exercise 75: Graphs - Dijkstra Exercise-:
   Exercise Description:
-    See:
+    Create a constructor function for a WeightedGraph. 
+    It should inherit from the Graph constructor.
+      Having all the same methods except for adding an edge. 
+    Since weights will now be added with edges.
+      The adjacency list should not only store the nodes which are connected to it. 
+        But also the corresponding weight of the edge.
+    A PriorityQueue has been implemented for you. 
+    The PriorityQueue adds the LOWEST priority first -this is helpful for Dijkstra-.
+    Implement the Dijkstra method on the WeightedGraph.prototype
+      This function should return an array with two values.
+        The first being the total distance.
+        The second an array of nodes which create the shortest path.
   My Solution:
-    "../Scripts
-  Constructor Solution:
-    "../Scripts
+    ../Scripts/V42 -Coding Exercise 75 Graphs Dijkstra Exercise-/my-solution.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 V43 -Coding Exercise 76: Dynamic Programming - Coin Change-:
   Exercise Description:
     See:

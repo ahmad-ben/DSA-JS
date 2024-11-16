@@ -643,77 +643,87 @@ V42 -Coding Exercise 75: Graphs - Dijkstra Exercise-:
         The second an array of nodes which create the shortest path.
   My Solution:
     ../Scripts/V42 -Coding Exercise 75 Graphs Dijkstra Exercise-/my-solution.js
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 V43 -Coding Exercise 76: Dynamic Programming - Coin Change-:
   Exercise Description:
-    See:
+    Write a function called coinChange. 
+    It accepts two parameters an array of denominations and a value. 
+    It should return: 
+      The number of ways you can obtain the value from the given collection of denominations. 
+    You can think of this as: 
+      Figuring out the number of ways to make change for a given value from a supply of coins.
   My Solution:
-    "../Scripts
-  Constructor Solution:
-    "../Scripts
+    ../Scripts/V43 -...-/my-naive-solution.js
+      Very slow solution.
+    ../Scripts/V43 -...-/my-improved-solution-two-dimensional-array.js
+      Enhanced solution using two dimensional array.
+    ../Scripts/V43 -...-/my-improved-solution-one-dimensional-array.js
+      More advanced solution using a normal array.
+  Chatgpt Solution:
+    ../Scripts/V43 -...-/chatgpt-solution.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 V44 -Coding Exercise 77: Coin Change - Greedy Algorithm-:
   Exercise Description:
     See:

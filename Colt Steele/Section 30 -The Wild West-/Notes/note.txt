@@ -90,10 +90,10 @@ V10 -Coding Exercise 43: Divide and Conquer - sortedFrequency-:
     Constraints:
       Time Complexity: O(log n)
     Inputs & Outputs Examples:
-      sortedFrequency([1,1,2,2,2,2,3],2) // 4 
-      sortedFrequency([1,1,2,2,2,2,3],3) // 1 
-      sortedFrequency([1,1,2,2,2,2,3],1) // 2 
-      sortedFrequency([1,1,2,2,2,2,3],4) // -1
+      sortedFrequency([1,1,2,2,2,2,3],2) => 4 
+      sortedFrequency([1,1,2,2,2,2,3],3) => 1 
+      sortedFrequency([1,1,2,2,2,2,3],1) => 2 
+      sortedFrequency([1,1,2,2,2,2,3],4) => -1
     See:
   My Solutions:
     Initial solution:
@@ -258,7 +258,7 @@ V16 -Coding Exercise 49: Merge Sort-:
           That takes in two sorted arrays and a comparator and returns a new sorted array. 
           You implemented this function in the previous exercise, so copy and paste that code here.
     You can read more merge sort here: 
-      "https://www.rithmschool.com/courses/
+      https://www.rithmschool.com/courses/
         javascript-computer-science-fundamentals/intermediate-sorting-algorithms"
   My Solution:
     ../Scripts/V16 -Coding Exercise 49 Merge Sort-/my-solution.js
@@ -280,7 +280,7 @@ V17 -Coding Exercise 50: Sorting Exercise - pivot helper-:
         var arr = [4, 2, 5, 3, 6];
         pivot(arr);  => 2
         arr;         => [3, 2, 4, 5, 6];
-        More Examples are in the solution file for test.
+      More Examples are in the solution file for test.
   My Solution:
     ../Scripts/V17 -Coding Exercise 50 Sorting Exercise pivot helper-/my-solution.js
 V18 -Coding Exercise 51: Quick Sort-:
@@ -436,7 +436,7 @@ V29 -Coding Exercise 62: Binary Search Tree - DFS Exercise-:
       DFSPreOrder
         Search through each node in the binary search tree using pre-order depth first search.
         Return an array containing each node's value.
-        Inputs & Outputs Examples: 
+        Inputs & Outputs Example: 
           const binarySearchTree = new BinarySearchTree();
           binarySearchTree
             .insert(15)
@@ -446,11 +446,11 @@ V29 -Coding Exercise 62: Binary Search Tree - DFS Exercise-:
             .insert(1)
             .insert(5)
             .insert(50);
-          binarySearchTree.DFSPreOrder() // [15, 10, 1, 5, 12, 20, 50]
+          binarySearchTree.DFSPreOrder() => [15, 10, 1, 5, 12, 20, 50]
       DFSInOrder
         Search through each node in the binary search tree using in-order depth first search.
         Return an array containing each node's value.
-        Inputs & Outputs Examples:
+        Inputs & Outputs Example:
           const binarySearchTree = new BinarySearchTree();
           binarySearchTree
             .insert(15)
@@ -460,11 +460,11 @@ V29 -Coding Exercise 62: Binary Search Tree - DFS Exercise-:
             .insert(1)
             .insert(5)
             .insert(50);
-          binarySearchTree.DFSInOrder() // [1, 5, 10, 12, 15, 20, 50]
+          binarySearchTree.DFSInOrder() => [1, 5, 10, 12, 15, 20, 50]
       DFSPostOrder
         Search through each node in the binary search tree using post-order depth first search.
         Return an array containing each node's value.
-        Inputs & Outputs Examples:
+        Inputs & Outputs Example:
           const binarySearchTree = new BinarySearchTree();
           binarySearchTree
             .insert(15)
@@ -474,7 +474,7 @@ V29 -Coding Exercise 62: Binary Search Tree - DFS Exercise-:
             .insert(1)
             .insert(5)
             .insert(50);
-          binarySearchTree.DFSPostOrder() // [5, 1, 12, 10, 50, 20, 15]
+          binarySearchTree.DFSPostOrder() => [5, 1, 12, 10, 50, 20, 15]
   My Solution:
     ../Scripts/V29 -Coding Exercise 62 Binary Search Tree DFS Exercise-/my-solution.js
 V30 -Coding Exercise 63: Binary Search Tree - BFS Exercise-:
@@ -482,7 +482,7 @@ V30 -Coding Exercise 63: Binary Search Tree - BFS Exercise-:
     Implement the breadthFirstSearch function on the BinarySearchTree.prototype.
     It should search through each node in the binary search tree using breadth first search.
     Return an array containing each node's value.
-    Inputs & Outputs Examples:
+    Inputs & Outputs Example:
       const binarySearchTree = new BinarySearchTree();
       binarySearchTree
         .insert(15)
@@ -492,7 +492,7 @@ V30 -Coding Exercise 63: Binary Search Tree - BFS Exercise-:
         .insert(1)
         .insert(5)
         .insert(50);
-      binarySearchTree.breadthFirstSearch() // [(15, 10, 20, 1, 12, 50, 5)];
+      binarySearchTree.breadthFirstSearch() => [(15, 10, 20, 1, 12, 50, 5)];
   My Solution:
     ../Scripts/V30 -Coding Exercise 63 Binary Search Tree BFS Exercise-/my-solution.js
 V31 -Coding Exercise 64: Binary Search Tree - remove Exercise-:
@@ -516,8 +516,8 @@ V31 -Coding Exercise 64: Binary Search Tree - remove Exercise-:
           .insert(5)
           .insert(50);
         binarySearchTree.remove(50);
-        binarySearchTree.root.right.value // 20
-        binarySearchTree.root.right.right // null
+        binarySearchTree.root.right.value => 20
+        binarySearchTree.root.right.right => null
       More Examples are in the solution file for test. 
   My Solution:
     ../Scripts/V31 -Coding Exercise 64 Binary Search Tree remove Exercise-/my-solution.js
@@ -528,18 +528,18 @@ V32 -Coding Exercise 65: Binary Search Tree Exercise - Find 2nd largest node-:
     Write the findSecondLargest function on the BinarySearchTree class:
     Finds and returns the second largest value in the BST. 
     If the tree has fewer than two nodes, return undefined.
-    Inputs & Outputs Example:
+    Inputs & Outputs Examples:
       Example 1:
         const binarySearchTree = new BinarySearchTree();
         binarySearchTree.insert(15);
         binarySearchTree.insert(20);
         binarySearchTree.insert(10);
         binarySearchTree.insert(12);
-        binarySearchTree.findSecondLargest(); // returns 15
+        binarySearchTree.findSecondLargest(); => returns 15
       Example 2:
         const binarySearchTree2 = new BinarySearchTree();
         binarySearchTree2.insert(10);
-        binarySearchTree2.findSecondLargest(); // returns undefined    
+        binarySearchTree2.findSecondLargest(); => returns undefined    
   My Solution:
     ../Scripts/V32 -...-/my-solution.js
 V33 -Coding Exercise 66: Binary Search Tree Exercise - Check if balanced-:
@@ -660,77 +660,58 @@ V43 -Coding Exercise 76: Dynamic Programming - Coin Change-:
       More advanced solution using a normal array.
   Chatgpt Solution:
     ../Scripts/V43 -...-/chatgpt-solution.js
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 V44 -Coding Exercise 77: Coin Change - Greedy Algorithm-:
   Exercise Description:
-    See:
-  My Solution:
-    "../Scripts
-  Constructor Solution:
-    "../Scripts
+    Write the minCoinChange function. 
+    It takes two arguments: 
+      an array of coin denominations -coins-.
+        The provided array of coins is sorted in ascending order.
+          From the smallest coin denomination to the largest.
+      Target amount number -amount-. 
+    Return an array representing the minimum number of coins needed to make the given amount. 
+    The result should be an array of the actual coins used.
+      Not their count or sum.
+    To achieve this: 
+    Solution Steps:
+      Start by considering the largest denominations first.
+        Use them as much as possible before moving to smaller denominations. 
+      As a consequence of this, the result array should be sorted in descending order. 
+        Starting from the largest coin denomination to the smallest.
+    Inputs & Outputs Examples:
+      minCoinChange([1, 2, 3, 4, 5], 11);     => [5, 5, 1]
+      minCoinChange([5, 10, 15, 20, 25], 85); => [25, 25, 25, 10]
+      minCoinChange([1, 5, 6, 9], 11);        => [9, 1, 1]
+  My Solution With The Help Of Binary Search:
+    ../Scripts/V44 -Coding Exercise 77 Coin Change Greedy Algorithm-/my-binary-search-solution.js
+  My Solution Using Greedy Algorithm:
+    ../Scripts/V44 -Coding Exercise 77 Coin Change Greedy Algorithm-/my-greedy-algorithm-solution.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 V45 -Coding Exercise 78: Frequency Counter - constructNote-:
   Exercise Description:
     See:

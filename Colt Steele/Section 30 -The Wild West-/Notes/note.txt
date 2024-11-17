@@ -682,43 +682,58 @@ V44 -Coding Exercise 77: Coin Change - Greedy Algorithm-:
       minCoinChange([5, 10, 15, 20, 25], 85); => [25, 25, 25, 10]
       minCoinChange([1, 5, 6, 9], 11);        => [9, 1, 1]
   My Solution With The Help Of Binary Search:
-    ../Scripts/V44 -Coding Exercise 77 Coin Change Greedy Algorithm-/my-binary-search-solution.js
+    ../Scripts/V44 -...-/my-binary-search-solution.js
   My Solution Using Greedy Algorithm:
-    ../Scripts/V44 -Coding Exercise 77 Coin Change Greedy Algorithm-/my-greedy-algorithm-solution.js
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    ../Scripts/V44 -...-/my-greedy-algorithm-solution.js
 V45 -Coding Exercise 78: Frequency Counter - constructNote-:
   Exercise Description:
-    See:
+    Write a function called constructNote.
+    It accepts two strings: 
+      A message and some letters. 
+    The function should return:
+      True, if the message can be built with the letters that you are given.
+      False, otherwise.
+    Assume that there are only lowercase letters and no space or special characters.
+      In both the message and the letters.
+    Bonus Constraints:
+      If M is the length of message and N is the length of letters:
+        Time Complexity: O(M+N)
+        Space Complexity: O(N)
+    Inputs & Outputs Examples:
+      constructNote('aa', 'abc') // false
+      constructNote('abc', 'dcba') // true
+      constructNote('aabbcc', 'bcabcaddff') // true
   My Solution:
     "../Scripts
   Constructor Solution:
     "../Scripts
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 V46 -Coding Exercise 79: Frequency Counter - findAllDuplicates-:
   Exercise Description:
     See:

@@ -1,6 +1,6 @@
 const findAllDuplicates = (arr) => {
-  let duplicatesVal = [], valuesObj = {};
-  arr.forEach(v => !valuesObj[v] ? valuesObj[v] = true : duplicatesVal.push(v))
+  let duplicatesVal = [], valObj = {};
+  arr.forEach(v => !valObj[v] ? valObj[v] = true : duplicatesVal.push(v));
   return duplicatesVal;
 };
 

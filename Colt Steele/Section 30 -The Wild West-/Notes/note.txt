@@ -704,43 +704,47 @@ V45 -Coding Exercise 78: Frequency Counter - constructNote-:
       constructNote('abc', 'dcba') // true
       constructNote('aabbcc', 'bcabcaddff') // true
   My Solution:
-    "../Scripts
-  Constructor Solution:
-    "../Scripts
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    ../Scripts/V45 -Coding Exercise 78 Frequency Counter constructNote-/my-solution.js
 V46 -Coding Exercise 79: Frequency Counter - findAllDuplicates-:
   Exercise Description:
-    See:
+    Given an array of positive integers, some elements appear twice and others appear once. 
+    Find all the elements that appear twice in this array. 
+    Note that you can return the elements in any order.
+    Constraints:
+      Time Complexity - O(n)
+    Inputs & Outputs Examples:
+      findAllDuplicates([4,3,2,7,8,2,3,1])        // array has 2 and 3
+      findAllDuplicates([4, 3, 2, 1, 0])          // []
+      findAllDuplicates([4, 3, 2, 1, 0, 1, 2, 3]) // array has 3, 2, and 1
   My Solution:
-    "../Scripts
-  Constructor Solution:
-    "../Scripts
+    ../Scripts/V46 -Coding Exercise 79 Frequency Counter findAllDuplicates-/my-solution.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 V47 -Coding Exercise 80: Frequency Counter / Multiple Pointer - findPair-:
   Exercise Description:
     See:

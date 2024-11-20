@@ -746,41 +746,69 @@ V47 -Coding Exercise 80: Frequency Counter / Multiple Pointer - findPair-:
       ../Scripts/V47 -...-/first-constraints-solution.js
     Second Constraints:
       ../Scripts/V47 -...-/second-constraints-solution.js
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 V48 -Coding Exercise 81: Trie Exercise - addWord-:
   Exercise Description:
-    See:
+    This function should add the given word starting from the given index to the Trie.
+    It will be recursive.
+    Notify the correct child of this Trie to add the word starting from a later index.
+    Consider what the add function should do when it reaches the end of the word. 
+      As a word does not necessarily end at a leaf.
+    You must mark nodes which are the ends of words.
+      So that the words can be reconstructed later.
+    Inputs & Outputs Example:
+      const firstTrie = new Trie();
+      firstTrie.addWord("fun")
+      firstTrie.characters => {f: Trie}
+      !!firstTrie.characters["f"] => true
+      firstTrie.characters.f.characters.u => {u: Trie}
+      !!firstTrie.characters.f.characters.u => true
+      firstTrie.characters.f.characters.u.characters.n.isWord => true
+      !!firstTrie.characters.f.characters.u.characters.n => true
+      !!firstTrie.characters.f.characters.u.characters.n.characters => {}
+      !!firstTrie.characters.f.characters.u.characters.l => true  
   My Solution:
-    "../Scripts
+    ../Scripts/V48 -Coding Exercise 81 Trie Exercise addWord-/my-solution.js
+      My iterative solution is good.
+      My recursive solution:
+        I had the problem of continuously iterate over the Trie to find the last level.
+          That was very inefficient and repetitive. 
+        I couldn't pass the last level to the function by the parameter.
+          So no parameter to save the last level and pass it to the next called function.
+        The solution was simply to play with the this keyword.
+          Make it hold the last level, and that what the chatgpt solution does.
+        So always remember:
+          If you want to changeable value to be passed to a function, and there no params for that.
+            Think about the this keyword it may help.
   Constructor Solution:
-    "../Scripts
+    ../Scripts/V48 -Coding Exercise 81 Trie Exercise addWord-/chatgpt-solution.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 V49 -Coding Exercise 82: Trie Exercise - findWord-:
   Exercise Description:
     See:

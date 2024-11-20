@@ -781,41 +781,40 @@ V48 -Coding Exercise 81: Trie Exercise - addWord-:
             Think about the this keyword it may help.
   Constructor Solution:
     ../Scripts/V48 -Coding Exercise 81 Trie Exercise addWord-/chatgpt-solution.js
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 V49 -Coding Exercise 82: Trie Exercise - findWord-:
   Exercise Description:
-    See:
+    Write a function called findWord. 
+    It accepts a string. 
+    If the string is a word in the Trie.
+      It returns the characters object for the last character in that word.
+      Otherwise it returns undefined. 
+    Try to solve this without having to find every single word in the Trie. 
+    Inputs & Outputs Examples:
+      const t = new Trie();
+      t.addWord('fun')
+      t.addWord('fast')
+      t.addWord('fat')
+      t.addWord('fate')
+      t.addWord('father')
+      t.findWord('taco') => undefined
+      t.findWord('fat').characters => {t: Trie}
+      t.findWord('father').characters => {}
+      t.findWord('father').isWord => true
   My Solution:
-    "../Scripts
-  Constructor Solution:
-    "../Scripts
+    ../Scripts/V49 -Coding Exercise 82 Trie Exercise findWord-/my-solution.js
+
+
+
+
+
+
+
+
+
+
+
+
+
 V50 -Coding Exercise 83: Trie Exercise - getWords-:
   Exercise Description:
     See:

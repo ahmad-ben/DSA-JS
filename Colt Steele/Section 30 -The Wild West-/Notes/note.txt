@@ -700,9 +700,9 @@ V45 -Coding Exercise 78: Frequency Counter - constructNote-:
         Time Complexity: O(M+N)
         Space Complexity: O(N)
     Inputs & Outputs Examples:
-      constructNote('aa', 'abc') // false
-      constructNote('abc', 'dcba') // true
-      constructNote('aabbcc', 'bcabcaddff') // true
+      constructNote('aa', 'abc') => false
+      constructNote('abc', 'dcba') => true
+      constructNote('aabbcc', 'bcabcaddff') => true
   My Solution:
     ../Scripts/V45 -Coding Exercise 78 Frequency Counter constructNote-/my-solution.js
 V46 -Coding Exercise 79: Frequency Counter - findAllDuplicates-:
@@ -713,9 +713,9 @@ V46 -Coding Exercise 79: Frequency Counter - findAllDuplicates-:
     Constraints:
       Time Complexity - O(n)
     Inputs & Outputs Examples:
-      findAllDuplicates([4,3,2,7,8,2,3,1])        // array has 2 and 3
-      findAllDuplicates([4, 3, 2, 1, 0])          // []
-      findAllDuplicates([4, 3, 2, 1, 0, 1, 2, 3]) // array has 3, 2, and 1
+      findAllDuplicates([4,3,2,7,8,2,3,1])        => array has 2 and 3
+      findAllDuplicates([4, 3, 2, 1, 0])          => []
+      findAllDuplicates([4, 3, 2, 1, 0, 1, 2, 3]) => array has 3, 2, and 1
   My Solution:
     ../Scripts/V46 -Coding Exercise 79 Frequency Counter findAllDuplicates-/my-solution.js
 V47 -Coding Exercise 80: Frequency Counter / Multiple Pointer - findPair-:
@@ -731,16 +731,16 @@ V47 -Coding Exercise 80: Frequency Counter / Multiple Pointer - findPair-:
         Time Complexity Requirement is O(n log n).
         Space Complexity Requirement is O(1).
     Inputs & Outputs Examples:
-      findPair([6,1,4,10,2,4], 2)       // true
-      findPair([8,6,2,4,1,0,2,5,13],1)  // true
-      findPair([4,-2,3,10],-6)          // true
-      findPair([6,1,4,10,2,4], 22)      // false
-      findPair([], 0)                   // false
-      findPair([5,5], 0)                // true
-      findPair([-4,4], -8)              // true
-      findPair([-4,4], 8)               // true
-      findPair([1,3,4,6],-2)            // true
-      findPair([0,1,3,4,6],-2)          // true
+      findPair([6,1,4,10,2,4], 2)       => true
+      findPair([8,6,2,4,1,0,2,5,13],1)  => true
+      findPair([4,-2,3,10],-6)          => true
+      findPair([6,1,4,10,2,4], 22)      => false
+      findPair([], 0)                   => false
+      findPair([5,5], 0)                => true
+      findPair([-4,4], -8)              => true
+      findPair([-4,4], 8)               => true
+      findPair([1,3,4,6],-2)            => true
+      findPair([0,1,3,4,6],-2)          => true
   My Solutions:
     First Constraints:
       ../Scripts/V47 -...-/first-constraints-solution.js
@@ -802,26 +802,55 @@ V49 -Coding Exercise 82: Trie Exercise - findWord-:
       t.findWord('father').isWord => true
   My Solution:
     ../Scripts/V49 -Coding Exercise 82 Trie Exercise findWord-/my-solution.js
-
-
-
-
-
-
-
-
-
-
-
-
-
 V50 -Coding Exercise 83: Trie Exercise - getWords-:
   Exercise Description:
-    See:
+    Write a function on the Trie.prototype called getWords. 
+    It returns an array of all of the words in the Trie.
+    Inputs & Outputs Examples:
+      const t = new Trie();
+      t.addWord('fun');
+      t.addWord('fast');
+      t.addWord('fat');
+      t.addWord('fate');
+      t.addWord('father');
+      t.addWord('forget');
+      t.addWord('awesome');
+      t.addWord('argue');
+      t.getWords() 
+        => ["fun", "fast", "fat", "fate", "father", "forget", "awesome", "argue"]
+      t.getWords().length => 8
   My Solution:
-    "../Scripts
+    ../Scripts/V50 -Coding Exercise 83 Trie Exercise getWords-/my-solution.js
   Constructor Solution:
-    "../Scripts
+    ../Scripts/V50 -Coding Exercise 83 Trie Exercise getWords-/chatgpt-solution.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 V51 -Coding Exercise 84: Trie Exercise - autoComplete-:
   Exercise Description:
     See:

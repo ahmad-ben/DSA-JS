@@ -843,20 +843,28 @@ V51 -Coding Exercise 84: Trie Exercise - autoComplete-:
       t.autoComplete('arz') => []
   My Solution:
     ../Scripts/V51 -Coding Exercise 84 Trie Exercise autoComplete-/my-solution.js
-
-
-
-
-
-
-
-
-
 V52 -Coding Exercise 85: Trie Exercise - removeWord-:
   Exercise Description:
-    See:
+    Write a function called removeWord. 
+    It accepts a string.
+    It removes the word from the Trie.
+    Inputs & Outputs Example:
+      var t = new Trie();
+      t.addWord('fun')
+      t.addWord('fast')
+      t.addWord('fat')
+      t.addWord('fate')
+      t.addWord('father')
+      t.addWord('forget')
+      t.addWord('awesome')
+      t.addWord('argue')
+      t.removeWord('fat')
+      t.characters.f.characters.a.characters.t.isWord => false
+      t.characters.f.characters.a.characters.t.characters.e.isWord => true
+      t.removeWord('argue')
+      t.characters.a.characters.r => undefined
   My Solution:
-    "../Scripts
-  Constructor Solution:
-    "../Scripts
+    ../Scripts/V52 -Coding Exercise 85 Trie Exercise removeWord-/my-solution.js
+  Chatgpt Solution:
+    ../Scripts/V52 -Coding Exercise 85 Trie Exercise removeWord-/chatgpt-solution.js
 ===================================================================================================

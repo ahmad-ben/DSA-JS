@@ -262,7 +262,7 @@ V16 -Coding Exercise 49: Merge Sort-:
         javascript-computer-science-fundamentals/intermediate-sorting-algorithms"
   My Solution:
     ../Scripts/V16 -Coding Exercise 49 Merge Sort-/my-solution.js
-  Constructor Solution:
+  Chatgpt Solution:
     ../Scripts/V16 -Coding Exercise 49 Merge Sort-/chatgpt-solution.js
 V17 -Coding Exercise 50: Sorting Exercise - pivot helper-:
   Exercise Description:
@@ -779,7 +779,7 @@ V48 -Coding Exercise 81: Trie Exercise - addWord-:
         So always remember:
           If you want to changeable value to be passed to a function, and there no params for that.
             Think about the this keyword it may help.
-  Constructor Solution:
+  Chatgpt Solution:
     ../Scripts/V48 -Coding Exercise 81 Trie Exercise addWord-/chatgpt-solution.js
 V49 -Coding Exercise 82: Trie Exercise - findWord-:
   Exercise Description:
@@ -789,7 +789,7 @@ V49 -Coding Exercise 82: Trie Exercise - findWord-:
       It returns the characters object for the last character in that word.
       Otherwise it returns undefined. 
     Try to solve this without having to find every single word in the Trie. 
-    Inputs & Outputs Examples:
+    Inputs & Outputs Example:
       const t = new Trie();
       t.addWord('fun')
       t.addWord('fast')
@@ -806,7 +806,7 @@ V50 -Coding Exercise 83: Trie Exercise - getWords-:
   Exercise Description:
     Write a function on the Trie.prototype called getWords. 
     It returns an array of all of the words in the Trie.
-    Inputs & Outputs Examples:
+    Inputs & Outputs Example:
       const t = new Trie();
       t.addWord('fun');
       t.addWord('fast');
@@ -821,7 +821,7 @@ V50 -Coding Exercise 83: Trie Exercise - getWords-:
       t.getWords().length => 8
   My Solution:
     ../Scripts/V50 -Coding Exercise 83 Trie Exercise getWords-/my-solution.js
-  Constructor Solution:
+  Chatgpt Solution:
     ../Scripts/V50 -Coding Exercise 83 Trie Exercise getWords-/chatgpt-solution.js
 V51 -Coding Exercise 84: Trie Exercise - autoComplete-:
   Exercise Description:
@@ -838,32 +838,11 @@ V51 -Coding Exercise 84: Trie Exercise - autoComplete-:
       t.addWord('forget')
       t.addWord('awesome')
       t.addWord('argue')
-      t.autoComplete('fa') // ["fast","fat", "fate", "father"] 
-      t.autoComplete('a') // ["awesome", "argue"]
-      t.autoComplete('arz') // []
+      t.autoComplete('fa') => ["fast","fat", "fate", "father"] 
+      t.autoComplete('a') => ["awesome", "argue"]
+      t.autoComplete('arz') => []
   My Solution:
-    "../Scripts
-  Constructor Solution:
-    "../Scripts
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    ../Scripts/V51 -Coding Exercise 84 Trie Exercise autoComplete-/my-solution.js
 
 
 

@@ -71,17 +71,3 @@ console.log(trie.getWords()); // ["fun", "fast", "fat", "fate", "father", "forge
 console.log(trie.getWords().length) // 8
 
 console.log(trie.getWordsIteratively());
-
-/*
-           f
-         /   \
-        a     u
-       /  \    \
-      t    s    n
-     / \    \
-    h   e    t
-   /   
-  e  
- / 
-r
-*/

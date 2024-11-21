@@ -823,41 +823,56 @@ V50 -Coding Exercise 83: Trie Exercise - getWords-:
     ../Scripts/V50 -Coding Exercise 83 Trie Exercise getWords-/my-solution.js
   Constructor Solution:
     ../Scripts/V50 -Coding Exercise 83 Trie Exercise getWords-/chatgpt-solution.js
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 V51 -Coding Exercise 84: Trie Exercise - autoComplete-:
   Exercise Description:
-    See:
+    Write a function on the Trie class named autoComplete.
+    It accepts a string.
+    It returns an array of all the possible options in the Trie for that string.
+    Inputs & Outputs Example:
+      const t = new Trie();
+      t.addWord('fun')
+      t.addWord('fast')
+      t.addWord('fat')
+      t.addWord('fate')
+      t.addWord('father')
+      t.addWord('forget')
+      t.addWord('awesome')
+      t.addWord('argue')
+      t.autoComplete('fa') // ["fast","fat", "fate", "father"] 
+      t.autoComplete('a') // ["awesome", "argue"]
+      t.autoComplete('arz') // []
   My Solution:
     "../Scripts
   Constructor Solution:
     "../Scripts
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 V52 -Coding Exercise 85: Trie Exercise - removeWord-:
   Exercise Description:
     See:
